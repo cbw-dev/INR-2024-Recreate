@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Generalizable plots | Introduction to R 2024</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Generalizable plots | Introduction to R 2024" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Generalizable plots | Introduction to R 2024" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="review-with-datasaurus-dozen.html"/>
+<link rel="next" href="factors.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/calendar-binding-0.3.4/calendar.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R 2024</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prework"><i class="fa fa-check"></i><b>1.1</b> Pre-Workshop Materials</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#meet-your-faculty"><i class="fa fa-check"></i><b>1.2</b> Meet Your Faculty</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#frances-wong-sheher"><i class="fa fa-check"></i>Frances Wong <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#andrés-melani-hehim"><i class="fa fa-check"></i>Andrés Melani <font size="3"> (he/him) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#amin-noorani-hehim"><i class="fa fa-check"></i>Amin Noorani <font size="3"> (he/him) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zoe-klein-sheher"><i class="fa fa-check"></i>Zoe Klein <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#michelle-brazas-phd-sheher"><i class="fa fa-check"></i>Michelle Brazas, PhD <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nia-hughes-sheher"><i class="fa fa-check"></i>Nia Hughes <font size="3"> (she/her) </font></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="course-schedule.html"><a href="course-schedule.html"><i class="fa fa-check"></i><b>2</b> Course Schedule</a></li>
+<li class="chapter" data-level="3" data-path="course-materials.html"><a href="course-materials.html"><i class="fa fa-check"></i><b>3</b> Course Materials</a>
+<ul>
+<li class="chapter" data-level="" data-path="course-materials.html"><a href="course-materials.html#day-1"><i class="fa fa-check"></i>Day 1</a></li>
+<li class="chapter" data-level="" data-path="course-materials.html"><a href="course-materials.html#day-2"><i class="fa fa-check"></i>Day 2</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="day-1-1.html"><a href="day-1-1.html"><i class="fa fa-check"></i><b>4</b> Day 1</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="day-1-1.html"><a href="day-1-1.html#general-syntax"><i class="fa fa-check"></i><b>4.1</b> General syntax</a></li>
+<li class="chapter" data-level="4.2" data-path="day-1-1.html"><a href="day-1-1.html#getting-started-with-data"><i class="fa fa-check"></i><b>4.2</b> Getting started with data</a></li>
+<li class="chapter" data-level="4.3" data-path="day-1-1.html"><a href="day-1-1.html#importing-data"><i class="fa fa-check"></i><b>4.3</b> Importing data</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="day-1-1.html"><a href="day-1-1.html#exercise-1-10-mins"><i class="fa fa-check"></i><b>4.3.1</b> Exercise 1 (10 mins)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="day-1-1.html"><a href="day-1-1.html#revising-the-r-environment"><i class="fa fa-check"></i><b>4.4</b> Revising the R environment</a></li>
+<li class="chapter" data-level="4.5" data-path="day-1-1.html"><a href="day-1-1.html#installing-packages-from-cran"><i class="fa fa-check"></i><b>4.5</b> Installing packages from CRAN</a></li>
+<li class="chapter" data-level="4.6" data-path="day-1-1.html"><a href="day-1-1.html#data-wrangling"><i class="fa fa-check"></i><b>4.6</b> Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="day-1-1.html"><a href="day-1-1.html#exercise"><i class="fa fa-check"></i><b>4.6.1</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="day-1-1.html"><a href="day-1-1.html#adding-new-columns-of-data"><i class="fa fa-check"></i><b>4.7</b> Adding new columns of data</a></li>
+<li class="chapter" data-level="4.8" data-path="day-1-1.html"><a href="day-1-1.html#tidyverse"><i class="fa fa-check"></i><b>4.8</b> Tidyverse</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="day-1-1.html"><a href="day-1-1.html#exercise-1"><i class="fa fa-check"></i><b>4.8.1</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="day-1-1.html"><a href="day-1-1.html#plotting-with-base-r"><i class="fa fa-check"></i><b>4.9</b> Plotting with Base R</a></li>
+<li class="chapter" data-level="4.10" data-path="day-1-1.html"><a href="day-1-1.html#scatterplot-with-ggplot"><i class="fa fa-check"></i><b>4.10</b> Scatterplot with ggplot</a></li>
+<li class="chapter" data-level="4.11" data-path="day-1-1.html"><a href="day-1-1.html#exercise-2"><i class="fa fa-check"></i><b>4.11</b> Exercise</a></li>
+<li class="chapter" data-level="4.12" data-path="day-1-1.html"><a href="day-1-1.html#multi-panel-plots-with-ggplot"><i class="fa fa-check"></i><b>4.12</b> Multi-panel plots with ggplot</a></li>
+<li class="chapter" data-level="4.13" data-path="day-1-1.html"><a href="day-1-1.html#exporting-plots"><i class="fa fa-check"></i><b>4.13</b> Exporting plots</a></li>
+<li class="chapter" data-level="4.14" data-path="day-1-1.html"><a href="day-1-1.html#day-1-project"><i class="fa fa-check"></i><b>4.14</b> Day 1 Project</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="day-2-1.html"><a href="day-2-1.html"><i class="fa fa-check"></i><b>5</b> Day 2</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="day-2-1.html"><a href="day-2-1.html#day-1-project-1"><i class="fa fa-check"></i><b>5.1</b> Day 1 Project</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="review-with-datasaurus-dozen.html"><a href="review-with-datasaurus-dozen.html"><i class="fa fa-check"></i><b>6</b> Review with Datasaurus Dozen</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="review-with-datasaurus-dozen.html"><a href="review-with-datasaurus-dozen.html#genearlizable-code"><i class="fa fa-check"></i><b>6.1</b> Genearlizable code</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="generalizable-plots.html"><a href="generalizable-plots.html"><i class="fa fa-check"></i><b>7</b> Generalizable plots</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="generalizable-plots.html"><a href="generalizable-plots.html#exercise-3"><i class="fa fa-check"></i><b>7.1</b> Exercise</a></li>
+<li class="chapter" data-level="7.2" data-path="generalizable-plots.html"><a href="generalizable-plots.html#dataset---heart-stroke-preduction"><i class="fa fa-check"></i><b>7.2</b> Dataset - Heart Stroke Preduction</a></li>
+<li class="chapter" data-level="7.3" data-path="generalizable-plots.html"><a href="generalizable-plots.html#exercise-4"><i class="fa fa-check"></i><b>7.3</b> Exercise</a></li>
+<li class="chapter" data-level="7.4" data-path="generalizable-plots.html"><a href="generalizable-plots.html#exercise-5"><i class="fa fa-check"></i><b>7.4</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>8</b> Factors</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="factors.html"><a href="factors.html#incomplete-data"><i class="fa fa-check"></i><b>8.1</b> Incomplete data</a></li>
+<li class="chapter" data-level="8.2" data-path="factors.html"><a href="factors.html#exercise-6"><i class="fa fa-check"></i><b>8.2</b> Exercise</a></li>
+<li class="chapter" data-level="8.3" data-path="factors.html"><a href="factors.html#loops"><i class="fa fa-check"></i><b>8.3</b> Loops</a></li>
+<li class="chapter" data-level="8.4" data-path="factors.html"><a href="factors.html#exercise-7"><i class="fa fa-check"></i><b>8.4</b> Exercise</a></li>
+<li class="chapter" data-level="8.5" data-path="factors.html"><a href="factors.html#conditional-for-loops"><i class="fa fa-check"></i><b>8.5</b> Conditional for loops</a></li>
+<li class="chapter" data-level="8.6" data-path="factors.html"><a href="factors.html#exercise-8"><i class="fa fa-check"></i><b>8.6</b> Exercise</a></li>
+<li class="chapter" data-level="8.7" data-path="factors.html"><a href="factors.html#countinous-variables"><i class="fa fa-check"></i><b>8.7</b> Countinous variables</a></li>
+<li class="chapter" data-level="8.8" data-path="factors.html"><a href="factors.html#linear-models"><i class="fa fa-check"></i><b>8.8</b> Linear models</a></li>
+<li class="chapter" data-level="8.9" data-path="factors.html"><a href="factors.html#exercise-9"><i class="fa fa-check"></i><b>8.9</b> Exercise</a></li>
+<li class="chapter" data-level="8.10" data-path="factors.html"><a href="factors.html#demo-detour-to-function-for-lm-plots"><i class="fa fa-check"></i><b>8.10</b> Demo detour to function for lm plots</a></li>
+<li class="chapter" data-level="8.11" data-path="factors.html"><a href="factors.html#notes-on-data-types"><i class="fa fa-check"></i><b>8.11</b> Notes on data types</a></li>
+<li class="chapter" data-level="8.12" data-path="factors.html"><a href="factors.html#day-2-project"><i class="fa fa-check"></i><b>8.12</b> Day 2 project</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="python-setup.html"><a href="python-setup.html"><i class="fa fa-check"></i><b>9</b> Python Setup?</a></li>
+<li class="chapter" data-level="10" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>10</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>10.1</b> Footnotes</a></li>
+<li class="chapter" data-level="10.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>10.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>11</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>11.1</b> Equations</a></li>
+<li class="chapter" data-level="11.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>11.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="11.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>11.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="12" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>12</b> R Markdown</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R 2024</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="generalizable-plots" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Generalizable plots<a href="generalizable-plots.html#generalizable-plots" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Remember when we edited our code to test out multiple datasets in the datasaurus dozen object? Perhaps you copy and pasted the code several time and changed the column name? This is not optimal because if you need to change the code in one instance (for example changing the x-axis label), you’ll need to revisit ever instance that you copy and pasted to code to. This approach leads you vulnerable to errors when copy and pasting.</p>
+<p>One way to make your code robust is to bring all the factors that need editing to the start of the data. This may seem cumbersome for such a simple example where we are only changing the dataset name, but we’ll return to this concept later with more complicated examples.</p>
+<p>Let’s grab the code we used to make one plot earlier and modify it to be more generalizable</p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="generalizable-plots.html#cb174-1" tabindex="-1"></a><span class="fu">levels</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span></code></pre></div>
+<pre><code>##  [1] &quot;away&quot;       &quot;bullseye&quot;   &quot;circle&quot;     &quot;dino&quot;       &quot;dots&quot;      
+##  [6] &quot;h_lines&quot;    &quot;high_lines&quot; &quot;slant_down&quot; &quot;slant_up&quot;   &quot;star&quot;      
+## [11] &quot;v_lines&quot;    &quot;wide_lines&quot; &quot;x_shape&quot;</code></pre>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="generalizable-plots.html#cb176-1" tabindex="-1"></a>dataset_name <span class="ot">&lt;-</span> <span class="st">&quot;dino&quot;</span> <span class="co"># ADD THIS LINE</span></span>
+<span id="cb176-2"><a href="generalizable-plots.html#cb176-2" tabindex="-1"></a></span>
+<span id="cb176-3"><a href="generalizable-plots.html#cb176-3" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb176-4"><a href="generalizable-plots.html#cb176-4" tabindex="-1"></a>  <span class="fu">filter</span>(dataset <span class="sc">==</span> dataset_name) <span class="sc">%&gt;%</span> <span class="co"># Remove comment # CHANGE VARIABLE NAME</span></span>
+<span id="cb176-5"><a href="generalizable-plots.html#cb176-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
+<span id="cb176-6"><a href="generalizable-plots.html#cb176-6" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="co"># REMOVE THE + at the end of the line</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p>Once we have converted our code to a generalized format, we can convert it into a more versatile custom function!</p>
+<p>Curly brackets are used for inputting multiple lines of code. It is generally attached to the function that proceeds it.</p>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="generalizable-plots.html#cb177-1" tabindex="-1"></a><span class="co"># dataset_name &lt;- &quot;dino&quot; # ADD THIS LINE</span></span>
+<span id="cb177-2"><a href="generalizable-plots.html#cb177-2" tabindex="-1"></a></span>
+<span id="cb177-3"><a href="generalizable-plots.html#cb177-3" tabindex="-1"></a>dino_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(data_name) {</span>
+<span id="cb177-4"><a href="generalizable-plots.html#cb177-4" tabindex="-1"></a>  datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb177-5"><a href="generalizable-plots.html#cb177-5" tabindex="-1"></a>    <span class="fu">filter</span>(dataset <span class="sc">==</span> data_name) <span class="sc">%&gt;%</span> <span class="co"># CHANGE ARGUMENT NAME</span></span>
+<span id="cb177-6"><a href="generalizable-plots.html#cb177-6" tabindex="-1"></a></span>
+<span id="cb177-7"><a href="generalizable-plots.html#cb177-7" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
+<span id="cb177-8"><a href="generalizable-plots.html#cb177-8" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb177-9"><a href="generalizable-plots.html#cb177-9" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span>
+<span id="cb177-10"><a href="generalizable-plots.html#cb177-10" tabindex="-1"></a>}</span>
+<span id="cb177-11"><a href="generalizable-plots.html#cb177-11" tabindex="-1"></a></span>
+<span id="cb177-12"><a href="generalizable-plots.html#cb177-12" tabindex="-1"></a><span class="fu">dino_plot</span>(<span class="st">&quot;dino&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="generalizable-plots.html#cb178-1" tabindex="-1"></a><span class="fu">dino_plot</span>(<span class="st">&quot;circle&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-78-2.png" width="672" /></p>
+<div id="exercise-3" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Exercise<a href="generalizable-plots.html#exercise-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ve now encountered round brackets <code>()</code>, square brackets <code>[]</code>, and curly brackets<code>{}</code> - each have their own distinct functions! Take a few moments to chat with your neighbors and outline cases in which we’ve used each bracket and what is their role in R syntax.</p>
+<p>round brackets ()
+come after a function, function will apply to whatever is in the brackets
+functionName(what is being acted on)</p>
+<p>square brackets []
+Indexing, locations
+object[position]
+dataframe[rows, cols]</p>
+<p>curly brackets {}
+Used in function, indicate multiple lines of related code
+Rmd – indicates language in code chunk</p>
+</div>
+<div id="dataset---heart-stroke-preduction" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Dataset - Heart Stroke Preduction<a href="generalizable-plots.html#dataset---heart-stroke-preduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The dataset we will be working with for today’s workshop contains clinical data collected with the aim of predicting whether a patient is likely to suffer a stroke.</p>
+<p>The dataset can be found: <a href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset" class="uri">https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset</a></p>
+<p>Here is some more information about the columns in this dataset:</p>
+<ol style="list-style-type: decimal">
+<li>id: unique identifier</li>
+<li>gender: “Male”, “Female” or “Other”</li>
+<li>age: age of the patient</li>
+<li>hypertension: 0 if the patient doesn’t have hypertension, 1 if the patient has hypertension</li>
+<li>heart_disease: 0 if the patient doesn’t have any heart diseases, 1 if the patient has a heart disease</li>
+<li>ever_married: “No” or “Yes”</li>
+<li>work_type: “children”, “Govt_jov”, “Never_worked”, “Private” or “Self-employed”</li>
+<li>Residence_type: “Rural” or “Urban”</li>
+<li>avg_glucose_level: average glucose level in blood</li>
+<li>bmi: body mass index</li>
+<li>smoking_status: “formerly smoked”, “never smoked”, “smokes” or “Unknown”*</li>
+<li>stroke: 1 if the patient had a stroke or 0 if not
+*Note: “Unknown” in smoking_status means that the information is unavailable for this patient</li>
+</ol>
+<p>Let’s get started!</p>
+</div>
+<div id="exercise-4" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Exercise<a href="generalizable-plots.html#exercise-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Reading in the dataset can be an intimidating step when you’re just starting out with programming. Since this is a csv file, we can use the appropriately named <code>read.csv()</code> function. In cases when you have other file types such as .txt or .tab files that are tab deliminated, there is also a <code>read.table()</code> function that is more universal (but requires more parameters to let R know how your data is stored).</p>
+<p>Read in the <code>healthcare-dataset-stroke-data.csv</code> into an object called <code>heart</code>. Check your object using head and/or summary functions. Toggle a parameter called <code>stringsAsFactors</code> to <code>TRUE</code> in order to automatically import character values as factors rather than characters</p>
+<p>Hint: make sure the dataset is in the same directory or folder as this .Rmd file for ease of import</p>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="generalizable-plots.html#cb179-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;healthcare-dataset-stroke-data.csv&quot;</span>, <span class="at">stringsAsFactors=</span><span class="cn">TRUE</span>)</span>
+<span id="cb179-2"><a href="generalizable-plots.html#cb179-2" tabindex="-1"></a></span>
+<span id="cb179-3"><a href="generalizable-plots.html#cb179-3" tabindex="-1"></a><span class="fu">head</span>(heart)</span></code></pre></div>
+<pre><code>##      id gender age hypertension heart_disease ever_married     work_type
+## 1  9046   Male  67            0             1          Yes       Private
+## 2 51676 Female  61            0             0          Yes Self-employed
+## 3 31112   Male  80            0             1          Yes       Private
+## 4 60182 Female  49            0             0          Yes       Private
+## 5  1665 Female  79            1             0          Yes Self-employed
+## 6 56669   Male  81            0             0          Yes       Private
+##   Residence_type avg_glucose_level  bmi  smoking_status stroke
+## 1          Urban            228.69 36.6 formerly smoked      1
+## 2          Rural            202.21  N/A    never smoked      1
+## 3          Rural            105.92 32.5    never smoked      1
+## 4          Urban            171.23 34.4          smokes      1
+## 5          Rural            174.12   24    never smoked      1
+## 6          Urban            186.21   29 formerly smoked      1</code></pre>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="generalizable-plots.html#cb181-1" tabindex="-1"></a><span class="fu">str</span>(heart)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    5110 obs. of  12 variables:
+##  $ id               : int  9046 51676 31112 60182 1665 56669 53882 10434 27419 60491 ...
+##  $ gender           : Factor w/ 6 levels &quot;female&quot;,&quot;Female&quot;,..: 4 2 4 2 2 4 4 2 2 2 ...
+##  $ age              : num  67 61 80 49 79 81 74 69 59 78 ...
+##  $ hypertension     : Factor w/ 4 levels &quot;0&quot;,&quot;1&quot;,&quot;10&quot;,&quot;10+D4972&quot;: 1 1 1 1 2 1 2 1 1 1 ...
+##  $ heart_disease    : int  1 0 1 0 0 0 1 0 0 0 ...
+##  $ ever_married     : Factor w/ 2 levels &quot;No&quot;,&quot;Yes&quot;: 2 2 2 2 2 2 2 1 2 2 ...
+##  $ work_type        : Factor w/ 8 levels &quot;children&quot;,&quot;Govt_job&quot;,..: 5 7 5 5 7 5 5 5 5 5 ...
+##  $ Residence_type   : Factor w/ 2 levels &quot;Rural&quot;,&quot;Urban&quot;: 2 1 1 2 1 2 1 2 1 2 ...
+##  $ avg_glucose_level: num  229 202 106 171 174 ...
+##  $ bmi              : Factor w/ 419 levels &quot;10.3&quot;,&quot;11.3&quot;,..: 240 419 199 218 114 164 148 102 419 116 ...
+##  $ smoking_status   : Factor w/ 4 levels &quot;formerly smoked&quot;,..: 1 2 2 3 2 1 2 2 4 4 ...
+##  $ stroke           : int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="generalizable-plots.html#cb183-1" tabindex="-1"></a><span class="co"># Hypertension has values that are typos, need to be removed</span></span>
+<span id="cb183-2"><a href="generalizable-plots.html#cb183-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>hypertension)</span></code></pre></div>
+<pre><code>## 
+##        0        1       10 10+D4972 
+##     4612      493        4        1</code></pre>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="generalizable-plots.html#cb185-1" tabindex="-1"></a><span class="co"># Stroke and heart.disease need to be categorical</span></span>
+<span id="cb185-2"><a href="generalizable-plots.html#cb185-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>stroke)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+## 0.00000 0.00000 0.00000 0.04873 0.00000 1.00000</code></pre>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="generalizable-plots.html#cb187-1" tabindex="-1"></a><span class="co"># Gender has some variability</span></span>
+<span id="cb187-2"><a href="generalizable-plots.html#cb187-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
+<pre><code>## 
+## female Female   male   Male   meal  Other 
+##      7   2987      6   2108      1      1</code></pre>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="generalizable-plots.html#cb189-1" tabindex="-1"></a><span class="co"># Abnormal BMI value AND convert from factor to numeric</span></span>
+<span id="cb189-2"><a href="generalizable-plots.html#cb189-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
+<pre><code>##     N/A    28.7    28.4    26.1    26.7    27.6    27.7    23.4    27.3      27 
+##     201      41      38      37      37      37      37      36      36      35 
+##    25.1    26.4    26.9    25.5    23.5    24.8    28.9    22.2    26.5    28.3 
+##      34      34      34      33      31      31      31      30      30      30 
+##    29.4    30.3    31.4    24.2    26.6    27.5    28.1    29.1      24    24.1 
+##      30      30      30      29      29      29      29      29      28      28 
+##    25.3    27.1    27.9      28    32.3    21.5      23    24.9      25    26.2 
+##      28      28      28      28      28      27      27      27      27      27 
+##    28.5    28.6    29.7      30    30.9    31.5    24.3    24.5    25.4    28.8 
+##      27      27      27      27      27      27      26      26      26      26 
+##      29    29.2    29.5    29.6    29.9    30.1    31.1    20.1    22.7    22.8 
+##      26      26      26      26      26      26      26      25      25      25 
+##      26    28.2    32.8    33.1    23.6    23.9    25.8    25.9    27.2    30.5 
+##      25      25      25      25      24      24      24      24      24      24 
+##    31.8    32.1    35.8    20.4    24.4    26.3    27.8    29.8    30.7    33.5 
+##      24      24      24      23      23      23      23      23      23      23 
+##    21.4    22.1    22.4    23.8    24.6    24.7    27.4    29.3      31    31.9 
+##      22      22      22      22      22      22      22      22      22      22 
+##    19.5    21.3    23.1    25.6    26.8    30.8    31.3    31.6      32 (Other) 
+##      21      21      21      21      21      21      21      21      21    2282</code></pre>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="generalizable-plots.html#cb191-1" tabindex="-1"></a><span class="co"># Age, very low value of 0.08</span></span>
+<span id="cb191-2"><a href="generalizable-plots.html#cb191-2" tabindex="-1"></a><span class="fu">str</span>(heart)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    5110 obs. of  12 variables:
+##  $ id               : int  9046 51676 31112 60182 1665 56669 53882 10434 27419 60491 ...
+##  $ gender           : Factor w/ 6 levels &quot;female&quot;,&quot;Female&quot;,..: 4 2 4 2 2 4 4 2 2 2 ...
+##  $ age              : num  67 61 80 49 79 81 74 69 59 78 ...
+##  $ hypertension     : Factor w/ 4 levels &quot;0&quot;,&quot;1&quot;,&quot;10&quot;,&quot;10+D4972&quot;: 1 1 1 1 2 1 2 1 1 1 ...
+##  $ heart_disease    : int  1 0 1 0 0 0 1 0 0 0 ...
+##  $ ever_married     : Factor w/ 2 levels &quot;No&quot;,&quot;Yes&quot;: 2 2 2 2 2 2 2 1 2 2 ...
+##  $ work_type        : Factor w/ 8 levels &quot;children&quot;,&quot;Govt_job&quot;,..: 5 7 5 5 7 5 5 5 5 5 ...
+##  $ Residence_type   : Factor w/ 2 levels &quot;Rural&quot;,&quot;Urban&quot;: 2 1 1 2 1 2 1 2 1 2 ...
+##  $ avg_glucose_level: num  229 202 106 171 174 ...
+##  $ bmi              : Factor w/ 419 levels &quot;10.3&quot;,&quot;11.3&quot;,..: 240 419 199 218 114 164 148 102 419 116 ...
+##  $ smoking_status   : Factor w/ 4 levels &quot;formerly smoked&quot;,..: 1 2 2 3 2 1 2 2 4 4 ...
+##  $ stroke           : int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>Before we dive into this dataset, we get a very limited indication that the object is read in correctly by checking the Environment panel - you’ll notice the new <code>heart</code> appears under Data and it lets us know that there are 5110 observations (number of patients) and 12 variables (number of clinical features with entries). You can also double click the name of the object here to open up a view of the whole dataset - caution that this can cause your machine to stall if the dataset is exceptionally large and/or your machine is running on minimal memory.</p>
+</div>
+<div id="exercise-5" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Exercise<a href="generalizable-plots.html#exercise-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Explore the dataset! Take a look at the columns and identify some potential issues with this dataset that either warrant further investigation or correction.</p>
+<p>There is no universally right or wrong way to do this. Perhaps the only truly incorrect way of doing this is going through the dataset which is thousands of observations line by line.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="review-with-datasaurus-dozen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="factors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Day2_Completed.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

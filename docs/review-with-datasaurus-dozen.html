@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Review with Datasaurus Dozen | Introduction to R 2024</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Review with Datasaurus Dozen | Introduction to R 2024" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Review with Datasaurus Dozen | Introduction to R 2024" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="day-2-1.html"/>
+<link rel="next" href="generalizable-plots.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/calendar-binding-0.3.4/calendar.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R 2024</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prework"><i class="fa fa-check"></i><b>1.1</b> Pre-Workshop Materials</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#meet-your-faculty"><i class="fa fa-check"></i><b>1.2</b> Meet Your Faculty</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#frances-wong-sheher"><i class="fa fa-check"></i>Frances Wong <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#andrés-melani-hehim"><i class="fa fa-check"></i>Andrés Melani <font size="3"> (he/him) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#amin-noorani-hehim"><i class="fa fa-check"></i>Amin Noorani <font size="3"> (he/him) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zoe-klein-sheher"><i class="fa fa-check"></i>Zoe Klein <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#michelle-brazas-phd-sheher"><i class="fa fa-check"></i>Michelle Brazas, PhD <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nia-hughes-sheher"><i class="fa fa-check"></i>Nia Hughes <font size="3"> (she/her) </font></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="course-schedule.html"><a href="course-schedule.html"><i class="fa fa-check"></i><b>2</b> Course Schedule</a></li>
+<li class="chapter" data-level="3" data-path="course-materials.html"><a href="course-materials.html"><i class="fa fa-check"></i><b>3</b> Course Materials</a>
+<ul>
+<li class="chapter" data-level="" data-path="course-materials.html"><a href="course-materials.html#day-1"><i class="fa fa-check"></i>Day 1</a></li>
+<li class="chapter" data-level="" data-path="course-materials.html"><a href="course-materials.html#day-2"><i class="fa fa-check"></i>Day 2</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="day-1-1.html"><a href="day-1-1.html"><i class="fa fa-check"></i><b>4</b> Day 1</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="day-1-1.html"><a href="day-1-1.html#general-syntax"><i class="fa fa-check"></i><b>4.1</b> General syntax</a></li>
+<li class="chapter" data-level="4.2" data-path="day-1-1.html"><a href="day-1-1.html#getting-started-with-data"><i class="fa fa-check"></i><b>4.2</b> Getting started with data</a></li>
+<li class="chapter" data-level="4.3" data-path="day-1-1.html"><a href="day-1-1.html#importing-data"><i class="fa fa-check"></i><b>4.3</b> Importing data</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="day-1-1.html"><a href="day-1-1.html#exercise-1-10-mins"><i class="fa fa-check"></i><b>4.3.1</b> Exercise 1 (10 mins)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="day-1-1.html"><a href="day-1-1.html#revising-the-r-environment"><i class="fa fa-check"></i><b>4.4</b> Revising the R environment</a></li>
+<li class="chapter" data-level="4.5" data-path="day-1-1.html"><a href="day-1-1.html#installing-packages-from-cran"><i class="fa fa-check"></i><b>4.5</b> Installing packages from CRAN</a></li>
+<li class="chapter" data-level="4.6" data-path="day-1-1.html"><a href="day-1-1.html#data-wrangling"><i class="fa fa-check"></i><b>4.6</b> Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="day-1-1.html"><a href="day-1-1.html#exercise"><i class="fa fa-check"></i><b>4.6.1</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="day-1-1.html"><a href="day-1-1.html#adding-new-columns-of-data"><i class="fa fa-check"></i><b>4.7</b> Adding new columns of data</a></li>
+<li class="chapter" data-level="4.8" data-path="day-1-1.html"><a href="day-1-1.html#tidyverse"><i class="fa fa-check"></i><b>4.8</b> Tidyverse</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="day-1-1.html"><a href="day-1-1.html#exercise-1"><i class="fa fa-check"></i><b>4.8.1</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="day-1-1.html"><a href="day-1-1.html#plotting-with-base-r"><i class="fa fa-check"></i><b>4.9</b> Plotting with Base R</a></li>
+<li class="chapter" data-level="4.10" data-path="day-1-1.html"><a href="day-1-1.html#scatterplot-with-ggplot"><i class="fa fa-check"></i><b>4.10</b> Scatterplot with ggplot</a></li>
+<li class="chapter" data-level="4.11" data-path="day-1-1.html"><a href="day-1-1.html#exercise-2"><i class="fa fa-check"></i><b>4.11</b> Exercise</a></li>
+<li class="chapter" data-level="4.12" data-path="day-1-1.html"><a href="day-1-1.html#multi-panel-plots-with-ggplot"><i class="fa fa-check"></i><b>4.12</b> Multi-panel plots with ggplot</a></li>
+<li class="chapter" data-level="4.13" data-path="day-1-1.html"><a href="day-1-1.html#exporting-plots"><i class="fa fa-check"></i><b>4.13</b> Exporting plots</a></li>
+<li class="chapter" data-level="4.14" data-path="day-1-1.html"><a href="day-1-1.html#day-1-project"><i class="fa fa-check"></i><b>4.14</b> Day 1 Project</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="day-2-1.html"><a href="day-2-1.html"><i class="fa fa-check"></i><b>5</b> Day 2</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="day-2-1.html"><a href="day-2-1.html#day-1-project-1"><i class="fa fa-check"></i><b>5.1</b> Day 1 Project</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="review-with-datasaurus-dozen.html"><a href="review-with-datasaurus-dozen.html"><i class="fa fa-check"></i><b>6</b> Review with Datasaurus Dozen</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="review-with-datasaurus-dozen.html"><a href="review-with-datasaurus-dozen.html#genearlizable-code"><i class="fa fa-check"></i><b>6.1</b> Genearlizable code</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="generalizable-plots.html"><a href="generalizable-plots.html"><i class="fa fa-check"></i><b>7</b> Generalizable plots</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="generalizable-plots.html"><a href="generalizable-plots.html#exercise-3"><i class="fa fa-check"></i><b>7.1</b> Exercise</a></li>
+<li class="chapter" data-level="7.2" data-path="generalizable-plots.html"><a href="generalizable-plots.html#dataset---heart-stroke-preduction"><i class="fa fa-check"></i><b>7.2</b> Dataset - Heart Stroke Preduction</a></li>
+<li class="chapter" data-level="7.3" data-path="generalizable-plots.html"><a href="generalizable-plots.html#exercise-4"><i class="fa fa-check"></i><b>7.3</b> Exercise</a></li>
+<li class="chapter" data-level="7.4" data-path="generalizable-plots.html"><a href="generalizable-plots.html#exercise-5"><i class="fa fa-check"></i><b>7.4</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>8</b> Factors</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="factors.html"><a href="factors.html#incomplete-data"><i class="fa fa-check"></i><b>8.1</b> Incomplete data</a></li>
+<li class="chapter" data-level="8.2" data-path="factors.html"><a href="factors.html#exercise-6"><i class="fa fa-check"></i><b>8.2</b> Exercise</a></li>
+<li class="chapter" data-level="8.3" data-path="factors.html"><a href="factors.html#loops"><i class="fa fa-check"></i><b>8.3</b> Loops</a></li>
+<li class="chapter" data-level="8.4" data-path="factors.html"><a href="factors.html#exercise-7"><i class="fa fa-check"></i><b>8.4</b> Exercise</a></li>
+<li class="chapter" data-level="8.5" data-path="factors.html"><a href="factors.html#conditional-for-loops"><i class="fa fa-check"></i><b>8.5</b> Conditional for loops</a></li>
+<li class="chapter" data-level="8.6" data-path="factors.html"><a href="factors.html#exercise-8"><i class="fa fa-check"></i><b>8.6</b> Exercise</a></li>
+<li class="chapter" data-level="8.7" data-path="factors.html"><a href="factors.html#countinous-variables"><i class="fa fa-check"></i><b>8.7</b> Countinous variables</a></li>
+<li class="chapter" data-level="8.8" data-path="factors.html"><a href="factors.html#linear-models"><i class="fa fa-check"></i><b>8.8</b> Linear models</a></li>
+<li class="chapter" data-level="8.9" data-path="factors.html"><a href="factors.html#exercise-9"><i class="fa fa-check"></i><b>8.9</b> Exercise</a></li>
+<li class="chapter" data-level="8.10" data-path="factors.html"><a href="factors.html#demo-detour-to-function-for-lm-plots"><i class="fa fa-check"></i><b>8.10</b> Demo detour to function for lm plots</a></li>
+<li class="chapter" data-level="8.11" data-path="factors.html"><a href="factors.html#notes-on-data-types"><i class="fa fa-check"></i><b>8.11</b> Notes on data types</a></li>
+<li class="chapter" data-level="8.12" data-path="factors.html"><a href="factors.html#day-2-project"><i class="fa fa-check"></i><b>8.12</b> Day 2 project</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="python-setup.html"><a href="python-setup.html"><i class="fa fa-check"></i><b>9</b> Python Setup?</a></li>
+<li class="chapter" data-level="10" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>10</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>10.1</b> Footnotes</a></li>
+<li class="chapter" data-level="10.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>10.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>11</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>11.1</b> Equations</a></li>
+<li class="chapter" data-level="11.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>11.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="11.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>11.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="12" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>12</b> R Markdown</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R 2024</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="review-with-datasaurus-dozen" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Review with Datasaurus Dozen<a href="review-with-datasaurus-dozen.html#review-with-datasaurus-dozen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The Datasaurus Dozen dataset is a handful of data points that complement the <code>dplyr</code> package. Aside from functions, packages can also import objects.</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="review-with-datasaurus-dozen.html#cb161-1" tabindex="-1"></a><span class="co">#install.packages(&quot;datasauRus&quot;)</span></span>
+<span id="cb161-2"><a href="review-with-datasaurus-dozen.html#cb161-2" tabindex="-1"></a><span class="fu">library</span>(datasauRus)</span>
+<span id="cb161-3"><a href="review-with-datasaurus-dozen.html#cb161-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="review-with-datasaurus-dozen.html#cb162-1" tabindex="-1"></a><span class="fu">summary</span>(datasaurus_dozen)</span></code></pre></div>
+<pre><code>##    dataset                x               y           
+##  Length:1846        Min.   :15.56   Min.   : 0.01512  
+##  Class :character   1st Qu.:41.07   1st Qu.:22.56107  
+##  Mode  :character   Median :52.59   Median :47.59445  
+##                     Mean   :54.27   Mean   :47.83510  
+##                     3rd Qu.:67.28   3rd Qu.:71.81078  
+##                     Max.   :98.29   Max.   :99.69468</code></pre>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="review-with-datasaurus-dozen.html#cb164-1" tabindex="-1"></a>datasaurus_dozen<span class="sc">$</span>dataset <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span>
+<span id="cb164-2"><a href="review-with-datasaurus-dozen.html#cb164-2" tabindex="-1"></a></span>
+<span id="cb164-3"><a href="review-with-datasaurus-dozen.html#cb164-3" tabindex="-1"></a><span class="fu">tail</span>(datasaurus_dozen)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   dataset        x     y
+##   &lt;fct&gt;      &lt;dbl&gt; &lt;dbl&gt;
+## 1 wide_lines  34.7  19.6
+## 2 wide_lines  33.7  26.1
+## 3 wide_lines  75.6  37.1
+## 4 wide_lines  40.6  89.1
+## 5 wide_lines  39.1  96.5
+## 6 wide_lines  34.6  89.6</code></pre>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="review-with-datasaurus-dozen.html#cb166-1" tabindex="-1"></a><span class="fu">table</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span></code></pre></div>
+<pre><code>## 
+##       away   bullseye     circle       dino       dots    h_lines high_lines 
+##        142        142        142        142        142        142        142 
+## slant_down   slant_up       star    v_lines wide_lines    x_shape 
+##        142        142        142        142        142        142</code></pre>
+<p>There are 13 different datasets in this one object. We will use tidyverse functions to take an overview look at the object, grouped by the datasets.</p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="review-with-datasaurus-dozen.html#cb168-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb168-2"><a href="review-with-datasaurus-dozen.html#cb168-2" tabindex="-1"></a>  <span class="fu">group_by</span>(dataset) <span class="sc">%&gt;%</span></span>
+<span id="cb168-3"><a href="review-with-datasaurus-dozen.html#cb168-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
+<span id="cb168-4"><a href="review-with-datasaurus-dozen.html#cb168-4" tabindex="-1"></a>            <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
+<span id="cb168-5"><a href="review-with-datasaurus-dozen.html#cb168-5" tabindex="-1"></a>            <span class="at">std_dev_x =</span> <span class="fu">sd</span>(x),</span>
+<span id="cb168-6"><a href="review-with-datasaurus-dozen.html#cb168-6" tabindex="-1"></a>            <span class="at">std_dev_y =</span> <span class="fu">sd</span>(y))</span></code></pre></div>
+<pre><code>## # A tibble: 13 × 5
+##    dataset    mean_x mean_y std_dev_x std_dev_y
+##    &lt;fct&gt;       &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+##  1 away         54.3   47.8      16.8      26.9
+##  2 bullseye     54.3   47.8      16.8      26.9
+##  3 circle       54.3   47.8      16.8      26.9
+##  4 dino         54.3   47.8      16.8      26.9
+##  5 dots         54.3   47.8      16.8      26.9
+##  6 h_lines      54.3   47.8      16.8      26.9
+##  7 high_lines   54.3   47.8      16.8      26.9
+##  8 slant_down   54.3   47.8      16.8      26.9
+##  9 slant_up     54.3   47.8      16.8      26.9
+## 10 star         54.3   47.8      16.8      26.9
+## 11 v_lines      54.3   47.8      16.8      26.9
+## 12 wide_lines   54.3   47.8      16.8      26.9
+## 13 x_shape      54.3   47.8      16.8      26.9</code></pre>
+<p>All of the datasets have roughly the same mean and standard deviation along both the x and y axis.</p>
+<p>Let’s take a look the data graphically. We will use <code>filter</code> to extract the rows belonging to one dataset and then pipe that directly into a ggplot. Both dplyr and ggplot are developed within “the Tidyverse” and can use pipes, but you may not be able to pipe in base R functions or functions from different packages.</p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="review-with-datasaurus-dozen.html#cb170-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb170-2"><a href="review-with-datasaurus-dozen.html#cb170-2" tabindex="-1"></a>  <span class="fu">filter</span>(dataset <span class="sc">==</span> <span class="st">&quot;star&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb170-3"><a href="review-with-datasaurus-dozen.html#cb170-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span> <span class="co"># PLUS SIGN, NOT PIPE FOR THIS ONE</span></span>
+<span id="cb170-4"><a href="review-with-datasaurus-dozen.html#cb170-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<p>Tidyverse’s data wranging packages use the pipe <code>%&gt;%</code> to move the previous output to the next line, where as ggplot uses the plus sign <code>+</code></p>
+<p>Try editing the code above to display different datasets. Notice how different groups of data points can all give similar statistical summaries - so it’s always a good choice to visualize your data rather than relying on just numbers.</p>
+<p>If we wanted to take a look at all of the datasets at once, we can also use the <code>facet_wrap()</code> function.</p>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="review-with-datasaurus-dozen.html#cb171-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb171-2"><a href="review-with-datasaurus-dozen.html#cb171-2" tabindex="-1"></a>  <span class="co">#filter(dataset == &quot;star&quot;) %&gt;%  REMOVE THIS ROW</span></span>
+<span id="cb171-3"><a href="review-with-datasaurus-dozen.html#cb171-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
+<span id="cb171-4"><a href="review-with-datasaurus-dozen.html#cb171-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb171-5"><a href="review-with-datasaurus-dozen.html#cb171-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>dataset)<span class="sc">+</span> <span class="fu">theme_void</span>() <span class="co"># ADD THIS LINE</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="review-with-datasaurus-dozen.html#cb172-1" tabindex="-1"></a><span class="fu">head</span>(datasaurus_dozen)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   dataset     x     y
+##   &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt;
+## 1 dino     55.4  97.2
+## 2 dino     51.5  96.0
+## 3 dino     46.2  94.5
+## 4 dino     42.8  91.4
+## 5 dino     40.8  88.3
+## 6 dino     38.7  84.9</code></pre>
+<div id="genearlizable-code" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Genearlizable code<a href="review-with-datasaurus-dozen.html#genearlizable-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A major strength of programming is the ability to automate repetitive tasks. As a general rule of thumb, if you need to do a task more than three times (ex. analyzing multiple PCR plates or integrating clinical data from multiple days), it is worth it to invest time to write generalizable code or a custom function.</p>
+<p>Now that we’re getting comfortable writing code, we will spend some time revisiting code that we wrote to make them generalizable and even better! Generalizable means that the code is flexible and can be applied to multiple similar objects. For example, if we’re running a clinical study and we have patient demographic data from multiple sites, we want to check that the mean patient demographic is comparable between sites by creating similar plots of each hospital site to compare. If we write code for one location and then copy and paste it into another code chunk to apply to the next location, the code may require some modification before it works.</p>
+<p>Generalizable code begins at data collection. Depending on your workflow, you may or may not be able to influence this stage of the analysis. If possible, it is best practice to keep the column names and entries for categorical variables consistent. For example, when recording the age of patients, “6”, “6”, “six”, and “Six” are all considered different levels of the factor so you will need to either make sure data collection is consistent or check and correct these inconsistencies in your code. Get into a habit of checking your work. Whether it is code you’ve written yourself, code you you’ve been sent by a collaborator, or published data from a biobank - never assume the data is as you predicted.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="day-2-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="generalizable-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Day2_Completed.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

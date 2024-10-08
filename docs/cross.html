@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Cross-references | A Minimal Book Example</title>
+  <title>4 Cross-references | Introduction to R 2024</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Cross-references | A Minimal Book Example" />
+  <meta property="og:title" content="4 Cross-references | Introduction to R 2024" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,25 +19,23 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Cross-references | A Minimal Book Example" />
+  <meta name="twitter:title" content="4 Cross-references | Introduction to R 2024" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   
 
-<meta name="author" content="John Doe" />
 
 
-<meta name="date" content="2024-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hello-bookdown.html"/>
-<link rel="next" href="parts.html"/>
+<link rel="prev" href="day-1.html"/>
+<link rel="next" href="python-setup.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -58,6 +56,8 @@ set in the _output.yml file.</p>" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/calendar-binding-0.3.4/calendar.js"></script>
 
 
 <style type="text/css">
@@ -72,7 +72,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -166,46 +166,70 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Introduction to R 2024</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prework"><i class="fa fa-check"></i><b>1.1</b> Pre-Workshop Materials</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nice-label"><i class="fa fa-check"></i>Meet Your Faculty</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#frances-wong-sheher"><i class="fa fa-check"></i>Frances Wong <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#andrés-melani-hehim"><i class="fa fa-check"></i>Andrés Melani <font size="3"> (he/him) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#amin-noorani-hehim"><i class="fa fa-check"></i>Amin Noorani <font size="3"> (he/him) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zoe-klein-sheher"><i class="fa fa-check"></i>Zoe Klein <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#michelle-brazas-phd-sheher"><i class="fa fa-check"></i>Michelle Brazas, PhD <font size="3"> (she/her) </font></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nia-hughes-sheher"><i class="fa fa-check"></i>Nia Hughes <font size="3"> (she/her) </font></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
-<ul>
-<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<li class="chapter" data-level="2" data-path="course-schedule.html"><a href="course-schedule.html"><i class="fa fa-check"></i><b>2</b> Course Schedule</a></li>
+<li class="chapter" data-level="3" data-path="day-1.html"><a href="day-1.html"><i class="fa fa-check"></i><b>3</b> Day 1</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
-<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
-<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<li class="chapter" data-level="3.1" data-path="day-1.html"><a href="day-1.html#general-syntax"><i class="fa fa-check"></i><b>3.1</b> General syntax</a></li>
+<li class="chapter" data-level="3.2" data-path="day-1.html"><a href="day-1.html#getting-started-with-data"><i class="fa fa-check"></i><b>3.2</b> Getting started with data</a></li>
+<li class="chapter" data-level="3.3" data-path="day-1.html"><a href="day-1.html#importing-data"><i class="fa fa-check"></i><b>3.3</b> Importing data</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
-<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+<li class="chapter" data-level="3.3.1" data-path="day-1.html"><a href="day-1.html#exercise-1-10-mins"><i class="fa fa-check"></i><b>3.3.1</b> Exercise 1 (10 mins)</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<li class="chapter" data-level="3.4" data-path="day-1.html"><a href="day-1.html#revising-the-r-environment"><i class="fa fa-check"></i><b>3.4</b> Revising the R environment</a></li>
+<li class="chapter" data-level="3.5" data-path="day-1.html"><a href="day-1.html#installing-packages-from-cran"><i class="fa fa-check"></i><b>3.5</b> Installing packages from CRAN</a></li>
+<li class="chapter" data-level="3.6" data-path="day-1.html"><a href="day-1.html#data-wrangling"><i class="fa fa-check"></i><b>3.6</b> Data Wrangling</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
-<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
-<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+<li class="chapter" data-level="3.6.1" data-path="day-1.html"><a href="day-1.html#exercise"><i class="fa fa-check"></i><b>3.6.1</b> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<li class="chapter" data-level="3.7" data-path="day-1.html"><a href="day-1.html#adding-new-columns-of-data"><i class="fa fa-check"></i><b>3.7</b> Adding new columns of data</a></li>
+<li class="chapter" data-level="3.8" data-path="day-1.html"><a href="day-1.html#tidyverse"><i class="fa fa-check"></i><b>3.8</b> Tidyverse</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
-<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
-<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+<li class="chapter" data-level="3.8.1" data-path="day-1.html"><a href="day-1.html#exercise-1"><i class="fa fa-check"></i><b>3.8.1</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="day-1.html"><a href="day-1.html#plotting-with-base-r"><i class="fa fa-check"></i><b>3.9</b> Plotting with Base R</a></li>
+<li class="chapter" data-level="3.10" data-path="day-1.html"><a href="day-1.html#scatterplot-with-ggplot"><i class="fa fa-check"></i><b>3.10</b> Scatterplot with ggplot</a></li>
+<li class="chapter" data-level="3.11" data-path="day-1.html"><a href="day-1.html#exercise-2"><i class="fa fa-check"></i><b>3.11</b> Exercise</a></li>
+<li class="chapter" data-level="3.12" data-path="day-1.html"><a href="day-1.html#multi-panel-plots-with-ggplot"><i class="fa fa-check"></i><b>3.12</b> Multi-panel plots with ggplot</a></li>
+<li class="chapter" data-level="3.13" data-path="day-1.html"><a href="day-1.html#exporting-plots"><i class="fa fa-check"></i><b>3.13</b> Exporting plots</a></li>
+<li class="chapter" data-level="3.14" data-path="day-1.html"><a href="day-1.html#day-1-project"><i class="fa fa-check"></i><b>3.14</b> Day 1 Project</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>4</b> Cross-references</a></li>
+<li class="chapter" data-level="5" data-path="python-setup.html"><a href="python-setup.html"><i class="fa fa-check"></i><b>5</b> Python Setup?</a></li>
+<li class="chapter" data-level="6" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>6</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>6.1</b> Footnotes</a></li>
+<li class="chapter" data-level="6.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>6.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>7</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>7.1</b> Equations</a></li>
+<li class="chapter" data-level="7.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>7.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="7.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>7.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>8</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>8.1</b> Publishing</a></li>
+<li class="chapter" data-level="8.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>8.2</b> 404 pages</a></li>
+<li class="chapter" data-level="8.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>8.3</b> Metadata for sharing</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="9" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>9</b> R Markdown</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -218,7 +242,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R 2024</a>
           </h1>
         </div>
 
@@ -226,102 +250,56 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cross" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Cross-references<a href="cross.html#cross" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Cross-references make it easier for your readers to find and link to elements in your book.</p>
-<div id="chapters-and-sub-chapters" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Chapters and sub-chapters<a href="cross.html#chapters-and-sub-chapters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are two steps to cross-reference any heading:</p>
-<ol style="list-style-type: decimal">
-<li>Label the heading: <code># Hello world {#nice-label}</code>.
-<ul>
-<li>Leave the label off if you like the automated heading generated based on your heading title: for example, <code># Hello world</code> = <code># Hello world {#hello-world}</code>.</li>
-<li>To label an un-numbered heading, use: <code># Hello world {-#nice-label}</code> or <code>{# Hello world .unnumbered}</code>.</li>
-</ul></li>
-<li>Next, reference the labeled heading anywhere in the text using <code>\@ref(nice-label)</code>; for example, please see Chapter <a href="cross.html#cross">3</a>.
-<ul>
-<li>If you prefer text as the link instead of a numbered reference use: <a href="cross.html#cross">any text you want can go here</a>.</li>
-</ul></li>
-</ol>
+<div id="cross" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Cross-references<a href="cross.html#cross" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="toastui-calendar calendar html-widget" style="width:100%;height:1000px;">
+<div id="htmlwidget-35c7eeeaf0973d2ad329_menu">
+<span id="htmlwidget-35c7eeeaf0973d2ad329_menu_navi">
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-35c7eeeaf0973d2ad329_today">Today</button>
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-35c7eeeaf0973d2ad329_prev">
+<i class="fa fa-chevron-left"></i>
+</button>
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-35c7eeeaf0973d2ad329_next">
+<i class="fa fa-chevron-right"></i>
+</button>
+</span>
+<span id="htmlwidget-35c7eeeaf0973d2ad329_renderRange" class="render-range"></span>
 </div>
-<div id="captioned-figures-and-tables" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Captioned figures and tables<a href="cross.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
-<p>See Figure <a href="cross.html#fig:nice-fig">3.1</a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="cross.html#cb3-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb3-2"><a href="cross.html#cb3-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
-<img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
-<p class="caption">
-Figure 3.1: Here is a nice figure!
-</p>
+<br/>
+<div id="htmlwidget-35c7eeeaf0973d2ad329" style="width:100%;height:1000px;" class="calendar html-widget" width="100%" height="1000"></div>
 </div>
-<p>Don’t miss Table <a href="cross.html#tab:nice-tab">3.1</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="cross.html#cb4-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb4-2"><a href="cross.html#cb4-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb4-3"><a href="cross.html#cb4-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb4-4"><a href="cross.html#cb4-4" tabindex="-1"></a>)</span></code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 3.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">temperature</th>
-<th align="right">pressure</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">0</td>
-<td align="right">0.0002</td>
-</tr>
-<tr class="even">
-<td align="right">20</td>
-<td align="right">0.0012</td>
-</tr>
-<tr class="odd">
-<td align="right">40</td>
-<td align="right">0.0060</td>
-</tr>
-<tr class="even">
-<td align="right">60</td>
-<td align="right">0.0300</td>
-</tr>
-<tr class="odd">
-<td align="right">80</td>
-<td align="right">0.0900</td>
-</tr>
-<tr class="even">
-<td align="right">100</td>
-<td align="right">0.2700</td>
-</tr>
-<tr class="odd">
-<td align="right">120</td>
-<td align="right">0.7500</td>
-</tr>
-<tr class="even">
-<td align="right">140</td>
-<td align="right">1.8500</td>
-</tr>
-<tr class="odd">
-<td align="right">160</td>
-<td align="right">4.2000</td>
-</tr>
-<tr class="even">
-<td align="right">180</td>
-<td align="right">8.8000</td>
-</tr>
-</tbody>
-</table>
+<script type="application/json" data-for="htmlwidget-35c7eeeaf0973d2ad329">{"x":{"options":{"defaultView":"week","useDetailPopup":true,"useFormPopup":false,"isReadOnly":true,"usageStatistics":false,"week":{"startDayOfWeek":1,"workweek":true,"eventView":true,"taskView":false},"calendars":[{"id":"1","name":"PERSO","color":"#000","backgroundColor":"#c6d19d","borderColor":"forestgreen"},{"id":"2","name":"WORK","color":"#000","backgroundColor":"#F5A9A9","borderColor":"firebrick"},{"id":"3","name":"COURSES","color":"#000","backgroundColor":"#c6e2f6","borderColor":"#3b7cc6"}]},"schedules":[{"category":"time","dueDateClass":"","id":"schedulee1bc16955a89187778d1a8b6","calendarId":"3","title":"Course 1","body":"Learn something interesting","start":"2024-09-30 8:00:00","end":"2024-09-30 12:00:00"},{"category":"time","dueDateClass":"","id":"schedulea05aab510d1c324913690e8c","calendarId":"3","title":"Course 2","body":"Learn something interesting","start":"2024-09-30 14:00:00","end":"2024-09-30 18:00:00"},{"category":"time","dueDateClass":"","id":"schedule28042fc9358bb8c40f01cdad","calendarId":"3","title":"Course 3","body":"Learn something interesting","start":"2024-10-02 08:00:00","end":"2024-10-02 11:00:00"},{"category":"time","dueDateClass":"","id":"schedule82e7b23ad22b9e1e9defc739","calendarId":"3","title":"Course 4","body":"Learn something interesting","start":"2024-10-03 16:00:00","end":"2024-10-03 19:00:00"},{"category":"time","dueDateClass":"","id":"schedulebca56af67156a3433fd063f8","calendarId":"2","title":"Lunch","body":"Work lunch","start":"2024-10-01 12:00:00","end":"2024-10-01 14:00:00"},{"category":"time","dueDateClass":"","id":"schedule59a8afbb5670010c3bbee664","calendarId":"2","title":"Meeting","body":"Work meeting","start":"2024-10-01 16:00:00","end":"2024-10-01 18:30:00"},{"category":"time","dueDateClass":"","id":"schedule18c2eb46c364e6afed82ff07","calendarId":"1","title":"Sport","body":"Make some exercise","start":"2024-10-03 07:00:00","end":"2024-10-03 09:00:00"},{"category":"time","dueDateClass":"","id":"schedule8e29070df7d61786bad0a1ce","calendarId":"1","title":"Movie","body":"Go watch a cool movie","start":"2024-10-02 18:00:00","end":"2024-10-02 21:00:00"},{"category":"allday","dueDateClass":"","id":"schedulefab74a550d71d30a6e63ca31","calendarId":"1","title":"Day off","body":"Take some rest","start":"2024-10-04","end":"2024-10-04"}],"navigation":false,"defaultDate":"2024-10-02","events":[],"navigationOptions":{"today_label":"Today","prev_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z\"><\/path>\n  <title>caret-left-light<\/title>\n<\/svg>","next_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z\"><\/path>\n  <title>caret-right-light<\/title>\n<\/svg>","class":" bttn-bordered bttn-sm bttn-primary","fmt_date":"YYYY-MM-DD","sep_date":" ~ "}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="cross.html#cb139-1" tabindex="-1"></a><span class="fu">library</span>(toastui)</span>
+<span id="cb139-2"><a href="cross.html#cb139-2" tabindex="-1"></a><span class="fu">cal_demo_data</span>(<span class="st">&quot;week&quot;</span>)</span></code></pre></div>
+<pre><code>##   calendarId    title                        body               start
+## 1          3 Course 1 Learn something interesting  2024-09-30 8:00:00
+## 2          3 Course 2 Learn something interesting 2024-09-30 14:00:00
+## 3          3 Course 3 Learn something interesting 2024-10-02 08:00:00
+## 4          3 Course 4 Learn something interesting 2024-10-03 16:00:00
+## 5          2    Lunch                  Work lunch 2024-10-01 12:00:00
+## 6          2  Meeting                Work meeting 2024-10-01 16:00:00
+## 7          1    Sport          Make some exercise 2024-10-03 07:00:00
+## 8          1    Movie       Go watch a cool movie 2024-10-02 18:00:00
+## 9          1  Day off              Take some rest          2024-10-04
+##                   end category
+## 1 2024-09-30 12:00:00     time
+## 2 2024-09-30 18:00:00     time
+## 3 2024-10-02 11:00:00     time
+## 4 2024-10-03 19:00:00     time
+## 5 2024-10-01 14:00:00     time
+## 6 2024-10-01 18:30:00     time
+## 7 2024-10-03 09:00:00     time
+## 8 2024-10-02 21:00:00     time
+## 9          2024-10-04   allday</code></pre>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="hello-bookdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="parts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="day-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

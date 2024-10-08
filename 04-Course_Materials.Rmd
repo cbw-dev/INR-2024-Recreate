@@ -1,0 +1,29 @@
+# Course Materials {#course-materials}
+
+After having done your [pre-work](#prework), download the course materials!
+
+### Day 1 {-}
+<!-- 4 #s just so that it doesn't appear in table of contents, can remove it if you want "Day 1" and "Day 2" to appear under "Course Materials" in TOC -->
+
+I have no idea why the to-do lists wrritten in markdown look so weird?
+
+- [ ] [Module 1 Lecture Recording](https://youtu.be/Re3Lricv7o4)
+
+HTML Code
+
+<div style="list-style-type: none;">
+  <label><input type="checkbox"> [Module 1 Lecture Recording](https://youtu.be/Re3Lricv7o4)</label><br>
+  <label><input type="checkbox"> [Day 1 Rmd (empty)](https://drive.google.com/file/d/19fsvDHPj74MIdHhL7slZ3jfqkTfper2O/view?usp=sharing)</label><br>
+  <label> [Day 1 Rmd (completed)](https://drive.google.com/file/d/1hbldrszTBDjuVlDKFeBNG3g50olVafNk/view?usp=sharing)</label><br>
+  <label><input type="checkbox"> [Abalone.csv](https://drive.google.com/file/d/1GrbvNDjUdf8mzY0mr0YD2fb-_2GnnnHb/view?usp=sharing)</label><br>
+  <label><input type="checkbox"> [Water_potability.csv](https://drive.google.com/file/d/1ZOTY43EyPoNBltGedDfOdsKzq9HSA77e/view?usp=sharing)</label><br>
+</div>
+
+### Day 2 {-}
+
+<div style="list-style-type: none;">
+  <label><input type="checkbox"> [Day 2 Rmd (empty) ](https://drive.google.com/file/d/1047GdyOYBlXu3fPHaALMYfy9Tb9o7Tu9/view?usp=sharing)</label><br>
+  <label> [Day 2 Rmd (completed)](https://drive.google.com/file/d/194fm_P1Vz7u_enACxQYzCfZyiAlYI4Ru/view?usp=sharing)</label><br>
+  <label><input type="checkbox"> [healthcare-dataset-stroke.csv](https://drive.google.com/file/d/1d78J0MhMYQj2BpqFwXldZVbonzkTrKCI/view?usp=sharing)</label><br>
+  <label><input type="checkbox"> [diamonds.csv](https://drive.google.com/file/d/1CIxMafo6EVWo_Nk0efmfN4m44_gs217A/view?usp=sharing)</label><br>
+</div>
