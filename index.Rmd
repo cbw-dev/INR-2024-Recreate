@@ -16,8 +16,6 @@ github-repo: rstudio/bookdown-demo
 
 # Introduction
 
-![Alt text](IDE_2024_Module1.pdf){width=100% height=900}
-
 Welcome to CBW's Introduction to R 2024 Workshop!
 
 Before continuing, ensure to register, complete your pre-work (below) and ensure your zoom is functional.

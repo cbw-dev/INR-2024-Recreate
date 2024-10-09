@@ -53,3 +53,4 @@ a-python-chunk
 modify-a-python-variable
 python-graphics
 r-markdown
+pdf-slidedeck

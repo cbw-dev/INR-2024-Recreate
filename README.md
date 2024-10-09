@@ -3,7 +3,7 @@
 This is the (Tuesday, October 8, 2024) implementation of INR 2024. Mostly everything is present.
 
 Notes:
-- All chapters that end in a question mark have (potentially) useful code (implementing a schedule, compiling python, image-text wrapping)
+- All chapters that end in a question mark have (potentially) useful code (implementing a schedule, compiling python, image-text wrapping + PDF/Slidedeck implementation)
 - Datasets were moved to a "datasets" folder - all read.csv calls go to the datasets folder for the correct csv file
 - The Rmd headers from the completed Rmd files were just slightly edited to fit into their own chapter, the actual subheaders might be terrible
   - Also edited so that the read.csv called from the dataset folder (as mentioned above)
