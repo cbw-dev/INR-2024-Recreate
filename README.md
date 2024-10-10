@@ -14,5 +14,3 @@ Some fixes that need to be made:
   - Meet the faculty headers-pronouns bug
 - Figure out how to implement a schedule using the toastui library (create our own R data frame?)
 - A good way to show the Course Materials
-
-Quick Note: INR does not have any slides currently on the website, however check Julia's_LabNotes for a way to do so (essentially embedded a pdf)
