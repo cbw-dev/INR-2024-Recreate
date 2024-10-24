@@ -260,49 +260,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">8</span> Python Setup ?<a href="python-setup.html#python-setup" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="a-normal-r-code-chunk" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> A normal R code chunk<a href="python-setup.html#a-normal-r-code-chunk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="python-setup.html#cb312-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb312-2"><a href="python-setup.html#cb312-2" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">42</span></span>
-<span id="cb312-3"><a href="python-setup.html#cb312-3" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="python-setup.html#cb316-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb316-2"><a href="python-setup.html#cb316-2" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">42</span></span>
+<span id="cb316-3"><a href="python-setup.html#cb316-3" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>## [1] 42</code></pre>
 </div>
 <div id="modify-an-r-variable" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Modify an R variable<a href="python-setup.html#modify-an-r-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the following chunk, the value of <code>x</code> on the right hand side
 is 42, which was defined in the previous chunk.</p>
-<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="python-setup.html#cb314-1" tabindex="-1"></a>x <span class="ot">=</span> x <span class="sc">+</span> <span class="dv">12</span></span>
-<span id="cb314-2"><a href="python-setup.html#cb314-2" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="python-setup.html#cb318-1" tabindex="-1"></a>x <span class="ot">=</span> x <span class="sc">+</span> <span class="dv">12</span></span>
+<span id="cb318-2"><a href="python-setup.html#cb318-2" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>## [1] 54</code></pre>
 </div>
 <div id="a-python-chunk" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> A Python chunk<a href="python-setup.html#a-python-chunk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This works fine and as expected.</p>
-<div class="sourceCode" id="cb316"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb316-1"><a href="python-setup.html#cb316-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span> <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb316-2"><a href="python-setup.html#cb316-2" tabindex="-1"></a><span class="bu">print</span>(x) </span></code></pre></div>
+<div class="sourceCode" id="cb320"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb320-1"><a href="python-setup.html#cb320-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">42</span> <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb320-2"><a href="python-setup.html#cb320-2" tabindex="-1"></a><span class="bu">print</span>(x) </span></code></pre></div>
 <pre><code>## 84</code></pre>
 <p>The value of <code>x</code> in the Python session is 84.
 It is not the same <code>x</code> as the one in R.</p>
 </div>
 <div id="modify-a-python-variable" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Modify a Python variable<a href="python-setup.html#modify-a-python-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb318"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb318-1"><a href="python-setup.html#cb318-1" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">18</span> </span>
-<span id="cb318-2"><a href="python-setup.html#cb318-2" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb322"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb322-1"><a href="python-setup.html#cb322-1" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">18</span> </span>
+<span id="cb322-2"><a href="python-setup.html#cb322-2" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>## 102</code></pre>
 <p>Retrieve the value of <code>x</code> from the Python session again:</p>
-<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="python-setup.html#cb320-1" tabindex="-1"></a>py<span class="sc">$</span>x</span></code></pre></div>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="python-setup.html#cb324-1" tabindex="-1"></a>py<span class="sc">$</span>x</span></code></pre></div>
 <pre><code>## [1] 102</code></pre>
 <p>Assign to a variable in the Python session from R:</p>
-<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="python-setup.html#cb322-1" tabindex="-1"></a>py<span class="sc">$</span>y <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="python-setup.html#cb326-1" tabindex="-1"></a>py<span class="sc">$</span>y <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span></code></pre></div>
 <p>See the value of <code>y</code> in the Python session:</p>
-<div class="sourceCode" id="cb323"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb323-1"><a href="python-setup.html#cb323-1" tabindex="-1"></a><span class="bu">print</span>(y)</span></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb327-1"><a href="python-setup.html#cb327-1" tabindex="-1"></a><span class="bu">print</span>(y)</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4, 5]</code></pre>
 </div>
 <div id="python-graphics" class="section level2 hasAnchor" number="8.5">
 <h2><span class="header-section-number">8.5</span> Python graphics<a href="python-setup.html#python-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You can draw plots using the <strong>matplotlib</strong> package in Python.</p>
-<div class="sourceCode" id="cb325"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb325-1"><a href="python-setup.html#cb325-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb325-2"><a href="python-setup.html#cb325-2" tabindex="-1"></a>plt.plot([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>])</span>
-<span id="cb325-3"><a href="python-setup.html#cb325-3" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-126-1.png" width="672" /></p>
+<div class="sourceCode" id="cb329"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb329-1"><a href="python-setup.html#cb329-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb329-2"><a href="python-setup.html#cb329-2" tabindex="-1"></a>plt.plot([<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>])</span>
+<span id="cb329-3"><a href="python-setup.html#cb329-3" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-128-1.png" width="672" /></p>
 
 </div>
 </div>

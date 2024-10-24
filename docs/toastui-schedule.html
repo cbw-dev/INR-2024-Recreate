@@ -274,29 +274,127 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <br/>
 <div id="htmlwidget-35c7eeeaf0973d2ad329" style="width:100%;height:1000px;" class="calendar html-widget" width="100%" height="1000"></div>
 </div>
-<script type="application/json" data-for="htmlwidget-35c7eeeaf0973d2ad329">{"x":{"options":{"defaultView":"week","useDetailPopup":true,"useFormPopup":false,"isReadOnly":true,"usageStatistics":false,"week":{"startDayOfWeek":1,"workweek":true,"eventView":true,"taskView":false},"calendars":[{"id":"1","name":"PERSO","color":"#000","backgroundColor":"#c6d19d","borderColor":"forestgreen"},{"id":"2","name":"WORK","color":"#000","backgroundColor":"#F5A9A9","borderColor":"firebrick"},{"id":"3","name":"COURSES","color":"#000","backgroundColor":"#c6e2f6","borderColor":"#3b7cc6"}]},"schedules":[{"category":"time","dueDateClass":"","id":"schedulee1bc16955a89187778d1a8b6","calendarId":"3","title":"Course 1","body":"Learn something interesting","start":"2024-10-07 8:00:00","end":"2024-10-07 12:00:00"},{"category":"time","dueDateClass":"","id":"schedulea05aab510d1c324913690e8c","calendarId":"3","title":"Course 2","body":"Learn something interesting","start":"2024-10-07 14:00:00","end":"2024-10-07 18:00:00"},{"category":"time","dueDateClass":"","id":"schedule28042fc9358bb8c40f01cdad","calendarId":"3","title":"Course 3","body":"Learn something interesting","start":"2024-10-09 08:00:00","end":"2024-10-09 11:00:00"},{"category":"time","dueDateClass":"","id":"schedule82e7b23ad22b9e1e9defc739","calendarId":"3","title":"Course 4","body":"Learn something interesting","start":"2024-10-10 16:00:00","end":"2024-10-10 19:00:00"},{"category":"time","dueDateClass":"","id":"schedulebca56af67156a3433fd063f8","calendarId":"2","title":"Lunch","body":"Work lunch","start":"2024-10-08 12:00:00","end":"2024-10-08 14:00:00"},{"category":"time","dueDateClass":"","id":"schedule59a8afbb5670010c3bbee664","calendarId":"2","title":"Meeting","body":"Work meeting","start":"2024-10-08 16:00:00","end":"2024-10-08 18:30:00"},{"category":"time","dueDateClass":"","id":"schedule18c2eb46c364e6afed82ff07","calendarId":"1","title":"Sport","body":"Make some exercise","start":"2024-10-10 07:00:00","end":"2024-10-10 09:00:00"},{"category":"time","dueDateClass":"","id":"schedule8e29070df7d61786bad0a1ce","calendarId":"1","title":"Movie","body":"Go watch a cool movie","start":"2024-10-09 18:00:00","end":"2024-10-09 21:00:00"},{"category":"allday","dueDateClass":"","id":"schedulefab74a550d71d30a6e63ca31","calendarId":"1","title":"Day off","body":"Take some rest","start":"2024-10-11","end":"2024-10-11"}],"navigation":false,"events":[],"navigationOptions":{"today_label":"Today","prev_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z\"><\/path>\n  <title>caret-left-light<\/title>\n<\/svg>","next_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z\"><\/path>\n  <title>caret-right-light<\/title>\n<\/svg>","class":" bttn-bordered bttn-sm bttn-primary","fmt_date":"YYYY-MM-DD","sep_date":" ~ "}},"evals":[],"jsHooks":[]}</script>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="toastui-schedule.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(toastui)</span>
-<span id="cb1-2"><a href="toastui-schedule.html#cb1-2" tabindex="-1"></a><span class="fu">cal_demo_data</span>(<span class="st">&quot;week&quot;</span>)</span></code></pre></div>
+<script type="application/json" data-for="htmlwidget-35c7eeeaf0973d2ad329">{"x":{"options":{"defaultView":"week","useDetailPopup":true,"useFormPopup":false,"isReadOnly":true,"usageStatistics":false,"week":{"startDayOfWeek":1,"workweek":true,"eventView":true,"taskView":false},"calendars":[{"id":"1","name":"PERSO","color":"#000","backgroundColor":"#c6d19d","borderColor":"forestgreen"},{"id":"2","name":"WORK","color":"#000","backgroundColor":"#F5A9A9","borderColor":"firebrick"},{"id":"3","name":"COURSES","color":"#000","backgroundColor":"#c6e2f6","borderColor":"#3b7cc6"}]},"schedules":[{"category":"time","dueDateClass":"","id":"schedulee1bc16955a89187778d1a8b6","calendarId":"3","title":"Course 1","body":"Learn something interesting","start":"2024-10-21 8:00:00","end":"2024-10-21 12:00:00"},{"category":"time","dueDateClass":"","id":"schedulea05aab510d1c324913690e8c","calendarId":"3","title":"Course 2","body":"Learn something interesting","start":"2024-10-21 14:00:00","end":"2024-10-21 18:00:00"},{"category":"time","dueDateClass":"","id":"schedule28042fc9358bb8c40f01cdad","calendarId":"3","title":"Course 3","body":"Learn something interesting","start":"2024-10-23 08:00:00","end":"2024-10-23 11:00:00"},{"category":"time","dueDateClass":"","id":"schedule82e7b23ad22b9e1e9defc739","calendarId":"3","title":"Course 4","body":"Learn something interesting","start":"2024-10-24 16:00:00","end":"2024-10-24 19:00:00"},{"category":"time","dueDateClass":"","id":"schedulebca56af67156a3433fd063f8","calendarId":"2","title":"Lunch","body":"Work lunch","start":"2024-10-22 12:00:00","end":"2024-10-22 14:00:00"},{"category":"time","dueDateClass":"","id":"schedule59a8afbb5670010c3bbee664","calendarId":"2","title":"Meeting","body":"Work meeting","start":"2024-10-22 16:00:00","end":"2024-10-22 18:30:00"},{"category":"time","dueDateClass":"","id":"schedule18c2eb46c364e6afed82ff07","calendarId":"1","title":"Sport","body":"Make some exercise","start":"2024-10-24 07:00:00","end":"2024-10-24 09:00:00"},{"category":"time","dueDateClass":"","id":"schedule8e29070df7d61786bad0a1ce","calendarId":"1","title":"Movie","body":"Go watch a cool movie","start":"2024-10-23 18:00:00","end":"2024-10-23 21:00:00"},{"category":"allday","dueDateClass":"","id":"schedulefab74a550d71d30a6e63ca31","calendarId":"1","title":"Day off","body":"Take some rest","start":"2024-10-25","end":"2024-10-25"}],"navigation":false,"events":[],"navigationOptions":{"today_label":"Today","prev_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z\"><\/path>\n  <title>caret-left-light<\/title>\n<\/svg>","next_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z\"><\/path>\n  <title>caret-right-light<\/title>\n<\/svg>","class":" bttn-bordered bttn-sm bttn-primary","fmt_date":"YYYY-MM-DD","sep_date":" ~ "}},"evals":[],"jsHooks":[]}</script>
+<pre><code>##    calendarId        title                    body recurrenceRule
+## 1           1        Sport  Go to sport every week     Every week
+## 2           1        Sport  Go to sport every week     Every week
+## 3           1        Sport  Go to sport every week     Every week
+## 4           1     Week-end   Week-end with friends           &lt;NA&gt;
+## 5           2    Project 1       Coding cool stuff           &lt;NA&gt;
+## 6           2    Project 2       Coding cool stuff           &lt;NA&gt;
+## 7           2    Project 3       Coding cool stuff           &lt;NA&gt;
+## 8           3   Training 1       Learn programming           &lt;NA&gt;
+## 9           3   Training 2       Learn programming           &lt;NA&gt;
+## 10          2      Meeting Meeting with John Smith           &lt;NA&gt;
+## 11          2        Lunch     Lunch with Jane Doe           &lt;NA&gt;
+## 12          3   Conference       Cool R conference           &lt;NA&gt;
+## 13          4 Mum birthday          Dont forget!!!           &lt;NA&gt;
+##                  start                 end category          location
+## 1  2024-10-05 20:00:00 2024-10-05 22:00:00     time              &lt;NA&gt;
+## 2  2024-10-12 20:00:00 2024-10-12 22:00:00     time              &lt;NA&gt;
+## 3  2024-10-19 20:00:00 2024-10-19 22:00:00     time              &lt;NA&gt;
+## 4           2024-10-12          2024-10-13   allday              &lt;NA&gt;
+## 5           2024-10-07          2024-10-08   allday              &lt;NA&gt;
+## 6           2024-10-01          2024-10-04   allday              &lt;NA&gt;
+## 7           2024-10-29          2024-10-29   allday              &lt;NA&gt;
+## 8           2024-10-08          2024-10-11   allday              &lt;NA&gt;
+## 9           2024-10-15          2024-10-17   allday              &lt;NA&gt;
+## 10 2024-10-20 14:00:00 2024-10-20 17:00:00     time              &lt;NA&gt;
+## 11 2024-10-24 12:00:00 2024-10-24 14:00:00     time   Some restaurant
+## 12          2024-10-27          2024-10-28   allday Conference center
+## 13          2024-10-03          2024-10-03   allday              &lt;NA&gt;
+##    backgroundColor   color borderColor
+## 1             &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 2             &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 3             &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 4             &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 5          #5E81AC   white     #5E81AC
+## 6          #5E81AC   white     #5E81AC
+## 7          #5E81AC   white     #5E81AC
+## 8             &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 9             &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 10            &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 11            &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 12            &lt;NA&gt;    &lt;NA&gt;        &lt;NA&gt;
+## 13         #FAFAFA #FF0000     #FF0000</code></pre>
 <pre><code>##   calendarId    title                        body               start
-## 1          3 Course 1 Learn something interesting  2024-10-07 8:00:00
-## 2          3 Course 2 Learn something interesting 2024-10-07 14:00:00
-## 3          3 Course 3 Learn something interesting 2024-10-09 08:00:00
-## 4          3 Course 4 Learn something interesting 2024-10-10 16:00:00
-## 5          2    Lunch                  Work lunch 2024-10-08 12:00:00
-## 6          2  Meeting                Work meeting 2024-10-08 16:00:00
-## 7          1    Sport          Make some exercise 2024-10-10 07:00:00
-## 8          1    Movie       Go watch a cool movie 2024-10-09 18:00:00
-## 9          1  Day off              Take some rest          2024-10-11
+## 1          3 Course 1 Learn something interesting  2024-10-21 8:00:00
+## 2          3 Course 2 Learn something interesting 2024-10-21 14:00:00
+## 3          3 Course 3 Learn something interesting 2024-10-23 08:00:00
+## 4          3 Course 4 Learn something interesting 2024-10-24 16:00:00
+## 5          2    Lunch                  Work lunch 2024-10-22 12:00:00
+## 6          2  Meeting                Work meeting 2024-10-22 16:00:00
+## 7          1    Sport          Make some exercise 2024-10-24 07:00:00
+## 8          1    Movie       Go watch a cool movie 2024-10-23 18:00:00
+## 9          1  Day off              Take some rest          2024-10-25
 ##                   end category
-## 1 2024-10-07 12:00:00     time
-## 2 2024-10-07 18:00:00     time
-## 3 2024-10-09 11:00:00     time
-## 4 2024-10-10 19:00:00     time
-## 5 2024-10-08 14:00:00     time
-## 6 2024-10-08 18:30:00     time
-## 7 2024-10-10 09:00:00     time
-## 8 2024-10-09 21:00:00     time
-## 9          2024-10-11   allday</code></pre>
+## 1 2024-10-21 12:00:00     time
+## 2 2024-10-21 18:00:00     time
+## 3 2024-10-23 11:00:00     time
+## 4 2024-10-24 19:00:00     time
+## 5 2024-10-22 14:00:00     time
+## 6 2024-10-22 18:30:00     time
+## 7 2024-10-24 09:00:00     time
+## 8 2024-10-23 21:00:00     time
+## 9          2024-10-25   allday</code></pre>
+<pre><code>##   calendarID title   body               start                 end category
+## 1          1     A  aaaaa  2024-10-14 8:00:00 2024-10-14 12:00:00     time
+## 2          2     B   bbbb 2024-10-14 14:00:00 2024-10-14 18:00:00     time
+## 3          3     C cccccc 2024-10-16 08:00:00 2024-10-16 11:00:00     time
+## 4          2     D dddddd 2024-10-17 08:00:00 2024-10-17 19:00:00     time</code></pre>
+<div class="toastui-calendar calendar html-widget" style="width:100%;height:1000px;">
+<div id="htmlwidget-bae54ab948d003c9dabb_menu">
+<span id="htmlwidget-bae54ab948d003c9dabb_menu_navi">
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-bae54ab948d003c9dabb_today">Today</button>
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-bae54ab948d003c9dabb_prev">
+<i class="fa fa-chevron-left"></i>
+</button>
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-bae54ab948d003c9dabb_next">
+<i class="fa fa-chevron-right"></i>
+</button>
+</span>
+<span id="htmlwidget-bae54ab948d003c9dabb_renderRange" class="render-range"></span>
+</div>
+<br/>
+<div id="htmlwidget-bae54ab948d003c9dabb" style="width:100%;height:1000px;" class="calendar html-widget" width="100%" height="1000"></div>
+</div>
+<script type="application/json" data-for="htmlwidget-bae54ab948d003c9dabb">{"x":{"options":{"defaultView":"week","useDetailPopup":true,"useFormPopup":false,"isReadOnly":true,"usageStatistics":false,"week":{"startDayOfWeek":1,"workweek":true,"eventView":true,"taskView":false},"calendars":[{"id":"1","name":"PERSO","color":"#000","backgroundColor":"#c6d19d","borderColor":"forestgreen"},{"id":"2","name":"WORK","color":"#000","backgroundColor":"#F5A9A9","borderColor":"firebrick"},{"id":"3","name":"COURSES","color":"#000","backgroundColor":"#c6e2f6","borderColor":"#3b7cc6"}]},"schedules":[{"category":"time","dueDateClass":"","id":"schedule35c7eeeaf0973d2ad329bae5","calendarId":"1","calendarID":1,"title":"A","body":"aaaaa","start":"2024-10-14 8:00:00","end":"2024-10-14 12:00:00"},{"category":"time","dueDateClass":"","id":"schedule4ab948d003c9dabba5cd1e0a","calendarId":"1","calendarID":2,"title":"B","body":"bbbb","start":"2024-10-14 14:00:00","end":"2024-10-14 18:00:00"},{"category":"time","dueDateClass":"","id":"schedule8b662985b21c8b5a130cb5a8","calendarId":"1","calendarID":3,"title":"C","body":"cccccc","start":"2024-10-16 08:00:00","end":"2024-10-16 11:00:00"},{"category":"time","dueDateClass":"","id":"schedule16bc7c46adbbfcbc3556c7cd","calendarId":"1","calendarID":2,"title":"D","body":"dddddd","start":"2024-10-17 08:00:00","end":"2024-10-17 19:00:00"}],"navigation":false,"defaultDate":"2024-10-18","events":[],"navigationOptions":{"today_label":"Today","prev_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z\"><\/path>\n  <title>caret-left-light<\/title>\n<\/svg>","next_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z\"><\/path>\n  <title>caret-right-light<\/title>\n<\/svg>","class":" bttn-bordered bttn-sm bttn-primary","fmt_date":"YYYY-MM-DD","sep_date":" ~ "}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="toastui-schedule.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(toastui)</span>
+<span id="cb4-2"><a href="toastui-schedule.html#cb4-2" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb4-3"><a href="toastui-schedule.html#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="toastui-schedule.html#cb4-4" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;sample_toastui_excel.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;Sheet1&quot;</span>)</span>
+<span id="cb4-5"><a href="toastui-schedule.html#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="toastui-schedule.html#cb4-6" tabindex="-1"></a>my_data</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 6
+##   calendarID title body   start               end                 category
+##        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt;   
+## 1          1 A     aaaaaa 2024-10-14 08:00:00 2024-10-14 12:00:00 time    
+## 2          2 B     bbbbb  2024-10-14 14:00:00 2024-10-14 18:00:00 time    
+## 3          3 C     ccccc  2024-10-16 08:00:00 2024-10-16 11:00:00 time    
+## 4          2 D     ddddd  2024-10-17 08:00:00 2024-10-17 19:00:00 time</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="toastui-schedule.html#cb6-1" tabindex="-1"></a><span class="fu">calendar</span>(my_data, <span class="at">view =</span> <span class="st">&quot;week&quot;</span>, <span class="at">height =</span> <span class="dv">1000</span>, <span class="at">defaultDate =</span> <span class="st">&quot;2024-10-18&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="toastui-schedule.html#cb6-2" tabindex="-1"></a><span class="fu">cal_week_options</span>(</span>
+<span id="cb6-3"><a href="toastui-schedule.html#cb6-3" tabindex="-1"></a>  <span class="at">startDayOfWeek =</span> <span class="dv">1</span>,</span>
+<span id="cb6-4"><a href="toastui-schedule.html#cb6-4" tabindex="-1"></a>  <span class="at">workweek =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-5"><a href="toastui-schedule.html#cb6-5" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-6"><a href="toastui-schedule.html#cb6-6" tabindex="-1"></a><span class="fu">cal_props</span>(<span class="fu">cal_demo_props</span>()) </span></code></pre></div>
+<div class="toastui-calendar calendar html-widget" style="width:100%;height:1000px;">
+<div id="htmlwidget-a5cd1e0a8b662985b21c_menu">
+<span id="htmlwidget-a5cd1e0a8b662985b21c_menu_navi">
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-a5cd1e0a8b662985b21c_today">Today</button>
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-a5cd1e0a8b662985b21c_prev">
+<i class="fa fa-chevron-left"></i>
+</button>
+<button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-a5cd1e0a8b662985b21c_next">
+<i class="fa fa-chevron-right"></i>
+</button>
+</span>
+<span id="htmlwidget-a5cd1e0a8b662985b21c_renderRange" class="render-range"></span>
+</div>
+<br/>
+<div id="htmlwidget-a5cd1e0a8b662985b21c" style="width:100%;height:1000px;" class="calendar html-widget" width="100%" height="1000"></div>
+</div>
+<script type="application/json" data-for="htmlwidget-a5cd1e0a8b662985b21c">{"x":{"options":{"defaultView":"week","useDetailPopup":true,"useFormPopup":false,"isReadOnly":true,"usageStatistics":false,"week":{"startDayOfWeek":1,"workweek":true,"eventView":true,"taskView":false},"calendars":[{"id":"1","name":"PERSO","color":"#000","backgroundColor":"#c6d19d","borderColor":"forestgreen"},{"id":"2","name":"WORK","color":"#000","backgroundColor":"#F5A9A9","borderColor":"firebrick"},{"id":"3","name":"COURSES","color":"#000","backgroundColor":"#c6e2f6","borderColor":"#3b7cc6"}]},"schedules":[{"category":"time","dueDateClass":"","id":"schedule88b7d8d3f40f58037f840b8e","calendarId":"1","calendarID":1,"title":"A","body":"aaaaaa","start":"2024-10-14T08:00:00Z","end":"2024-10-14T12:00:00Z"},{"category":"time","dueDateClass":"","id":"schedule4c4c607a5daae5f40c3f120e","calendarId":"1","calendarID":2,"title":"B","body":"bbbbb","start":"2024-10-14T14:00:00Z","end":"2024-10-14T18:00:00Z"},{"category":"time","dueDateClass":"","id":"schedule8ea2bc3ca57046e6c43a2e0d","calendarId":"1","calendarID":3,"title":"C","body":"ccccc","start":"2024-10-16T08:00:00Z","end":"2024-10-16T11:00:00Z"},{"category":"time","dueDateClass":"","id":"schedule1bcf5fbd84e9839840864bd2","calendarId":"1","calendarID":2,"title":"D","body":"ddddd","start":"2024-10-17T08:00:00Z","end":"2024-10-17T19:00:00Z"}],"navigation":false,"defaultDate":"2024-10-18","events":[],"navigationOptions":{"today_label":"Today","prev_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z\"><\/path>\n  <title>caret-left-light<\/title>\n<\/svg>","next_label":"<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 256 256\" class=\"phosphor-svg\" height=\"1.33em\" fill=\"currentColor\" style=\"vertical-align:-0.25em;\">\n  <path d=\"M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z\"><\/path>\n  <title>caret-right-light<\/title>\n<\/svg>","class":" bttn-bordered bttn-sm bttn-primary","fmt_date":"YYYY-MM-DD","sep_date":" ~ "}},"evals":[],"jsHooks":[]}</script>
 
 </div>
             </section>

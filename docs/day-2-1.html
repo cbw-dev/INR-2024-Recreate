@@ -289,9 +289,9 @@ Potability</p>
 <ol style="list-style-type: decimal">
 <li>Read in the “water_potability.csv” data into an object called data Check the object you created by printing out the first 10 rows and applying the summary function.</li>
 </ol>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="day-2-1.html#cb141-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;datasets/water_potability.csv&quot;</span>)</span>
-<span id="cb141-2"><a href="day-2-1.html#cb141-2" tabindex="-1"></a></span>
-<span id="cb141-3"><a href="day-2-1.html#cb141-3" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n=</span><span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="day-2-1.html#cb145-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;datasets/water_potability.csv&quot;</span>)</span>
+<span id="cb145-2"><a href="day-2-1.html#cb145-2" tabindex="-1"></a></span>
+<span id="cb145-3"><a href="day-2-1.html#cb145-3" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n=</span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##           ph Hardness   Solids Chloramines  Sulfate Conductivity Organic_carbon
 ## 1         NA 204.8905 20791.32    7.300212 368.5164     564.3087      10.379783
 ## 2   3.716080 129.4229 18630.06    6.635246       NA     592.8854      15.180013
@@ -314,7 +314,7 @@ Potability</p>
 ## 8         62.79831  4.401425          0
 ## 9         53.92885  3.595017          0
 ## 10        71.97660  4.370562          0</code></pre>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="day-2-1.html#cb143-1" tabindex="-1"></a>data[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="day-2-1.html#cb147-1" tabindex="-1"></a>data[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, ]</span></code></pre></div>
 <pre><code>##           ph Hardness   Solids Chloramines  Sulfate Conductivity Organic_carbon
 ## 1         NA 204.8905 20791.32    7.300212 368.5164     564.3087      10.379783
 ## 2   3.716080 129.4229 18630.06    6.635246       NA     592.8854      15.180013
@@ -342,8 +342,8 @@ Potability</p>
 </ol>
 <p>Create new object called water_df that only contains complete observations.</p>
 <p>Hint: take a look at the function called <code>na.omit()</code>. In most cases, someone’s already done what you’ve wanted to do so there may already be code or functions that you can adapt and use!</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="day-2-1.html#cb145-1" tabindex="-1"></a>water_df <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(data)</span>
-<span id="cb145-2"><a href="day-2-1.html#cb145-2" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="day-2-1.html#cb149-1" tabindex="-1"></a>water_df <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(data)</span>
+<span id="cb149-2"><a href="day-2-1.html#cb149-2" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div>
 <pre><code>##        ph            Hardness          Solids         Chloramines    
 ##  Min.   : 0.000   Min.   : 47.43   Min.   :  320.9   Min.   : 0.352  
 ##  1st Qu.: 6.093   1st Qu.:176.85   1st Qu.:15666.7   1st Qu.: 6.127  
@@ -368,7 +368,7 @@ Potability</p>
 ##  3rd Qu.:4.500   3rd Qu.:1.0000  
 ##  Max.   :6.739   Max.   :1.0000  
 ## </code></pre>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="day-2-1.html#cb147-1" tabindex="-1"></a><span class="fu">summary</span>(water_df)</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="day-2-1.html#cb151-1" tabindex="-1"></a><span class="fu">summary</span>(water_df)</span></code></pre></div>
 <pre><code>##        ph             Hardness          Solids         Chloramines    
 ##  Min.   : 0.2275   Min.   : 73.49   Min.   :  320.9   Min.   : 1.391  
 ##  1st Qu.: 6.0897   1st Qu.:176.74   1st Qu.:15615.7   1st Qu.: 6.139  
@@ -390,16 +390,16 @@ Potability</p>
 ##  Mean   :3.970   Mean   :0.4033  
 ##  3rd Qu.:4.514   3rd Qu.:1.0000  
 ##  Max.   :6.495   Max.   :1.0000</code></pre>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="day-2-1.html#cb149-1" tabindex="-1"></a><span class="fu">dim</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="day-2-1.html#cb153-1" tabindex="-1"></a><span class="fu">dim</span>(data)</span></code></pre></div>
 <pre><code>## [1] 3276   10</code></pre>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="day-2-1.html#cb151-1" tabindex="-1"></a><span class="fu">dim</span>(water_df)</span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="day-2-1.html#cb155-1" tabindex="-1"></a><span class="fu">dim</span>(water_df)</span></code></pre></div>
 <pre><code>## [1] 2011   10</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>The Potability column has two possible values: 1 means Potable and 0 means Not potable.</li>
 </ol>
 <p>It is read in by default as a character vector. Convert this column to a factor.</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="day-2-1.html#cb153-1" tabindex="-1"></a>water_df<span class="sc">$</span>Potability <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(water_df<span class="sc">$</span>Potability)</span>
-<span id="cb153-2"><a href="day-2-1.html#cb153-2" tabindex="-1"></a><span class="fu">head</span>(water_df)</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="day-2-1.html#cb157-1" tabindex="-1"></a>water_df<span class="sc">$</span>Potability <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(water_df<span class="sc">$</span>Potability)</span>
+<span id="cb157-2"><a href="day-2-1.html#cb157-2" tabindex="-1"></a><span class="fu">head</span>(water_df)</span></code></pre></div>
 <pre><code>##           ph Hardness   Solids Chloramines  Sulfate Conductivity Organic_carbon
 ## 4   8.316766 214.3734 22018.42    8.059332 356.8861     363.2665      18.436524
 ## 5   9.092223 181.1015 17978.99    6.546600 310.1357     398.4108      11.558279
@@ -414,7 +414,7 @@ Potability</p>
 ## 7         84.60356  2.672989          0
 ## 8         62.79831  4.401425          0
 ## 10        71.97660  4.370562          0</code></pre>
-<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="day-2-1.html#cb155-1" tabindex="-1"></a><span class="fu">table</span>(water_df<span class="sc">$</span>Potability)</span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="day-2-1.html#cb159-1" tabindex="-1"></a><span class="fu">table</span>(water_df<span class="sc">$</span>Potability)</span></code></pre></div>
 <pre><code>## 
 ##    0    1 
 ## 1200  811</code></pre>
@@ -429,44 +429,44 @@ Potability</p>
 </ul>
 <p>There are multiple ways to do this, give it a go! You can’t break the object - if you ever feel like you need a reset, you can always repeat step 1 to read in the object again.</p>
 <p>Use <code>table()</code> or <code>summary()</code> to check the values in the <code>ph_category</code> column</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="day-2-1.html#cb157-1" tabindex="-1"></a>water_df<span class="sc">$</span>ph_category <span class="ot">&lt;-</span> <span class="st">&quot;permissible&quot;</span></span>
-<span id="cb157-2"><a href="day-2-1.html#cb157-2" tabindex="-1"></a></span>
-<span id="cb157-3"><a href="day-2-1.html#cb157-3" tabindex="-1"></a>water_df<span class="sc">$</span>ph_category[water_df<span class="sc">$</span>ph <span class="sc">&lt;</span> <span class="fl">6.5</span>] <span class="ot">&lt;-</span> <span class="st">&quot;acidic&quot;</span></span>
-<span id="cb157-4"><a href="day-2-1.html#cb157-4" tabindex="-1"></a></span>
-<span id="cb157-5"><a href="day-2-1.html#cb157-5" tabindex="-1"></a>water_df<span class="sc">$</span>ph_category[water_df<span class="sc">$</span>ph <span class="sc">&gt;</span> <span class="fl">8.5</span>] <span class="ot">&lt;-</span> <span class="st">&quot;basic&quot;</span></span>
-<span id="cb157-6"><a href="day-2-1.html#cb157-6" tabindex="-1"></a></span>
-<span id="cb157-7"><a href="day-2-1.html#cb157-7" tabindex="-1"></a><span class="fu">table</span>(water_df<span class="sc">$</span>ph_category)</span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="day-2-1.html#cb161-1" tabindex="-1"></a>water_df<span class="sc">$</span>ph_category <span class="ot">&lt;-</span> <span class="st">&quot;permissible&quot;</span></span>
+<span id="cb161-2"><a href="day-2-1.html#cb161-2" tabindex="-1"></a></span>
+<span id="cb161-3"><a href="day-2-1.html#cb161-3" tabindex="-1"></a>water_df<span class="sc">$</span>ph_category[water_df<span class="sc">$</span>ph <span class="sc">&lt;</span> <span class="fl">6.5</span>] <span class="ot">&lt;-</span> <span class="st">&quot;acidic&quot;</span></span>
+<span id="cb161-4"><a href="day-2-1.html#cb161-4" tabindex="-1"></a></span>
+<span id="cb161-5"><a href="day-2-1.html#cb161-5" tabindex="-1"></a>water_df<span class="sc">$</span>ph_category[water_df<span class="sc">$</span>ph <span class="sc">&gt;</span> <span class="fl">8.5</span>] <span class="ot">&lt;-</span> <span class="st">&quot;basic&quot;</span></span>
+<span id="cb161-6"><a href="day-2-1.html#cb161-6" tabindex="-1"></a></span>
+<span id="cb161-7"><a href="day-2-1.html#cb161-7" tabindex="-1"></a><span class="fu">table</span>(water_df<span class="sc">$</span>ph_category)</span></code></pre></div>
 <pre><code>## 
 ##      acidic       basic permissible 
 ##         692         358         961</code></pre>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="day-2-1.html#cb159-1" tabindex="-1"></a><span class="fu">nrow</span>(water_df[water_df<span class="sc">$</span>ph <span class="sc">&lt;</span><span class="fl">6.5</span>, ])</span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="day-2-1.html#cb163-1" tabindex="-1"></a><span class="fu">nrow</span>(water_df[water_df<span class="sc">$</span>ph <span class="sc">&lt;</span><span class="fl">6.5</span>, ])</span></code></pre></div>
 <pre><code>## [1] 692</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Create a plot to double check if the annotations in the <code>ph_category</code> column were applied correctly. Make sure to represent both the <code>ph</code> and <code>ph_category</code> columns.</li>
 </ol>
 <p>You’re welcome to use base R or ggplot functions. There are multiple ways of representing these two columns. ggplot is slightly preferred because of its increased customization so it’s good to get some practice with it!</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="day-2-1.html#cb161-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb161-2"><a href="day-2-1.html#cb161-2" tabindex="-1"></a><span class="fu">ggplot</span>(water_df, <span class="fu">aes</span>(<span class="at">x=</span>ph_category, <span class="at">y=</span>ph)) <span class="sc">+</span></span>
-<span id="cb161-3"><a href="day-2-1.html#cb161-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="day-2-1.html#cb165-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb165-2"><a href="day-2-1.html#cb165-2" tabindex="-1"></a><span class="fu">ggplot</span>(water_df, <span class="fu">aes</span>(<span class="at">x=</span>ph_category, <span class="at">y=</span>ph)) <span class="sc">+</span></span>
+<span id="cb165-3"><a href="day-2-1.html#cb165-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>The levels of sulfates and water hardness cause by salts should be minimized in order to be safe for consumption.</li>
 </ol>
 <p>Create a plot with the level of water hardness on the x axis and sulphate on the y axis colored by the Potability column.</p>
 <p>Try applying the <code>facet_grid()</code> layer to the plot in order to group the plots by a factor. Make sure to use the <code>~</code> before the column name!</p>
 <p>(Note - the data is quite messy so don’t worry if the results do not separate as much as you would like - real data is messy!)</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="day-2-1.html#cb162-1" tabindex="-1"></a><span class="fu">ggplot</span>(water_df, <span class="fu">aes</span>(<span class="at">x =</span> Hardness, <span class="at">y =</span> Sulfate, <span class="at">col =</span> Potability)) <span class="sc">+</span></span>
-<span id="cb162-2"><a href="day-2-1.html#cb162-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb162-3"><a href="day-2-1.html#cb162-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>ph_category) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="day-2-1.html#cb166-1" tabindex="-1"></a><span class="fu">ggplot</span>(water_df, <span class="fu">aes</span>(<span class="at">x =</span> Hardness, <span class="at">y =</span> Sulfate, <span class="at">col =</span> Potability)) <span class="sc">+</span></span>
+<span id="cb166-2"><a href="day-2-1.html#cb166-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb166-3"><a href="day-2-1.html#cb166-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>ph_category) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
 </div>
 <div id="review-with-datasaurus-dozen" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Review with Datasaurus Dozen<a href="day-2-1.html#review-with-datasaurus-dozen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Datasaurus Dozen dataset is a handful of data points that complement the <code>dplyr</code> package. Aside from functions, packages can also import objects.</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="day-2-1.html#cb163-1" tabindex="-1"></a><span class="co">#install.packages(&quot;datasauRus&quot;)</span></span>
-<span id="cb163-2"><a href="day-2-1.html#cb163-2" tabindex="-1"></a><span class="fu">library</span>(datasauRus)</span>
-<span id="cb163-3"><a href="day-2-1.html#cb163-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="day-2-1.html#cb164-1" tabindex="-1"></a><span class="fu">summary</span>(datasaurus_dozen)</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="day-2-1.html#cb167-1" tabindex="-1"></a><span class="co">#install.packages(&quot;datasauRus&quot;)</span></span>
+<span id="cb167-2"><a href="day-2-1.html#cb167-2" tabindex="-1"></a><span class="fu">library</span>(datasauRus)</span>
+<span id="cb167-3"><a href="day-2-1.html#cb167-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="day-2-1.html#cb168-1" tabindex="-1"></a><span class="fu">summary</span>(datasaurus_dozen)</span></code></pre></div>
 <pre><code>##    dataset                x               y           
 ##  Length:1846        Min.   :15.56   Min.   : 0.01512  
 ##  Class :character   1st Qu.:41.07   1st Qu.:22.56107  
@@ -474,9 +474,9 @@ Potability</p>
 ##                     Mean   :54.27   Mean   :47.83510  
 ##                     3rd Qu.:67.28   3rd Qu.:71.81078  
 ##                     Max.   :98.29   Max.   :99.69468</code></pre>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="day-2-1.html#cb166-1" tabindex="-1"></a>datasaurus_dozen<span class="sc">$</span>dataset <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span>
-<span id="cb166-2"><a href="day-2-1.html#cb166-2" tabindex="-1"></a></span>
-<span id="cb166-3"><a href="day-2-1.html#cb166-3" tabindex="-1"></a><span class="fu">tail</span>(datasaurus_dozen)</span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="day-2-1.html#cb170-1" tabindex="-1"></a>datasaurus_dozen<span class="sc">$</span>dataset <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span>
+<span id="cb170-2"><a href="day-2-1.html#cb170-2" tabindex="-1"></a></span>
+<span id="cb170-3"><a href="day-2-1.html#cb170-3" tabindex="-1"></a><span class="fu">tail</span>(datasaurus_dozen)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 3
 ##   dataset        x     y
 ##   &lt;fct&gt;      &lt;dbl&gt; &lt;dbl&gt;
@@ -486,19 +486,19 @@ Potability</p>
 ## 4 wide_lines  40.6  89.1
 ## 5 wide_lines  39.1  96.5
 ## 6 wide_lines  34.6  89.6</code></pre>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="day-2-1.html#cb168-1" tabindex="-1"></a><span class="fu">table</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="day-2-1.html#cb172-1" tabindex="-1"></a><span class="fu">table</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span></code></pre></div>
 <pre><code>## 
 ##       away   bullseye     circle       dino       dots    h_lines high_lines 
 ##        142        142        142        142        142        142        142 
 ## slant_down   slant_up       star    v_lines wide_lines    x_shape 
 ##        142        142        142        142        142        142</code></pre>
 <p>There are 13 different datasets in this one object. We will use tidyverse functions to take an overview look at the object, grouped by the datasets.</p>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="day-2-1.html#cb170-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
-<span id="cb170-2"><a href="day-2-1.html#cb170-2" tabindex="-1"></a>  <span class="fu">group_by</span>(dataset) <span class="sc">%&gt;%</span></span>
-<span id="cb170-3"><a href="day-2-1.html#cb170-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
-<span id="cb170-4"><a href="day-2-1.html#cb170-4" tabindex="-1"></a>            <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
-<span id="cb170-5"><a href="day-2-1.html#cb170-5" tabindex="-1"></a>            <span class="at">std_dev_x =</span> <span class="fu">sd</span>(x),</span>
-<span id="cb170-6"><a href="day-2-1.html#cb170-6" tabindex="-1"></a>            <span class="at">std_dev_y =</span> <span class="fu">sd</span>(y))</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="day-2-1.html#cb174-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb174-2"><a href="day-2-1.html#cb174-2" tabindex="-1"></a>  <span class="fu">group_by</span>(dataset) <span class="sc">%&gt;%</span></span>
+<span id="cb174-3"><a href="day-2-1.html#cb174-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
+<span id="cb174-4"><a href="day-2-1.html#cb174-4" tabindex="-1"></a>            <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
+<span id="cb174-5"><a href="day-2-1.html#cb174-5" tabindex="-1"></a>            <span class="at">std_dev_x =</span> <span class="fu">sd</span>(x),</span>
+<span id="cb174-6"><a href="day-2-1.html#cb174-6" tabindex="-1"></a>            <span class="at">std_dev_y =</span> <span class="fu">sd</span>(y))</span></code></pre></div>
 <pre><code>## # A tibble: 13 × 5
 ##    dataset    mean_x mean_y std_dev_x std_dev_y
 ##    &lt;fct&gt;       &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
@@ -517,21 +517,21 @@ Potability</p>
 ## 13 x_shape      54.3   47.8      16.8      26.9</code></pre>
 <p>All of the datasets have roughly the same mean and standard deviation along both the x and y axis.</p>
 <p>Let’s take a look the data graphically. We will use <code>filter</code> to extract the rows belonging to one dataset and then pipe that directly into a ggplot. Both dplyr and ggplot are developed within “the Tidyverse” and can use pipes, but you may not be able to pipe in base R functions or functions from different packages.</p>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="day-2-1.html#cb172-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
-<span id="cb172-2"><a href="day-2-1.html#cb172-2" tabindex="-1"></a>  <span class="fu">filter</span>(dataset <span class="sc">==</span> <span class="st">&quot;star&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb172-3"><a href="day-2-1.html#cb172-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span> <span class="co"># PLUS SIGN, NOT PIPE FOR THIS ONE</span></span>
-<span id="cb172-4"><a href="day-2-1.html#cb172-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="day-2-1.html#cb176-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb176-2"><a href="day-2-1.html#cb176-2" tabindex="-1"></a>  <span class="fu">filter</span>(dataset <span class="sc">==</span> <span class="st">&quot;star&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb176-3"><a href="day-2-1.html#cb176-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span> <span class="co"># PLUS SIGN, NOT PIPE FOR THIS ONE</span></span>
+<span id="cb176-4"><a href="day-2-1.html#cb176-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
 <p>Tidyverse’s data wranging packages use the pipe <code>%&gt;%</code> to move the previous output to the next line, where as ggplot uses the plus sign <code>+</code></p>
 <p>Try editing the code above to display different datasets. Notice how different groups of data points can all give similar statistical summaries - so it’s always a good choice to visualize your data rather than relying on just numbers.</p>
 <p>If we wanted to take a look at all of the datasets at once, we can also use the <code>facet_wrap()</code> function.</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="day-2-1.html#cb173-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
-<span id="cb173-2"><a href="day-2-1.html#cb173-2" tabindex="-1"></a>  <span class="co">#filter(dataset == &quot;star&quot;) %&gt;%  REMOVE THIS ROW</span></span>
-<span id="cb173-3"><a href="day-2-1.html#cb173-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
-<span id="cb173-4"><a href="day-2-1.html#cb173-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb173-5"><a href="day-2-1.html#cb173-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>dataset)<span class="sc">+</span> <span class="fu">theme_void</span>() <span class="co"># ADD THIS LINE</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="day-2-1.html#cb174-1" tabindex="-1"></a><span class="fu">head</span>(datasaurus_dozen)</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="day-2-1.html#cb177-1" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb177-2"><a href="day-2-1.html#cb177-2" tabindex="-1"></a>  <span class="co">#filter(dataset == &quot;star&quot;) %&gt;%  REMOVE THIS ROW</span></span>
+<span id="cb177-3"><a href="day-2-1.html#cb177-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
+<span id="cb177-4"><a href="day-2-1.html#cb177-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb177-5"><a href="day-2-1.html#cb177-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>dataset)<span class="sc">+</span> <span class="fu">theme_void</span>() <span class="co"># ADD THIS LINE</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="day-2-1.html#cb178-1" tabindex="-1"></a><span class="fu">head</span>(datasaurus_dozen)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 3
 ##   dataset     x     y
 ##   &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt;
@@ -553,34 +553,34 @@ Potability</p>
 <p>Remember when we edited our code to test out multiple datasets in the datasaurus dozen object? Perhaps you copy and pasted the code several time and changed the column name? This is not optimal because if you need to change the code in one instance (for example changing the x-axis label), you’ll need to revisit ever instance that you copy and pasted to code to. This approach leads you vulnerable to errors when copy and pasting.</p>
 <p>One way to make your code robust is to bring all the factors that need editing to the start of the data. This may seem cumbersome for such a simple example where we are only changing the dataset name, but we’ll return to this concept later with more complicated examples.</p>
 <p>Let’s grab the code we used to make one plot earlier and modify it to be more generalizable</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="day-2-1.html#cb176-1" tabindex="-1"></a><span class="fu">levels</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="day-2-1.html#cb180-1" tabindex="-1"></a><span class="fu">levels</span>(datasaurus_dozen<span class="sc">$</span>dataset)</span></code></pre></div>
 <pre><code>##  [1] &quot;away&quot;       &quot;bullseye&quot;   &quot;circle&quot;     &quot;dino&quot;       &quot;dots&quot;      
 ##  [6] &quot;h_lines&quot;    &quot;high_lines&quot; &quot;slant_down&quot; &quot;slant_up&quot;   &quot;star&quot;      
 ## [11] &quot;v_lines&quot;    &quot;wide_lines&quot; &quot;x_shape&quot;</code></pre>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="day-2-1.html#cb178-1" tabindex="-1"></a>dataset_name <span class="ot">&lt;-</span> <span class="st">&quot;dino&quot;</span> <span class="co"># ADD THIS LINE</span></span>
-<span id="cb178-2"><a href="day-2-1.html#cb178-2" tabindex="-1"></a></span>
-<span id="cb178-3"><a href="day-2-1.html#cb178-3" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
-<span id="cb178-4"><a href="day-2-1.html#cb178-4" tabindex="-1"></a>  <span class="fu">filter</span>(dataset <span class="sc">==</span> dataset_name) <span class="sc">%&gt;%</span> <span class="co"># Remove comment # CHANGE VARIABLE NAME</span></span>
-<span id="cb178-5"><a href="day-2-1.html#cb178-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
-<span id="cb178-6"><a href="day-2-1.html#cb178-6" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="co"># REMOVE THE + at the end of the line</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="day-2-1.html#cb182-1" tabindex="-1"></a>dataset_name <span class="ot">&lt;-</span> <span class="st">&quot;dino&quot;</span> <span class="co"># ADD THIS LINE</span></span>
+<span id="cb182-2"><a href="day-2-1.html#cb182-2" tabindex="-1"></a></span>
+<span id="cb182-3"><a href="day-2-1.html#cb182-3" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb182-4"><a href="day-2-1.html#cb182-4" tabindex="-1"></a>  <span class="fu">filter</span>(dataset <span class="sc">==</span> dataset_name) <span class="sc">%&gt;%</span> <span class="co"># Remove comment # CHANGE VARIABLE NAME</span></span>
+<span id="cb182-5"><a href="day-2-1.html#cb182-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
+<span id="cb182-6"><a href="day-2-1.html#cb182-6" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="co"># REMOVE THE + at the end of the line</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
 <p>Once we have converted our code to a generalized format, we can convert it into a more versatile custom function!</p>
 <p>Curly brackets are used for inputting multiple lines of code. It is generally attached to the function that proceeds it.</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="day-2-1.html#cb179-1" tabindex="-1"></a><span class="co"># dataset_name &lt;- &quot;dino&quot; # ADD THIS LINE</span></span>
-<span id="cb179-2"><a href="day-2-1.html#cb179-2" tabindex="-1"></a></span>
-<span id="cb179-3"><a href="day-2-1.html#cb179-3" tabindex="-1"></a>dino_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(data_name) {</span>
-<span id="cb179-4"><a href="day-2-1.html#cb179-4" tabindex="-1"></a>  datasaurus_dozen <span class="sc">%&gt;%</span></span>
-<span id="cb179-5"><a href="day-2-1.html#cb179-5" tabindex="-1"></a>    <span class="fu">filter</span>(dataset <span class="sc">==</span> data_name) <span class="sc">%&gt;%</span> <span class="co"># CHANGE ARGUMENT NAME</span></span>
-<span id="cb179-6"><a href="day-2-1.html#cb179-6" tabindex="-1"></a></span>
-<span id="cb179-7"><a href="day-2-1.html#cb179-7" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
-<span id="cb179-8"><a href="day-2-1.html#cb179-8" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb179-9"><a href="day-2-1.html#cb179-9" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span>
-<span id="cb179-10"><a href="day-2-1.html#cb179-10" tabindex="-1"></a>}</span>
-<span id="cb179-11"><a href="day-2-1.html#cb179-11" tabindex="-1"></a></span>
-<span id="cb179-12"><a href="day-2-1.html#cb179-12" tabindex="-1"></a><span class="fu">dino_plot</span>(<span class="st">&quot;dino&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="day-2-1.html#cb180-1" tabindex="-1"></a><span class="fu">dino_plot</span>(<span class="st">&quot;circle&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-80-2.png" width="672" /></p>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="day-2-1.html#cb183-1" tabindex="-1"></a><span class="co"># dataset_name &lt;- &quot;dino&quot; # ADD THIS LINE</span></span>
+<span id="cb183-2"><a href="day-2-1.html#cb183-2" tabindex="-1"></a></span>
+<span id="cb183-3"><a href="day-2-1.html#cb183-3" tabindex="-1"></a>dino_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(data_name) {</span>
+<span id="cb183-4"><a href="day-2-1.html#cb183-4" tabindex="-1"></a>  datasaurus_dozen <span class="sc">%&gt;%</span></span>
+<span id="cb183-5"><a href="day-2-1.html#cb183-5" tabindex="-1"></a>    <span class="fu">filter</span>(dataset <span class="sc">==</span> data_name) <span class="sc">%&gt;%</span> <span class="co"># CHANGE ARGUMENT NAME</span></span>
+<span id="cb183-6"><a href="day-2-1.html#cb183-6" tabindex="-1"></a></span>
+<span id="cb183-7"><a href="day-2-1.html#cb183-7" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y)) <span class="sc">+</span></span>
+<span id="cb183-8"><a href="day-2-1.html#cb183-8" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb183-9"><a href="day-2-1.html#cb183-9" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span>
+<span id="cb183-10"><a href="day-2-1.html#cb183-10" tabindex="-1"></a>}</span>
+<span id="cb183-11"><a href="day-2-1.html#cb183-11" tabindex="-1"></a></span>
+<span id="cb183-12"><a href="day-2-1.html#cb183-12" tabindex="-1"></a><span class="fu">dino_plot</span>(<span class="st">&quot;dino&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="day-2-1.html#cb184-1" tabindex="-1"></a><span class="fu">dino_plot</span>(<span class="st">&quot;circle&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-82-2.png" width="672" /></p>
 <div id="exercise-3" class="section level3 hasAnchor" number="7.3.1">
 <h3><span class="header-section-number">7.3.1</span> Exercise<a href="day-2-1.html#exercise-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We’ve now encountered round brackets <code>()</code>, square brackets <code>[]</code>, and curly brackets<code>{}</code> - each have their own distinct functions! Take a few moments to chat with your neighbors and outline cases in which we’ve used each bracket and what is their role in R syntax.</p>
@@ -622,9 +622,9 @@ Rmd – indicates language in code chunk</p>
 <p>Reading in the dataset can be an intimidating step when you’re just starting out with programming. Since this is a csv file, we can use the appropriately named <code>read.csv()</code> function. In cases when you have other file types such as .txt or .tab files that are tab deliminated, there is also a <code>read.table()</code> function that is more universal (but requires more parameters to let R know how your data is stored).</p>
 <p>Read in the <code>healthcare-dataset-stroke-data.csv</code> into an object called <code>heart</code>. Check your object using head and/or summary functions. Toggle a parameter called <code>stringsAsFactors</code> to <code>TRUE</code> in order to automatically import character values as factors rather than characters</p>
 <p>Hint: make sure the dataset is in the same directory or folder as this .Rmd file for ease of import</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="day-2-1.html#cb181-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;datasets/healthcare-dataset-stroke-data.csv&quot;</span>, <span class="at">stringsAsFactors=</span><span class="cn">TRUE</span>)</span>
-<span id="cb181-2"><a href="day-2-1.html#cb181-2" tabindex="-1"></a></span>
-<span id="cb181-3"><a href="day-2-1.html#cb181-3" tabindex="-1"></a><span class="fu">head</span>(heart)</span></code></pre></div>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="day-2-1.html#cb185-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;datasets/healthcare-dataset-stroke-data.csv&quot;</span>, <span class="at">stringsAsFactors=</span><span class="cn">TRUE</span>)</span>
+<span id="cb185-2"><a href="day-2-1.html#cb185-2" tabindex="-1"></a></span>
+<span id="cb185-3"><a href="day-2-1.html#cb185-3" tabindex="-1"></a><span class="fu">head</span>(heart)</span></code></pre></div>
 <pre><code>##      id gender age hypertension heart_disease ever_married     work_type
 ## 1  9046   Male  67            0             1          Yes       Private
 ## 2 51676 Female  61            0             0          Yes Self-employed
@@ -639,7 +639,7 @@ Rmd – indicates language in code chunk</p>
 ## 4          Urban            171.23 34.4          smokes      1
 ## 5          Rural            174.12   24    never smoked      1
 ## 6          Urban            186.21   29 formerly smoked      1</code></pre>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="day-2-1.html#cb183-1" tabindex="-1"></a><span class="fu">str</span>(heart)</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="day-2-1.html#cb187-1" tabindex="-1"></a><span class="fu">str</span>(heart)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    5110 obs. of  12 variables:
 ##  $ id               : int  9046 51676 31112 60182 1665 56669 53882 10434 27419 60491 ...
 ##  $ gender           : Factor w/ 6 levels &quot;female&quot;,&quot;Female&quot;,..: 4 2 4 2 2 4 4 2 2 2 ...
@@ -653,22 +653,22 @@ Rmd – indicates language in code chunk</p>
 ##  $ bmi              : Factor w/ 419 levels &quot;10.3&quot;,&quot;11.3&quot;,..: 240 419 199 218 114 164 148 102 419 116 ...
 ##  $ smoking_status   : Factor w/ 4 levels &quot;formerly smoked&quot;,..: 1 2 2 3 2 1 2 2 4 4 ...
 ##  $ stroke           : int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="day-2-1.html#cb185-1" tabindex="-1"></a><span class="co"># Hypertension has values that are typos, need to be removed</span></span>
-<span id="cb185-2"><a href="day-2-1.html#cb185-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>hypertension)</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="day-2-1.html#cb189-1" tabindex="-1"></a><span class="co"># Hypertension has values that are typos, need to be removed</span></span>
+<span id="cb189-2"><a href="day-2-1.html#cb189-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>hypertension)</span></code></pre></div>
 <pre><code>## 
 ##        0        1       10 10+D4972 
 ##     4612      493        4        1</code></pre>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="day-2-1.html#cb187-1" tabindex="-1"></a><span class="co"># Stroke and heart.disease need to be categorical</span></span>
-<span id="cb187-2"><a href="day-2-1.html#cb187-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>stroke)</span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="day-2-1.html#cb191-1" tabindex="-1"></a><span class="co"># Stroke and heart.disease need to be categorical</span></span>
+<span id="cb191-2"><a href="day-2-1.html#cb191-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>stroke)</span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ## 0.00000 0.00000 0.00000 0.04873 0.00000 1.00000</code></pre>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="day-2-1.html#cb189-1" tabindex="-1"></a><span class="co"># Gender has some variability</span></span>
-<span id="cb189-2"><a href="day-2-1.html#cb189-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="day-2-1.html#cb193-1" tabindex="-1"></a><span class="co"># Gender has some variability</span></span>
+<span id="cb193-2"><a href="day-2-1.html#cb193-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
 <pre><code>## 
 ## female Female   male   Male   meal  Other 
 ##      7   2987      6   2108      1      1</code></pre>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="day-2-1.html#cb191-1" tabindex="-1"></a><span class="co"># Abnormal BMI value AND convert from factor to numeric</span></span>
-<span id="cb191-2"><a href="day-2-1.html#cb191-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="day-2-1.html#cb195-1" tabindex="-1"></a><span class="co"># Abnormal BMI value AND convert from factor to numeric</span></span>
+<span id="cb195-2"><a href="day-2-1.html#cb195-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
 <pre><code>##     N/A    28.7    28.4    26.1    26.7    27.6    27.7    23.4    27.3      27 
 ##     201      41      38      37      37      37      37      36      36      35 
 ##    25.1    26.4    26.9    25.5    23.5    24.8    28.9    22.2    26.5    28.3 
@@ -689,8 +689,8 @@ Rmd – indicates language in code chunk</p>
 ##      22      22      22      22      22      22      22      22      22      22 
 ##    19.5    21.3    23.1    25.6    26.8    30.8    31.3    31.6      32 (Other) 
 ##      21      21      21      21      21      21      21      21      21    2282</code></pre>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="day-2-1.html#cb193-1" tabindex="-1"></a><span class="co"># Age, very low value of 0.08</span></span>
-<span id="cb193-2"><a href="day-2-1.html#cb193-2" tabindex="-1"></a><span class="fu">str</span>(heart)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="day-2-1.html#cb197-1" tabindex="-1"></a><span class="co"># Age, very low value of 0.08</span></span>
+<span id="cb197-2"><a href="day-2-1.html#cb197-2" tabindex="-1"></a><span class="fu">str</span>(heart)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    5110 obs. of  12 variables:
 ##  $ id               : int  9046 51676 31112 60182 1665 56669 53882 10434 27419 60491 ...
 ##  $ gender           : Factor w/ 6 levels &quot;female&quot;,&quot;Female&quot;,..: 4 2 4 2 2 4 4 2 2 2 ...
@@ -720,11 +720,11 @@ Rmd – indicates language in code chunk</p>
 4) hypertension: 0 if the patient doesn’t have hypertension, 1 if the patient has hypertension
 5) heart_disease: 0 if the patient doesn’t have any heart diseases, 1 if the patient has a heart disease
 12) stroke: 1 if the patient had a stroke or 0 if not</p>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="day-2-1.html#cb195-1" tabindex="-1"></a>heart<span class="sc">$</span>hypertension <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>hypertension)</span>
-<span id="cb195-2"><a href="day-2-1.html#cb195-2" tabindex="-1"></a>heart<span class="sc">$</span>heart_disease <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>heart_disease)</span>
-<span id="cb195-3"><a href="day-2-1.html#cb195-3" tabindex="-1"></a>heart<span class="sc">$</span>stroke <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>stroke)</span>
-<span id="cb195-4"><a href="day-2-1.html#cb195-4" tabindex="-1"></a></span>
-<span id="cb195-5"><a href="day-2-1.html#cb195-5" tabindex="-1"></a><span class="fu">summary</span>(heart)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="day-2-1.html#cb199-1" tabindex="-1"></a>heart<span class="sc">$</span>hypertension <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>hypertension)</span>
+<span id="cb199-2"><a href="day-2-1.html#cb199-2" tabindex="-1"></a>heart<span class="sc">$</span>heart_disease <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>heart_disease)</span>
+<span id="cb199-3"><a href="day-2-1.html#cb199-3" tabindex="-1"></a>heart<span class="sc">$</span>stroke <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>stroke)</span>
+<span id="cb199-4"><a href="day-2-1.html#cb199-4" tabindex="-1"></a></span>
+<span id="cb199-5"><a href="day-2-1.html#cb199-5" tabindex="-1"></a><span class="fu">summary</span>(heart)</span></code></pre></div>
 <pre><code>##        id           gender          age          hypertension  heart_disease
 ##  Min.   :   67   female:   7   Min.   : 0.08   0       :4612   0:4834       
 ##  1st Qu.:17741   Female:2987   1st Qu.:25.00   1       : 493   1: 276       
@@ -753,10 +753,10 @@ Rmd – indicates language in code chunk</p>
 <h3><span class="header-section-number">7.4.1</span> Incomplete data<a href="day-2-1.html#incomplete-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Firstly, we have to make a decision on how to handle missing values. We can either accept that some of the columns are incomplete or eliminate rows that do not have full data. Let’s evaluate which columns this affects</p>
 <p>If you ever encounter missing data when you are entering data, use <code>NA</code>.</p>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="day-2-1.html#cb197-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x =</span> smoking_status, <span class="at">fill =</span> hypertension)) <span class="sc">+</span></span>
-<span id="cb197-2"><a href="day-2-1.html#cb197-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="day-2-1.html#cb198-1" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(heart<span class="sc">$</span>smoking_status, heart<span class="sc">$</span>hypertension))</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="day-2-1.html#cb201-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x =</span> smoking_status, <span class="at">fill =</span> hypertension)) <span class="sc">+</span></span>
+<span id="cb201-2"><a href="day-2-1.html#cb201-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="day-2-1.html#cb202-1" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(heart<span class="sc">$</span>smoking_status, heart<span class="sc">$</span>hypertension))</span></code></pre></div>
 <pre><code>##                  
 ##                              0            1           10     10+D4972
 ##   formerly smoked 0.1497064579 0.0232876712 0.0001956947 0.0000000000
@@ -764,82 +764,82 @@ Rmd – indicates language in code chunk</p>
 ##   smokes          0.1360078278 0.0183953033 0.0000000000 0.0000000000
 ##   Unknown         0.2919765166 0.0099804305 0.0001956947 0.0000000000</code></pre>
 <p>Let’s use tidyverse to remove the rows in the <code>smoking_status</code> column with a value of <code>Unknown</code>.</p>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="day-2-1.html#cb200-1" tabindex="-1"></a><span class="fu">dim</span>(heart) <span class="co"># original 5110 rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="day-2-1.html#cb204-1" tabindex="-1"></a><span class="fu">dim</span>(heart) <span class="co"># original 5110 rows</span></span></code></pre></div>
 <pre><code>## [1] 5110   12</code></pre>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="day-2-1.html#cb202-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>smoking_status) <span class="co">#1544 unknowns</span></span></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="day-2-1.html#cb206-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>smoking_status) <span class="co">#1544 unknowns</span></span></code></pre></div>
 <pre><code>## 
 ## formerly smoked    never smoked          smokes         Unknown 
 ##             885            1892             789            1544</code></pre>
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="day-2-1.html#cb204-1" tabindex="-1"></a><span class="fu">dim</span>(<span class="fu">filter</span>(heart, <span class="sc">!</span>(smoking_status <span class="sc">==</span> <span class="st">&quot;Unknown&quot;</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="day-2-1.html#cb208-1" tabindex="-1"></a><span class="fu">dim</span>(<span class="fu">filter</span>(heart, <span class="sc">!</span>(smoking_status <span class="sc">==</span> <span class="st">&quot;Unknown&quot;</span>)))</span></code></pre></div>
 <pre><code>## [1] 3566   12</code></pre>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="day-2-1.html#cb206-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">filter</span>(heart, <span class="sc">!</span>(smoking_status <span class="sc">==</span> <span class="st">&quot;Unknown&quot;</span>))</span>
-<span id="cb206-2"><a href="day-2-1.html#cb206-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>smoking_status)</span></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="day-2-1.html#cb210-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">filter</span>(heart, <span class="sc">!</span>(smoking_status <span class="sc">==</span> <span class="st">&quot;Unknown&quot;</span>))</span>
+<span id="cb210-2"><a href="day-2-1.html#cb210-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>smoking_status)</span></code></pre></div>
 <pre><code>## formerly smoked    never smoked          smokes         Unknown 
 ##             885            1892             789               0</code></pre>
 <p>After double checking, we can see that the smoking status has an empty level, we’ll clean this up before moving on</p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="day-2-1.html#cb208-1" tabindex="-1"></a>heart<span class="sc">$</span>smoking_status <span class="ot">&lt;-</span> <span class="fu">droplevels</span>(heart<span class="sc">$</span>smoking_status)</span>
-<span id="cb208-2"><a href="day-2-1.html#cb208-2" tabindex="-1"></a></span>
-<span id="cb208-3"><a href="day-2-1.html#cb208-3" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>smoking_status)</span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="day-2-1.html#cb212-1" tabindex="-1"></a>heart<span class="sc">$</span>smoking_status <span class="ot">&lt;-</span> <span class="fu">droplevels</span>(heart<span class="sc">$</span>smoking_status)</span>
+<span id="cb212-2"><a href="day-2-1.html#cb212-2" tabindex="-1"></a></span>
+<span id="cb212-3"><a href="day-2-1.html#cb212-3" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>smoking_status)</span></code></pre></div>
 <pre><code>## formerly smoked    never smoked          smokes 
 ##             885            1892             789</code></pre>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="day-2-1.html#cb210-1" tabindex="-1"></a>heart_checkpoint <span class="ot">&lt;-</span> heart</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="day-2-1.html#cb214-1" tabindex="-1"></a>heart_checkpoint <span class="ot">&lt;-</span> heart</span></code></pre></div>
 <p>Great! Now let’s tackle the typos in the gender column.</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="day-2-1.html#cb211-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="day-2-1.html#cb215-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
 <pre><code>## 
 ## female Female   male   Male   meal  Other 
 ##      5   2153      5   1402      0      1</code></pre>
 <p>We need to fix the typos that happened during data entry and the single observation of <code>Other</code> will not be enough data for us to draw any statistical conclusion so we’ll remove this row while we’re at it.</p>
 <p>We can use <code>str_replace_all()</code> as a search and replace tool</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="day-2-1.html#cb213-1" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">str_replace_all</span>(heart<span class="sc">$</span>gender, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;Female&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="day-2-1.html#cb217-1" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">str_replace_all</span>(heart<span class="sc">$</span>gender, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;Female&quot;</span>))</span></code></pre></div>
 <pre><code>## 
 ## Female   male   Male  Other 
 ##   2158      5   1402      1</code></pre>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="day-2-1.html#cb215-1" tabindex="-1"></a><span class="co"># str_replace_all(data, what we&#39;re search, what to replace with)</span></span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="day-2-1.html#cb219-1" tabindex="-1"></a><span class="co"># str_replace_all(data, what we&#39;re search, what to replace with)</span></span></code></pre></div>
 <p>Remember that this only displays the output, it does not replace the columns in the dataset.</p>
 <p>Before we apply it globally, we can set up a quick double check to make sure that the right values are changed.</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="day-2-1.html#cb216-1" tabindex="-1"></a><span class="co"># document which rows have the error &quot;female&quot;</span></span>
-<span id="cb216-2"><a href="day-2-1.html#cb216-2" tabindex="-1"></a>wrong_entry <span class="ot">&lt;-</span> <span class="fu">which</span>(heart<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>)</span>
-<span id="cb216-3"><a href="day-2-1.html#cb216-3" tabindex="-1"></a>wrong_entry</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="day-2-1.html#cb220-1" tabindex="-1"></a><span class="co"># document which rows have the error &quot;female&quot;</span></span>
+<span id="cb220-2"><a href="day-2-1.html#cb220-2" tabindex="-1"></a>wrong_entry <span class="ot">&lt;-</span> <span class="fu">which</span>(heart<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>)</span>
+<span id="cb220-3"><a href="day-2-1.html#cb220-3" tabindex="-1"></a>wrong_entry</span></code></pre></div>
 <pre><code>## [1]  127  271  941 1930 3021</code></pre>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="day-2-1.html#cb218-1" tabindex="-1"></a>heart<span class="sc">$</span>gender[wrong_entry]</span></code></pre></div>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="day-2-1.html#cb222-1" tabindex="-1"></a>heart<span class="sc">$</span>gender[wrong_entry]</span></code></pre></div>
 <pre><code>## [1] female female female female female
 ## Levels: female Female male Male meal Other</code></pre>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="day-2-1.html#cb220-1" tabindex="-1"></a><span class="co"># apply the search and replace</span></span>
-<span id="cb220-2"><a href="day-2-1.html#cb220-2" tabindex="-1"></a>heart<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(heart<span class="sc">$</span>gender, <span class="fu">c</span>(<span class="st">&quot;female&quot;</span> <span class="ot">=</span> <span class="st">&quot;Female&quot;</span>,</span>
-<span id="cb220-3"><a href="day-2-1.html#cb220-3" tabindex="-1"></a>                                                <span class="st">&quot;male&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>,</span>
-<span id="cb220-4"><a href="day-2-1.html#cb220-4" tabindex="-1"></a>                                                <span class="st">&quot;meal&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>))</span>
-<span id="cb220-5"><a href="day-2-1.html#cb220-5" tabindex="-1"></a></span>
-<span id="cb220-6"><a href="day-2-1.html#cb220-6" tabindex="-1"></a>heart<span class="sc">$</span>gender[wrong_entry]</span></code></pre></div>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="day-2-1.html#cb224-1" tabindex="-1"></a><span class="co"># apply the search and replace</span></span>
+<span id="cb224-2"><a href="day-2-1.html#cb224-2" tabindex="-1"></a>heart<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(heart<span class="sc">$</span>gender, <span class="fu">c</span>(<span class="st">&quot;female&quot;</span> <span class="ot">=</span> <span class="st">&quot;Female&quot;</span>,</span>
+<span id="cb224-3"><a href="day-2-1.html#cb224-3" tabindex="-1"></a>                                                <span class="st">&quot;male&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>,</span>
+<span id="cb224-4"><a href="day-2-1.html#cb224-4" tabindex="-1"></a>                                                <span class="st">&quot;meal&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>))</span>
+<span id="cb224-5"><a href="day-2-1.html#cb224-5" tabindex="-1"></a></span>
+<span id="cb224-6"><a href="day-2-1.html#cb224-6" tabindex="-1"></a>heart<span class="sc">$</span>gender[wrong_entry]</span></code></pre></div>
 <pre><code>## [1] &quot;FeMale&quot; &quot;FeMale&quot; &quot;FeMale&quot; &quot;FeMale&quot; &quot;FeMale&quot;</code></pre>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="day-2-1.html#cb222-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="day-2-1.html#cb226-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
 <pre><code>## 
 ## FeMale   Male  Other 
 ##   2158   1407      1</code></pre>
 <p>There’s an issue with the “male” search grabbing from the “female” word!! Good thing we made a checkpoint earlier. Let’s bring this back to our main heart object - it’s a good habit to make some objects to checkpoint your work. In case you have not had this set up, you can always back track in your code and re-read in the object and re-run some earlier code to catch up.</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="day-2-1.html#cb224-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> heart_checkpoint</span>
-<span id="cb224-2"><a href="day-2-1.html#cb224-2" tabindex="-1"></a></span>
-<span id="cb224-3"><a href="day-2-1.html#cb224-3" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="day-2-1.html#cb228-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> heart_checkpoint</span>
+<span id="cb228-2"><a href="day-2-1.html#cb228-2" tabindex="-1"></a></span>
+<span id="cb228-3"><a href="day-2-1.html#cb228-3" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
 <pre><code>## 
 ## female Female   male   Male   meal  Other 
 ##      5   2153      5   1402      0      1</code></pre>
 <p>Let’s try this again:</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="day-2-1.html#cb226-1" tabindex="-1"></a><span class="co"># From previous code</span></span>
-<span id="cb226-2"><a href="day-2-1.html#cb226-2" tabindex="-1"></a></span>
-<span id="cb226-3"><a href="day-2-1.html#cb226-3" tabindex="-1"></a><span class="co"># add ^ (carrot) to the start of the search term to make sure it&#39;s only found at the start of the word</span></span>
-<span id="cb226-4"><a href="day-2-1.html#cb226-4" tabindex="-1"></a>heart<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(heart<span class="sc">$</span>gender, <span class="fu">c</span>(<span class="st">&quot;^female&quot;</span> <span class="ot">=</span> <span class="st">&quot;Female&quot;</span>,</span>
-<span id="cb226-5"><a href="day-2-1.html#cb226-5" tabindex="-1"></a>                                                <span class="st">&quot;^male&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>,</span>
-<span id="cb226-6"><a href="day-2-1.html#cb226-6" tabindex="-1"></a>                                                <span class="st">&quot;^meal&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>))</span>
-<span id="cb226-7"><a href="day-2-1.html#cb226-7" tabindex="-1"></a></span>
-<span id="cb226-8"><a href="day-2-1.html#cb226-8" tabindex="-1"></a>heart<span class="sc">$</span>gender[wrong_entry]</span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="day-2-1.html#cb230-1" tabindex="-1"></a><span class="co"># From previous code</span></span>
+<span id="cb230-2"><a href="day-2-1.html#cb230-2" tabindex="-1"></a></span>
+<span id="cb230-3"><a href="day-2-1.html#cb230-3" tabindex="-1"></a><span class="co"># add ^ (carrot) to the start of the search term to make sure it&#39;s only found at the start of the word</span></span>
+<span id="cb230-4"><a href="day-2-1.html#cb230-4" tabindex="-1"></a>heart<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(heart<span class="sc">$</span>gender, <span class="fu">c</span>(<span class="st">&quot;^female&quot;</span> <span class="ot">=</span> <span class="st">&quot;Female&quot;</span>,</span>
+<span id="cb230-5"><a href="day-2-1.html#cb230-5" tabindex="-1"></a>                                                <span class="st">&quot;^male&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>,</span>
+<span id="cb230-6"><a href="day-2-1.html#cb230-6" tabindex="-1"></a>                                                <span class="st">&quot;^meal&quot;</span> <span class="ot">=</span> <span class="st">&quot;Male&quot;</span>))</span>
+<span id="cb230-7"><a href="day-2-1.html#cb230-7" tabindex="-1"></a></span>
+<span id="cb230-8"><a href="day-2-1.html#cb230-8" tabindex="-1"></a>heart<span class="sc">$</span>gender[wrong_entry]</span></code></pre></div>
 <pre><code>## [1] &quot;Female&quot; &quot;Female&quot; &quot;Female&quot; &quot;Female&quot; &quot;Female&quot;</code></pre>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="day-2-1.html#cb228-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="day-2-1.html#cb232-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
 <pre><code>## 
 ## Female   Male  Other 
 ##   2158   1407      1</code></pre>
 <p>The <code>^</code> is a special character that indicates the start of a word.</p>
 <p>Lastly, we’ll the one <code>Other</code> entry</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="day-2-1.html#cb230-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> heart[<span class="sc">!</span>heart<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">&quot;Other&quot;</span>, ] <span class="co"># object[rows, col]</span></span>
-<span id="cb230-2"><a href="day-2-1.html#cb230-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="day-2-1.html#cb234-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> heart[<span class="sc">!</span>heart<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">&quot;Other&quot;</span>, ] <span class="co"># object[rows, col]</span></span>
+<span id="cb234-2"><a href="day-2-1.html#cb234-2" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>gender)</span></code></pre></div>
 <pre><code>## 
 ## Female   Male 
 ##   2158   1407</code></pre>
@@ -848,23 +848,23 @@ Rmd – indicates language in code chunk</p>
 <div id="exercise-6" class="section level3 hasAnchor" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> Exercise<a href="day-2-1.html#exercise-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Investigate the <code>work_type</code> column and correct the data entry problems! Also, remove any “N/A” entries under <code>bmi</code></p>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="day-2-1.html#cb232-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="day-2-1.html#cb236-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
 <pre><code>## 
 ##       children       Govt_job      Govt_job    Never_worked        Private 
 ##             69            534              1             14           2281 
 ##       Private   Self-employed Self-employed  
 ##              3            662              1</code></pre>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="day-2-1.html#cb234-1" tabindex="-1"></a><span class="fu">levels</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="day-2-1.html#cb238-1" tabindex="-1"></a><span class="fu">levels</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
 <pre><code>## [1] &quot;children&quot;       &quot;Govt_job&quot;       &quot;Govt_job &quot;      &quot;Never_worked&quot;  
 ## [5] &quot;Private&quot;        &quot;Private &quot;       &quot;Self-employed&quot;  &quot;Self-employed &quot;</code></pre>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="day-2-1.html#cb236-1" tabindex="-1"></a>heart<span class="sc">$</span>work_type <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(heart<span class="sc">$</span>work_type, <span class="fu">c</span>(<span class="st">&quot;Govt_job &quot;</span> <span class="ot">=</span> <span class="st">&quot;Govt_job&quot;</span>,</span>
-<span id="cb236-2"><a href="day-2-1.html#cb236-2" tabindex="-1"></a>                                                      <span class="st">&quot;Private &quot;</span> <span class="ot">=</span> <span class="st">&quot;Private&quot;</span>,</span>
-<span id="cb236-3"><a href="day-2-1.html#cb236-3" tabindex="-1"></a>                                                      <span class="st">&quot;Self-employed &quot;</span> <span class="ot">=</span> <span class="st">&quot;Self-employed&quot;</span>))</span>
-<span id="cb236-4"><a href="day-2-1.html#cb236-4" tabindex="-1"></a></span>
-<span id="cb236-5"><a href="day-2-1.html#cb236-5" tabindex="-1"></a><span class="fu">class</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="day-2-1.html#cb240-1" tabindex="-1"></a>heart<span class="sc">$</span>work_type <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(heart<span class="sc">$</span>work_type, <span class="fu">c</span>(<span class="st">&quot;Govt_job &quot;</span> <span class="ot">=</span> <span class="st">&quot;Govt_job&quot;</span>,</span>
+<span id="cb240-2"><a href="day-2-1.html#cb240-2" tabindex="-1"></a>                                                      <span class="st">&quot;Private &quot;</span> <span class="ot">=</span> <span class="st">&quot;Private&quot;</span>,</span>
+<span id="cb240-3"><a href="day-2-1.html#cb240-3" tabindex="-1"></a>                                                      <span class="st">&quot;Self-employed &quot;</span> <span class="ot">=</span> <span class="st">&quot;Self-employed&quot;</span>))</span>
+<span id="cb240-4"><a href="day-2-1.html#cb240-4" tabindex="-1"></a></span>
+<span id="cb240-5"><a href="day-2-1.html#cb240-5" tabindex="-1"></a><span class="fu">class</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="day-2-1.html#cb238-1" tabindex="-1"></a>heart<span class="sc">$</span>work_type <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="day-2-1.html#cb239-1" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="day-2-1.html#cb242-1" tabindex="-1"></a>heart<span class="sc">$</span>work_type <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(heart<span class="sc">$</span>work_type)</span></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="day-2-1.html#cb243-1" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
 <pre><code>##     N/A    28.4    28.7      27    27.6    25.5    27.3    26.1    26.7    26.9 
 ##     140      32      32      30      30      28      28      26      26      26 
 ##    32.3    25.1    25.3    26.4    26.5    27.7    28.3    28.9      29    29.6 
@@ -885,8 +885,8 @@ Rmd – indicates language in code chunk</p>
 ##      16      16      16      16      16      16      16      16      16      16 
 ##    30.2    30.8    31.2    31.9    32.4    33.5    34.5    23.6    32.2 (Other) 
 ##      16      16      16      16      16      16      16      15      15    1414</code></pre>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="day-2-1.html#cb241-1" tabindex="-1"></a>heart<span class="sc">$</span>bmi <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(heart<span class="sc">$</span>bmi)</span>
-<span id="cb241-2"><a href="day-2-1.html#cb241-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="day-2-1.html#cb245-1" tabindex="-1"></a>heart<span class="sc">$</span>bmi <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(heart<span class="sc">$</span>bmi)</span>
+<span id="cb245-2"><a href="day-2-1.html#cb245-2" tabindex="-1"></a><span class="fu">summary</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##     3.0   128.0   168.0   185.6   223.0   419.0</code></pre>
 </div>
@@ -894,54 +894,54 @@ Rmd – indicates language in code chunk</p>
 <h3><span class="header-section-number">7.4.3</span> Loops<a href="day-2-1.html#loops" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>“For loops” allow R to apply highly automated tasks. It will cycle through a range of inputs and “for” each of them, it will carry out your custom task.</p>
 <p>Here’s a very simple example to show you the structure of for loops</p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="day-2-1.html#cb243-1" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;orange&quot;</span>)</span>
-<span id="cb243-2"><a href="day-2-1.html#cb243-2" tabindex="-1"></a></span>
-<span id="cb243-3"><a href="day-2-1.html#cb243-3" tabindex="-1"></a><span class="cf">for</span>(x <span class="cf">in</span> fruits) {</span>
-<span id="cb243-4"><a href="day-2-1.html#cb243-4" tabindex="-1"></a>  <span class="fu">print</span>(x)</span>
-<span id="cb243-5"><a href="day-2-1.html#cb243-5" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="day-2-1.html#cb247-1" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;orange&quot;</span>)</span>
+<span id="cb247-2"><a href="day-2-1.html#cb247-2" tabindex="-1"></a></span>
+<span id="cb247-3"><a href="day-2-1.html#cb247-3" tabindex="-1"></a><span class="cf">for</span>(x <span class="cf">in</span> fruits) {</span>
+<span id="cb247-4"><a href="day-2-1.html#cb247-4" tabindex="-1"></a>  <span class="fu">print</span>(x)</span>
+<span id="cb247-5"><a href="day-2-1.html#cb247-5" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;strawberry&quot;
 ## [1] &quot;banana&quot;
 ## [1] &quot;orange&quot;</code></pre>
 <p>The <code>for()</code> function accepts firstly the name of a temporary object that exists only within the curly brackets of the for loop, the <code>in</code> is a special R syntax specification, and <code>fruit</code> is the object that we are applying the for loop on.</p>
 <p>The for loop will take each entry of the fruits object, store it in the temporary object <code>x</code>, and apply the code written written within the curly bracket before repeating with the next entry.</p>
 <p>I recommend testing your code outside the <code>for()</code> loop before moving it into the loop to make sure it is robust and if you are applying the loop to a long vector or large dataset, consider trying it on a truncated version first as a proof of principle.</p>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="day-2-1.html#cb245-1" tabindex="-1"></a><span class="fu">levels</span>(heart<span class="sc">$</span>smoking_status)</span></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="day-2-1.html#cb249-1" tabindex="-1"></a><span class="fu">levels</span>(heart<span class="sc">$</span>smoking_status)</span></code></pre></div>
 <pre><code>## [1] &quot;formerly smoked&quot; &quot;never smoked&quot;    &quot;smokes&quot;</code></pre>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="day-2-1.html#cb247-1" tabindex="-1"></a>heart <span class="sc">%&gt;%</span></span>
-<span id="cb247-2"><a href="day-2-1.html#cb247-2" tabindex="-1"></a>  <span class="fu">filter</span>(smoking_status <span class="sc">==</span> <span class="st">&quot;never smoked&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb247-3"><a href="day-2-1.html#cb247-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>avg_glucose_level, <span class="at">y=</span>bmi)) <span class="sc">+</span></span>
-<span id="cb247-4"><a href="day-2-1.html#cb247-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb247-5"><a href="day-2-1.html#cb247-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;never smoked&quot;</span>) <span class="sc">+</span></span>
-<span id="cb247-6"><a href="day-2-1.html#cb247-6" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="day-2-1.html#cb251-1" tabindex="-1"></a>heart <span class="sc">%&gt;%</span></span>
+<span id="cb251-2"><a href="day-2-1.html#cb251-2" tabindex="-1"></a>  <span class="fu">filter</span>(smoking_status <span class="sc">==</span> <span class="st">&quot;never smoked&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb251-3"><a href="day-2-1.html#cb251-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>avg_glucose_level, <span class="at">y=</span>bmi)) <span class="sc">+</span></span>
+<span id="cb251-4"><a href="day-2-1.html#cb251-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb251-5"><a href="day-2-1.html#cb251-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;never smoked&quot;</span>) <span class="sc">+</span></span>
+<span id="cb251-6"><a href="day-2-1.html#cb251-6" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
 <p>If we wanted to save a pdf of every category of <code>smoking_status</code>, we can convert our code into a loop. When working on a larger section of code, it is helpful to sketch out the steps you need to do with <code>#</code> comments to keep you focused.</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="day-2-1.html#cb248-1" tabindex="-1"></a>smoke_cat <span class="ot">&lt;-</span> <span class="fu">levels</span>(heart<span class="sc">$</span>smoking_status)</span>
-<span id="cb248-2"><a href="day-2-1.html#cb248-2" tabindex="-1"></a>smoke_cat</span></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="day-2-1.html#cb252-1" tabindex="-1"></a>smoke_cat <span class="ot">&lt;-</span> <span class="fu">levels</span>(heart<span class="sc">$</span>smoking_status)</span>
+<span id="cb252-2"><a href="day-2-1.html#cb252-2" tabindex="-1"></a>smoke_cat</span></code></pre></div>
 <pre><code>## [1] &quot;formerly smoked&quot; &quot;never smoked&quot;    &quot;smokes&quot;</code></pre>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="day-2-1.html#cb250-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># get working directory</span></span></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="day-2-1.html#cb254-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># get working directory</span></span></code></pre></div>
 <pre><code>## [1] &quot;/Users/jqiu/Documents/CBWgithub/cbw-dev-test-pages/INR-2024-Recreate&quot;</code></pre>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="day-2-1.html#cb252-1" tabindex="-1"></a><span class="cf">for</span>(cat <span class="cf">in</span> smoke_cat) {</span>
-<span id="cb252-2"><a href="day-2-1.html#cb252-2" tabindex="-1"></a></span>
-<span id="cb252-3"><a href="day-2-1.html#cb252-3" tabindex="-1"></a>  <span class="co"># Specify file name</span></span>
-<span id="cb252-4"><a href="day-2-1.html#cb252-4" tabindex="-1"></a>  filename_cat <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;bmi_glucose_&quot;</span>, cat, <span class="st">&quot;.png&quot;</span>)</span>
-<span id="cb252-5"><a href="day-2-1.html#cb252-5" tabindex="-1"></a>  <span class="fu">print</span>(filename_cat)</span>
-<span id="cb252-6"><a href="day-2-1.html#cb252-6" tabindex="-1"></a></span>
-<span id="cb252-7"><a href="day-2-1.html#cb252-7" tabindex="-1"></a>  <span class="co"># Making plot (based on code from above)</span></span>
-<span id="cb252-8"><a href="day-2-1.html#cb252-8" tabindex="-1"></a></span>
-<span id="cb252-9"><a href="day-2-1.html#cb252-9" tabindex="-1"></a>  plot_cat <span class="ot">&lt;-</span> heart <span class="sc">%&gt;%</span> <span class="co"># SAVE OUTPUT TO OBJECT</span></span>
-<span id="cb252-10"><a href="day-2-1.html#cb252-10" tabindex="-1"></a>  <span class="fu">filter</span>(smoking_status <span class="sc">==</span> cat) <span class="sc">%&gt;%</span> <span class="co"># CHANGE TO cat</span></span>
-<span id="cb252-11"><a href="day-2-1.html#cb252-11" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>avg_glucose_level, <span class="at">y=</span>bmi)) <span class="sc">+</span></span>
-<span id="cb252-12"><a href="day-2-1.html#cb252-12" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb252-13"><a href="day-2-1.html#cb252-13" tabindex="-1"></a>  <span class="fu">ggtitle</span>(cat) <span class="sc">+</span> <span class="co"># CHANGE TO cat</span></span>
-<span id="cb252-14"><a href="day-2-1.html#cb252-14" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
-<span id="cb252-15"><a href="day-2-1.html#cb252-15" tabindex="-1"></a></span>
-<span id="cb252-16"><a href="day-2-1.html#cb252-16" tabindex="-1"></a>  <span class="co">#print(plot_cat) # PRINT OUT PLOT</span></span>
-<span id="cb252-17"><a href="day-2-1.html#cb252-17" tabindex="-1"></a></span>
-<span id="cb252-18"><a href="day-2-1.html#cb252-18" tabindex="-1"></a>  <span class="co"># Saving the plot to file</span></span>
-<span id="cb252-19"><a href="day-2-1.html#cb252-19" tabindex="-1"></a>  <span class="fu">png</span>(filename_cat, <span class="at">width =</span> <span class="dv">700</span>, <span class="at">height=</span> <span class="dv">500</span>, <span class="at">res=</span><span class="dv">120</span>) <span class="co"># Start saving whatever I make now to this file</span></span>
-<span id="cb252-20"><a href="day-2-1.html#cb252-20" tabindex="-1"></a>  <span class="fu">print</span>(plot_cat)</span>
-<span id="cb252-21"><a href="day-2-1.html#cb252-21" tabindex="-1"></a>  <span class="fu">dev.off</span>() <span class="co"># Stop saving</span></span>
-<span id="cb252-22"><a href="day-2-1.html#cb252-22" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="day-2-1.html#cb256-1" tabindex="-1"></a><span class="cf">for</span>(cat <span class="cf">in</span> smoke_cat) {</span>
+<span id="cb256-2"><a href="day-2-1.html#cb256-2" tabindex="-1"></a></span>
+<span id="cb256-3"><a href="day-2-1.html#cb256-3" tabindex="-1"></a>  <span class="co"># Specify file name</span></span>
+<span id="cb256-4"><a href="day-2-1.html#cb256-4" tabindex="-1"></a>  filename_cat <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;bmi_glucose_&quot;</span>, cat, <span class="st">&quot;.png&quot;</span>)</span>
+<span id="cb256-5"><a href="day-2-1.html#cb256-5" tabindex="-1"></a>  <span class="fu">print</span>(filename_cat)</span>
+<span id="cb256-6"><a href="day-2-1.html#cb256-6" tabindex="-1"></a></span>
+<span id="cb256-7"><a href="day-2-1.html#cb256-7" tabindex="-1"></a>  <span class="co"># Making plot (based on code from above)</span></span>
+<span id="cb256-8"><a href="day-2-1.html#cb256-8" tabindex="-1"></a></span>
+<span id="cb256-9"><a href="day-2-1.html#cb256-9" tabindex="-1"></a>  plot_cat <span class="ot">&lt;-</span> heart <span class="sc">%&gt;%</span> <span class="co"># SAVE OUTPUT TO OBJECT</span></span>
+<span id="cb256-10"><a href="day-2-1.html#cb256-10" tabindex="-1"></a>  <span class="fu">filter</span>(smoking_status <span class="sc">==</span> cat) <span class="sc">%&gt;%</span> <span class="co"># CHANGE TO cat</span></span>
+<span id="cb256-11"><a href="day-2-1.html#cb256-11" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>avg_glucose_level, <span class="at">y=</span>bmi)) <span class="sc">+</span></span>
+<span id="cb256-12"><a href="day-2-1.html#cb256-12" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb256-13"><a href="day-2-1.html#cb256-13" tabindex="-1"></a>  <span class="fu">ggtitle</span>(cat) <span class="sc">+</span> <span class="co"># CHANGE TO cat</span></span>
+<span id="cb256-14"><a href="day-2-1.html#cb256-14" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb256-15"><a href="day-2-1.html#cb256-15" tabindex="-1"></a></span>
+<span id="cb256-16"><a href="day-2-1.html#cb256-16" tabindex="-1"></a>  <span class="co">#print(plot_cat) # PRINT OUT PLOT</span></span>
+<span id="cb256-17"><a href="day-2-1.html#cb256-17" tabindex="-1"></a></span>
+<span id="cb256-18"><a href="day-2-1.html#cb256-18" tabindex="-1"></a>  <span class="co"># Saving the plot to file</span></span>
+<span id="cb256-19"><a href="day-2-1.html#cb256-19" tabindex="-1"></a>  <span class="fu">png</span>(filename_cat, <span class="at">width =</span> <span class="dv">700</span>, <span class="at">height=</span> <span class="dv">500</span>, <span class="at">res=</span><span class="dv">120</span>) <span class="co"># Start saving whatever I make now to this file</span></span>
+<span id="cb256-20"><a href="day-2-1.html#cb256-20" tabindex="-1"></a>  <span class="fu">print</span>(plot_cat)</span>
+<span id="cb256-21"><a href="day-2-1.html#cb256-21" tabindex="-1"></a>  <span class="fu">dev.off</span>() <span class="co"># Stop saving</span></span>
+<span id="cb256-22"><a href="day-2-1.html#cb256-22" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;bmi_glucose_formerly smoked.png&quot;</code></pre>
 <pre><code>## [1] &quot;bmi_glucose_never smoked.png&quot;</code></pre>
 <pre><code>## [1] &quot;bmi_glucose_smokes.png&quot;</code></pre>
@@ -956,28 +956,28 @@ Rmd – indicates language in code chunk</p>
 <div id="conditional-for-loops" class="section level3 hasAnchor" number="7.4.5">
 <h3><span class="header-section-number">7.4.5</span> Conditional for loops<a href="day-2-1.html#conditional-for-loops" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Boolean statements can be used to write conditional statements. If we do not want the loop to be applied to every item, we can add a condition.</p>
-<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="day-2-1.html#cb256-1" tabindex="-1"></a>food <span class="ot">&lt;-</span> <span class="st">&quot;pineapple&quot;</span></span>
-<span id="cb256-2"><a href="day-2-1.html#cb256-2" tabindex="-1"></a></span>
-<span id="cb256-3"><a href="day-2-1.html#cb256-3" tabindex="-1"></a><span class="cf">if</span>(food <span class="sc">==</span> <span class="st">&quot;pineapple&quot;</span>) {</span>
-<span id="cb256-4"><a href="day-2-1.html#cb256-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;This indeed is a pineapple.&quot;</span>)</span>
-<span id="cb256-5"><a href="day-2-1.html#cb256-5" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="day-2-1.html#cb260-1" tabindex="-1"></a>food <span class="ot">&lt;-</span> <span class="st">&quot;pineapple&quot;</span></span>
+<span id="cb260-2"><a href="day-2-1.html#cb260-2" tabindex="-1"></a></span>
+<span id="cb260-3"><a href="day-2-1.html#cb260-3" tabindex="-1"></a><span class="cf">if</span>(food <span class="sc">==</span> <span class="st">&quot;pineapple&quot;</span>) {</span>
+<span id="cb260-4"><a href="day-2-1.html#cb260-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;This indeed is a pineapple.&quot;</span>)</span>
+<span id="cb260-5"><a href="day-2-1.html#cb260-5" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;This indeed is a pineapple.&quot;</code></pre>
 <p>This will only output if the condition is met. We can also modify this statement to do something in case the condition is not met.</p>
-<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="day-2-1.html#cb258-1" tabindex="-1"></a>food <span class="ot">&lt;-</span> <span class="st">&quot;orange&quot;</span></span>
-<span id="cb258-2"><a href="day-2-1.html#cb258-2" tabindex="-1"></a></span>
-<span id="cb258-3"><a href="day-2-1.html#cb258-3" tabindex="-1"></a><span class="cf">if</span>(food <span class="sc">==</span> <span class="st">&quot;pineapple&quot;</span>) {</span>
-<span id="cb258-4"><a href="day-2-1.html#cb258-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;This indeed is a pineapple.&quot;</span>)</span>
-<span id="cb258-5"><a href="day-2-1.html#cb258-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb258-6"><a href="day-2-1.html#cb258-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;This is NOT a pineapple.&quot;</span>)</span>
-<span id="cb258-7"><a href="day-2-1.html#cb258-7" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="day-2-1.html#cb262-1" tabindex="-1"></a>food <span class="ot">&lt;-</span> <span class="st">&quot;orange&quot;</span></span>
+<span id="cb262-2"><a href="day-2-1.html#cb262-2" tabindex="-1"></a></span>
+<span id="cb262-3"><a href="day-2-1.html#cb262-3" tabindex="-1"></a><span class="cf">if</span>(food <span class="sc">==</span> <span class="st">&quot;pineapple&quot;</span>) {</span>
+<span id="cb262-4"><a href="day-2-1.html#cb262-4" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;This indeed is a pineapple.&quot;</span>)</span>
+<span id="cb262-5"><a href="day-2-1.html#cb262-5" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb262-6"><a href="day-2-1.html#cb262-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;This is NOT a pineapple.&quot;</span>)</span>
+<span id="cb262-7"><a href="day-2-1.html#cb262-7" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;This is NOT a pineapple.&quot;</code></pre>
 <p>Using <code>if else</code> statements will allow more customizability in our code. Let’s use this to add a new column called <code>ever_smoked</code> based on the value in the <code>smoking_status</code> column.</p>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="day-2-1.html#cb260-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>stroke)</span></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="day-2-1.html#cb264-1" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>stroke)</span></code></pre></div>
 <pre><code>## 
 ##    0    1 
 ## 3363  202</code></pre>
-<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="day-2-1.html#cb262-1" tabindex="-1"></a>heart<span class="sc">$</span>stroke_history <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb262-2"><a href="day-2-1.html#cb262-2" tabindex="-1"></a><span class="fu">head</span>(heart)</span></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="day-2-1.html#cb266-1" tabindex="-1"></a>heart<span class="sc">$</span>stroke_history <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb266-2"><a href="day-2-1.html#cb266-2" tabindex="-1"></a><span class="fu">head</span>(heart)</span></code></pre></div>
 <pre><code>##      id gender age hypertension heart_disease ever_married     work_type
 ## 1  9046   Male  67            0             1          Yes       Private
 ## 2 51676 Female  61            0             0          Yes Self-employed
@@ -992,16 +992,16 @@ Rmd – indicates language in code chunk</p>
 ## 4          Urban            171.23 218          smokes      1             NA
 ## 5          Rural            174.12 114    never smoked      1             NA
 ## 6          Urban            186.21 164 formerly smoked      1             NA</code></pre>
-<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="day-2-1.html#cb264-1" tabindex="-1"></a><span class="cf">for</span>(row <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(heart)) {</span>
-<span id="cb264-2"><a href="day-2-1.html#cb264-2" tabindex="-1"></a>  <span class="cf">if</span>(heart<span class="sc">$</span>stroke[row] <span class="sc">==</span> <span class="st">&quot;1&quot;</span>) {</span>
-<span id="cb264-3"><a href="day-2-1.html#cb264-3" tabindex="-1"></a>    heart<span class="sc">$</span>stroke_history[row] <span class="ot">&lt;-</span> <span class="st">&quot;confirmed_stroke&quot;</span></span>
-<span id="cb264-4"><a href="day-2-1.html#cb264-4" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb264-5"><a href="day-2-1.html#cb264-5" tabindex="-1"></a>    heart<span class="sc">$</span>stroke_history[row] <span class="ot">&lt;-</span> <span class="st">&quot;no_history&quot;</span></span>
-<span id="cb264-6"><a href="day-2-1.html#cb264-6" tabindex="-1"></a>    }</span>
-<span id="cb264-7"><a href="day-2-1.html#cb264-7" tabindex="-1"></a>  <span class="co"># else &gt;&gt; &quot;no_history&quot;</span></span>
-<span id="cb264-8"><a href="day-2-1.html#cb264-8" tabindex="-1"></a></span>
-<span id="cb264-9"><a href="day-2-1.html#cb264-9" tabindex="-1"></a>}</span>
-<span id="cb264-10"><a href="day-2-1.html#cb264-10" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>stroke, heart<span class="sc">$</span>stroke_history)</span></code></pre></div>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="day-2-1.html#cb268-1" tabindex="-1"></a><span class="cf">for</span>(row <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(heart)) {</span>
+<span id="cb268-2"><a href="day-2-1.html#cb268-2" tabindex="-1"></a>  <span class="cf">if</span>(heart<span class="sc">$</span>stroke[row] <span class="sc">==</span> <span class="st">&quot;1&quot;</span>) {</span>
+<span id="cb268-3"><a href="day-2-1.html#cb268-3" tabindex="-1"></a>    heart<span class="sc">$</span>stroke_history[row] <span class="ot">&lt;-</span> <span class="st">&quot;confirmed_stroke&quot;</span></span>
+<span id="cb268-4"><a href="day-2-1.html#cb268-4" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb268-5"><a href="day-2-1.html#cb268-5" tabindex="-1"></a>    heart<span class="sc">$</span>stroke_history[row] <span class="ot">&lt;-</span> <span class="st">&quot;no_history&quot;</span></span>
+<span id="cb268-6"><a href="day-2-1.html#cb268-6" tabindex="-1"></a>    }</span>
+<span id="cb268-7"><a href="day-2-1.html#cb268-7" tabindex="-1"></a>  <span class="co"># else &gt;&gt; &quot;no_history&quot;</span></span>
+<span id="cb268-8"><a href="day-2-1.html#cb268-8" tabindex="-1"></a></span>
+<span id="cb268-9"><a href="day-2-1.html#cb268-9" tabindex="-1"></a>}</span>
+<span id="cb268-10"><a href="day-2-1.html#cb268-10" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>stroke, heart<span class="sc">$</span>stroke_history)</span></code></pre></div>
 <pre><code>##    
 ##     confirmed_stroke no_history
 ##   0                0       3363
@@ -1016,24 +1016,24 @@ Rmd – indicates language in code chunk</p>
 <li><code>avg_glucose_levels</code> over 100 are annotated as <code>followup</code></li>
 </ul>
 <p>Hint: conditions can be combined using the <code>&amp;</code> for <code>and</code> where as <code>|</code> is used for <code>or</code> statements.</p>
-<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="day-2-1.html#cb266-1" tabindex="-1"></a><span class="fu">colnames</span>(heart) <span class="co"># SHOULD BE &#39;avg_glucose_level&#39; WITHOUT THE S AT THE </span><span class="re">END</span></span></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="day-2-1.html#cb270-1" tabindex="-1"></a><span class="fu">colnames</span>(heart) <span class="co"># SHOULD BE &#39;avg_glucose_level&#39; WITHOUT THE S AT THE </span><span class="re">END</span></span></code></pre></div>
 <pre><code>##  [1] &quot;id&quot;                &quot;gender&quot;            &quot;age&quot;              
 ##  [4] &quot;hypertension&quot;      &quot;heart_disease&quot;     &quot;ever_married&quot;     
 ##  [7] &quot;work_type&quot;         &quot;Residence_type&quot;    &quot;avg_glucose_level&quot;
 ## [10] &quot;bmi&quot;               &quot;smoking_status&quot;    &quot;stroke&quot;           
 ## [13] &quot;stroke_history&quot;</code></pre>
-<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="day-2-1.html#cb268-1" tabindex="-1"></a><span class="co"># Sorry!</span></span>
-<span id="cb268-2"><a href="day-2-1.html#cb268-2" tabindex="-1"></a></span>
-<span id="cb268-3"><a href="day-2-1.html#cb268-3" tabindex="-1"></a>heart<span class="sc">$</span>glucose_WHO <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb268-4"><a href="day-2-1.html#cb268-4" tabindex="-1"></a></span>
-<span id="cb268-5"><a href="day-2-1.html#cb268-5" tabindex="-1"></a><span class="cf">for</span>(row <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(heart)) {</span>
-<span id="cb268-6"><a href="day-2-1.html#cb268-6" tabindex="-1"></a>  <span class="cf">if</span>(heart<span class="sc">$</span>avg_glucose_level[row] <span class="sc">&gt;</span> <span class="dv">70</span> <span class="sc">&amp;</span> heart<span class="sc">$</span>avg_glucose_level[row] <span class="sc">&lt;</span> <span class="dv">100</span>) {</span>
-<span id="cb268-7"><a href="day-2-1.html#cb268-7" tabindex="-1"></a>  heart<span class="sc">$</span>glucose_WHO[row] <span class="ot">&lt;-</span> <span class="st">&quot;average&quot;</span></span>
-<span id="cb268-8"><a href="day-2-1.html#cb268-8" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb268-9"><a href="day-2-1.html#cb268-9" tabindex="-1"></a>    heart<span class="sc">$</span>glucose_WHO[row] <span class="ot">&lt;-</span> <span class="st">&quot;followup&quot;</span>}</span>
-<span id="cb268-10"><a href="day-2-1.html#cb268-10" tabindex="-1"></a>}</span>
-<span id="cb268-11"><a href="day-2-1.html#cb268-11" tabindex="-1"></a></span>
-<span id="cb268-12"><a href="day-2-1.html#cb268-12" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>glucose_WHO)</span></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="day-2-1.html#cb272-1" tabindex="-1"></a><span class="co"># Sorry!</span></span>
+<span id="cb272-2"><a href="day-2-1.html#cb272-2" tabindex="-1"></a></span>
+<span id="cb272-3"><a href="day-2-1.html#cb272-3" tabindex="-1"></a>heart<span class="sc">$</span>glucose_WHO <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb272-4"><a href="day-2-1.html#cb272-4" tabindex="-1"></a></span>
+<span id="cb272-5"><a href="day-2-1.html#cb272-5" tabindex="-1"></a><span class="cf">for</span>(row <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(heart)) {</span>
+<span id="cb272-6"><a href="day-2-1.html#cb272-6" tabindex="-1"></a>  <span class="cf">if</span>(heart<span class="sc">$</span>avg_glucose_level[row] <span class="sc">&gt;</span> <span class="dv">70</span> <span class="sc">&amp;</span> heart<span class="sc">$</span>avg_glucose_level[row] <span class="sc">&lt;</span> <span class="dv">100</span>) {</span>
+<span id="cb272-7"><a href="day-2-1.html#cb272-7" tabindex="-1"></a>  heart<span class="sc">$</span>glucose_WHO[row] <span class="ot">&lt;-</span> <span class="st">&quot;average&quot;</span></span>
+<span id="cb272-8"><a href="day-2-1.html#cb272-8" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb272-9"><a href="day-2-1.html#cb272-9" tabindex="-1"></a>    heart<span class="sc">$</span>glucose_WHO[row] <span class="ot">&lt;-</span> <span class="st">&quot;followup&quot;</span>}</span>
+<span id="cb272-10"><a href="day-2-1.html#cb272-10" tabindex="-1"></a>}</span>
+<span id="cb272-11"><a href="day-2-1.html#cb272-11" tabindex="-1"></a></span>
+<span id="cb272-12"><a href="day-2-1.html#cb272-12" tabindex="-1"></a><span class="fu">table</span>(heart<span class="sc">$</span>glucose_WHO)</span></code></pre></div>
 <pre><code>## 
 ##  average followup 
 ##     1610     1955</code></pre>
@@ -1041,24 +1041,24 @@ Rmd – indicates language in code chunk</p>
 <div id="countinous-variables" class="section level3 hasAnchor" number="7.4.7">
 <h3><span class="header-section-number">7.4.7</span> Countinous variables<a href="day-2-1.html#countinous-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In the heart dataset, we have three continuous variables. In R, continuous variables will be <code>numeric</code> values. Continuous variable have a wide range of ordered values. For example, the <code>age</code> values have a range of 10 to 82 - any value in between is possible.</p>
-<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="day-2-1.html#cb270-1" tabindex="-1"></a><span class="co">#heart$bmi &lt;- as.numeric(heart$bmi)</span></span>
-<span id="cb270-2"><a href="day-2-1.html#cb270-2" tabindex="-1"></a></span>
-<span id="cb270-3"><a href="day-2-1.html#cb270-3" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi)) <span class="sc">+</span></span>
-<span id="cb270-4"><a href="day-2-1.html#cb270-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="day-2-1.html#cb274-1" tabindex="-1"></a><span class="co">#heart$bmi &lt;- as.numeric(heart$bmi)</span></span>
+<span id="cb274-2"><a href="day-2-1.html#cb274-2" tabindex="-1"></a></span>
+<span id="cb274-3"><a href="day-2-1.html#cb274-3" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi)) <span class="sc">+</span></span>
+<span id="cb274-4"><a href="day-2-1.html#cb274-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-103-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
 <p>Staticians commonly prefer working with normally distributed data because this is a heavily studied and predictable distribution. Confirming that the variable is normally distributed opens up options for robust statistical approaches to be applied.</p>
 <p>Is this heart dataset normally distributed?</p>
 <p>QQ plots, or quantile-quantile plots, are unique scatterplots that help us determine the distribution. Rather than black and white diagnostic tool, this is a visualization tool for inform our analysis. The <code>qqnorm()</code> sorts the values in the vector and compares it to a theoretical normal distribution (the <code>norm</code> part of <code>qqnorm</code>).</p>
-<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="day-2-1.html#cb272-1" tabindex="-1"></a><span class="fu">qqnorm</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="day-2-1.html#cb276-1" tabindex="-1"></a><span class="fu">qqnorm</span>(heart<span class="sc">$</span>bmi)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
 <p>For a normal distribution, we ideally want a straight diagonal line. Notice the slight curve on the right end, we can see the tail is also on the right side of this histogram. Curves indicate deviation away from normality. This looks faily normal, we can check to see if a transformation improves the distribution.</p>
-<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="day-2-1.html#cb273-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log2</span>(bmi))) <span class="sc">+</span></span>
-<span id="cb273-2"><a href="day-2-1.html#cb273-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="day-2-1.html#cb277-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log2</span>(bmi))) <span class="sc">+</span></span>
+<span id="cb277-2"><a href="day-2-1.html#cb277-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="day-2-1.html#cb275-1" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">log2</span>(heart<span class="sc">$</span>bmi))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-105-2.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="day-2-1.html#cb279-1" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">log2</span>(heart<span class="sc">$</span>bmi))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-107-2.png" width="672" /></p>
 <p>The tail is exaggerated. Since all transformations add some artificial noise, we avoid applying them when it does not significantly improve the shape of our data.</p>
 <p>We will proceed with the non-transformed data.</p>
 </div>
@@ -1068,18 +1068,18 @@ Rmd – indicates language in code chunk</p>
 <p>For example, if we are investigating if a high fat diet affects sleep quality, the diet is the independent variable (changing or is different between participants) while the sleep quality is the dependent variable (depending on the diet, the sleep quality will change).</p>
 <p>Here, we are investigating the relation between bmi and avg_glucose_level</p>
 <p>We’ll first visualize the two variables</p>
-<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="day-2-1.html#cb276-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart)<span class="sc">+</span></span>
-<span id="cb276-2"><a href="day-2-1.html#cb276-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="day-2-1.html#cb280-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart)<span class="sc">+</span></span>
+<span id="cb280-2"><a href="day-2-1.html#cb280-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-108-1.png" width="672" /></p>
 <p>Notice here the aes is specified in the <code>geom_point()</code> call rather than the parent <code>ggplot()</code> call. This is helpful if your plots have multiple layers and you want the aes to apply only to one layer. Parameters in the <code>ggplot()</code> call will apply to all layers in the plot where as parameters specified in the <code>geom_point()</code> will only affect this specific layer.</p>
 <p>For this plot with only one layer, this has no functional impact on the plot made, but this will be important if you make more complex and layered plots.</p>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="day-2-1.html#cb277-1" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg_glucose_level <span class="sc">~</span> bmi, <span class="at">data =</span> heart)</span></code></pre></div>
+<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb281-1"><a href="day-2-1.html#cb281-1" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg_glucose_level <span class="sc">~</span> bmi, <span class="at">data =</span> heart)</span></code></pre></div>
 <p>This can be read as <code>avg_glucose_level</code> as a function of <code>bmi</code></p>
 <p>Use the function summary() on fit1 object to obtain more details of the model.</p>
-<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="day-2-1.html#cb278-1" tabindex="-1"></a>summary</span></code></pre></div>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="day-2-1.html#cb282-1" tabindex="-1"></a>summary</span></code></pre></div>
 <pre><code>## function (object, ...) 
 ## UseMethod(&quot;summary&quot;)
-## &lt;bytecode: 0x104d2fdd0&gt;
+## &lt;bytecode: 0x10dd725c8&gt;
 ## &lt;environment: namespace:base&gt;</code></pre>
 <p>This overall looks like a good model. The p-value is very low and statistically significant. However, the Multiple R-squared values is small and the slope of bmi is low.</p>
 <p>From the results, we could conclude that changes in bmi are associated to the average glucose level as the p-value is less than 0.05. We can also state that as bmi increases, there will be an increase in the average glucose level as the slope is weakly positive 0.11.</p>
@@ -1091,45 +1091,45 @@ Rmd – indicates language in code chunk</p>
 <p>avg_glucose_level = (0.097800)(bmi) + 90.823324</p>
 </blockquote>
 <p>We can use our knowledge of writing functions to calculate the predict the glucose level from the patient’s bmi</p>
-<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="day-2-1.html#cb280-1" tabindex="-1"></a>calc_gluc <span class="ot">&lt;-</span> <span class="cf">function</span>(bmi_value) {</span>
-<span id="cb280-2"><a href="day-2-1.html#cb280-2" tabindex="-1"></a>  (<span class="fl">0.097800</span><span class="sc">*</span>bmi_value) <span class="sc">+</span> <span class="fl">90.823324</span> <span class="co"># Change from brackets to * for multiply, bmi to bmi_value</span></span>
-<span id="cb280-3"><a href="day-2-1.html#cb280-3" tabindex="-1"></a>}</span>
-<span id="cb280-4"><a href="day-2-1.html#cb280-4" tabindex="-1"></a></span>
-<span id="cb280-5"><a href="day-2-1.html#cb280-5" tabindex="-1"></a>heart[<span class="dv">3</span>, <span class="fu">c</span>(<span class="st">&quot;bmi&quot;</span>, <span class="st">&quot;avg_glucose_level&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="day-2-1.html#cb284-1" tabindex="-1"></a>calc_gluc <span class="ot">&lt;-</span> <span class="cf">function</span>(bmi_value) {</span>
+<span id="cb284-2"><a href="day-2-1.html#cb284-2" tabindex="-1"></a>  (<span class="fl">0.097800</span><span class="sc">*</span>bmi_value) <span class="sc">+</span> <span class="fl">90.823324</span> <span class="co"># Change from brackets to * for multiply, bmi to bmi_value</span></span>
+<span id="cb284-3"><a href="day-2-1.html#cb284-3" tabindex="-1"></a>}</span>
+<span id="cb284-4"><a href="day-2-1.html#cb284-4" tabindex="-1"></a></span>
+<span id="cb284-5"><a href="day-2-1.html#cb284-5" tabindex="-1"></a>heart[<span class="dv">3</span>, <span class="fu">c</span>(<span class="st">&quot;bmi&quot;</span>, <span class="st">&quot;avg_glucose_level&quot;</span>)]</span></code></pre></div>
 <pre><code>##   bmi avg_glucose_level
 ## 3 199            105.92</code></pre>
-<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="day-2-1.html#cb282-1" tabindex="-1"></a><span class="fu">calc_gluc</span>(<span class="dv">119</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="day-2-1.html#cb286-1" tabindex="-1"></a><span class="fu">calc_gluc</span>(<span class="dv">119</span>)</span></code></pre></div>
 <pre><code>## [1] 102.4615</code></pre>
 <p>Next, let’s visualize this using ggplot</p>
-<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="day-2-1.html#cb284-1" tabindex="-1"></a><span class="co"># Start with code from previous point plot</span></span>
-<span id="cb284-2"><a href="day-2-1.html#cb284-2" tabindex="-1"></a></span>
-<span id="cb284-3"><a href="day-2-1.html#cb284-3" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>, <span class="at">col =</span> stroke))<span class="sc">+</span></span>
-<span id="cb284-4"><a href="day-2-1.html#cb284-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># ADD PLUS SIGN</span></span>
-<span id="cb284-5"><a href="day-2-1.html#cb284-5" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">90.823324</span>, <span class="at">slope =</span> <span class="fl">0.097800</span>, <span class="at">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="co"># ADD THIS LINE</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="day-2-1.html#cb288-1" tabindex="-1"></a><span class="co"># Start with code from previous point plot</span></span>
+<span id="cb288-2"><a href="day-2-1.html#cb288-2" tabindex="-1"></a></span>
+<span id="cb288-3"><a href="day-2-1.html#cb288-3" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>, <span class="at">col =</span> stroke))<span class="sc">+</span></span>
+<span id="cb288-4"><a href="day-2-1.html#cb288-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># ADD PLUS SIGN</span></span>
+<span id="cb288-5"><a href="day-2-1.html#cb288-5" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">90.823324</span>, <span class="at">slope =</span> <span class="fl">0.097800</span>, <span class="at">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="co"># ADD THIS LINE</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
 </div>
 <div id="exercise-9" class="section level3 hasAnchor" number="7.4.9">
 <h3><span class="header-section-number">7.4.9</span> Exercise<a href="day-2-1.html#exercise-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Hmm, this looks like there are two densities of data in this image. Let’s try to investigate if we can figure it out.</p>
 <p>I’ve started you off by creating two new objects, an object called <code>heart_stroke</code> that contains only patents who experienced a stroke (stroke == 1) and a second object called <code>heart_nostroke</code> that contains only patents who have not experienced a stroke (stroke == 0).</p>
 <p>Next, create two separate linear models called <code>fit_stroke</code> and <code>fit_nostroke</code> - are they different? How will you visualize the data?</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="day-2-1.html#cb285-1" tabindex="-1"></a>heart_stroke <span class="ot">&lt;-</span> <span class="fu">filter</span>(heart, stroke <span class="sc">==</span> <span class="dv">1</span>)</span>
-<span id="cb285-2"><a href="day-2-1.html#cb285-2" tabindex="-1"></a><span class="fu">table</span>(heart_stroke<span class="sc">$</span>stroke)</span></code></pre></div>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="day-2-1.html#cb289-1" tabindex="-1"></a>heart_stroke <span class="ot">&lt;-</span> <span class="fu">filter</span>(heart, stroke <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb289-2"><a href="day-2-1.html#cb289-2" tabindex="-1"></a><span class="fu">table</span>(heart_stroke<span class="sc">$</span>stroke)</span></code></pre></div>
 <pre><code>## 
 ##   0   1 
 ##   0 202</code></pre>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="day-2-1.html#cb287-1" tabindex="-1"></a>heart_nostroke <span class="ot">&lt;-</span> <span class="fu">filter</span>(heart, stroke <span class="sc">==</span> <span class="dv">0</span>)</span>
-<span id="cb287-2"><a href="day-2-1.html#cb287-2" tabindex="-1"></a><span class="fu">table</span>(heart_nostroke<span class="sc">$</span>stroke)</span></code></pre></div>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="day-2-1.html#cb291-1" tabindex="-1"></a>heart_nostroke <span class="ot">&lt;-</span> <span class="fu">filter</span>(heart, stroke <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb291-2"><a href="day-2-1.html#cb291-2" tabindex="-1"></a><span class="fu">table</span>(heart_nostroke<span class="sc">$</span>stroke)</span></code></pre></div>
 <pre><code>## 
 ##    0    1 
 ## 3363    0</code></pre>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="day-2-1.html#cb289-1" tabindex="-1"></a><span class="co"># From above:</span></span>
-<span id="cb289-2"><a href="day-2-1.html#cb289-2" tabindex="-1"></a><span class="co"># fit &lt;- lm(avg_glucose_level ~ bmi, data = heart)</span></span>
-<span id="cb289-3"><a href="day-2-1.html#cb289-3" tabindex="-1"></a></span>
-<span id="cb289-4"><a href="day-2-1.html#cb289-4" tabindex="-1"></a>fit_stroke <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg_glucose_level <span class="sc">~</span> bmi, <span class="at">data =</span> heart_stroke)</span>
-<span id="cb289-5"><a href="day-2-1.html#cb289-5" tabindex="-1"></a>fit_nostroke <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg_glucose_level <span class="sc">~</span> bmi, <span class="at">data =</span> heart_nostroke)</span>
-<span id="cb289-6"><a href="day-2-1.html#cb289-6" tabindex="-1"></a></span>
-<span id="cb289-7"><a href="day-2-1.html#cb289-7" tabindex="-1"></a><span class="fu">summary</span>(fit_stroke)</span></code></pre></div>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="day-2-1.html#cb293-1" tabindex="-1"></a><span class="co"># From above:</span></span>
+<span id="cb293-2"><a href="day-2-1.html#cb293-2" tabindex="-1"></a><span class="co"># fit &lt;- lm(avg_glucose_level ~ bmi, data = heart)</span></span>
+<span id="cb293-3"><a href="day-2-1.html#cb293-3" tabindex="-1"></a></span>
+<span id="cb293-4"><a href="day-2-1.html#cb293-4" tabindex="-1"></a>fit_stroke <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg_glucose_level <span class="sc">~</span> bmi, <span class="at">data =</span> heart_stroke)</span>
+<span id="cb293-5"><a href="day-2-1.html#cb293-5" tabindex="-1"></a>fit_nostroke <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg_glucose_level <span class="sc">~</span> bmi, <span class="at">data =</span> heart_nostroke)</span>
+<span id="cb293-6"><a href="day-2-1.html#cb293-6" tabindex="-1"></a></span>
+<span id="cb293-7"><a href="day-2-1.html#cb293-7" tabindex="-1"></a><span class="fu">summary</span>(fit_stroke)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = avg_glucose_level ~ bmi, data = heart_stroke)
@@ -1148,7 +1148,7 @@ Rmd – indicates language in code chunk</p>
 ## Residual standard error: 62.75 on 200 degrees of freedom
 ## Multiple R-squared:  0.01266,    Adjusted R-squared:  0.007726 
 ## F-statistic: 2.565 on 1 and 200 DF,  p-value: 0.1108</code></pre>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="day-2-1.html#cb291-1" tabindex="-1"></a><span class="fu">summary</span>(fit_nostroke)</span></code></pre></div>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="day-2-1.html#cb295-1" tabindex="-1"></a><span class="fu">summary</span>(fit_nostroke)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = avg_glucose_level ~ bmi, data = heart_nostroke)
@@ -1167,46 +1167,46 @@ Rmd – indicates language in code chunk</p>
 ## Residual standard error: 46.2 on 3361 degrees of freedom
 ## Multiple R-squared:  0.02768,    Adjusted R-squared:  0.02739 
 ## F-statistic: 95.68 on 1 and 3361 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="day-2-1.html#cb293-1" tabindex="-1"></a>fit_nostroke<span class="sc">$</span>coefficients</span></code></pre></div>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="day-2-1.html#cb297-1" tabindex="-1"></a>fit_nostroke<span class="sc">$</span>coefficients</span></code></pre></div>
 <pre><code>## (Intercept)         bmi 
 ## 89.92298677  0.09507385</code></pre>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="day-2-1.html#cb295-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>, <span class="at">col =</span> stroke))<span class="sc">+</span></span>
-<span id="cb295-2"><a href="day-2-1.html#cb295-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># ADD PLUS SIGN</span></span>
-<span id="cb295-3"><a href="day-2-1.html#cb295-3" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">90.823324</span>, <span class="at">slope =</span> <span class="fl">0.097800</span>, <span class="at">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="sc">+</span></span>
-<span id="cb295-4"><a href="day-2-1.html#cb295-4" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb295-5"><a href="day-2-1.html#cb295-5" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">100</span>, <span class="dv">200</span>)<span class="sc">+</span></span>
-<span id="cb295-6"><a href="day-2-1.html#cb295-6" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">100</span>, <span class="dv">200</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="day-2-1.html#cb299-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>, <span class="at">col =</span> stroke))<span class="sc">+</span></span>
+<span id="cb299-2"><a href="day-2-1.html#cb299-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># ADD PLUS SIGN</span></span>
+<span id="cb299-3"><a href="day-2-1.html#cb299-3" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">90.823324</span>, <span class="at">slope =</span> <span class="fl">0.097800</span>, <span class="at">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="sc">+</span></span>
+<span id="cb299-4"><a href="day-2-1.html#cb299-4" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb299-5"><a href="day-2-1.html#cb299-5" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">100</span>, <span class="dv">200</span>)<span class="sc">+</span></span>
+<span id="cb299-6"><a href="day-2-1.html#cb299-6" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">100</span>, <span class="dv">200</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2951 rows containing missing values or values outside the
 ## scale range (`geom_point()`).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
 </div>
 <div id="demo-detour-to-function-for-lm-plots" class="section level3 hasAnchor" number="7.4.10">
 <h3><span class="header-section-number">7.4.10</span> Demo detour to function for lm plots<a href="day-2-1.html#demo-detour-to-function-for-lm-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="day-2-1.html#cb297-1" tabindex="-1"></a><span class="co"># The variables</span></span>
-<span id="cb297-2"><a href="day-2-1.html#cb297-2" tabindex="-1"></a>which_data <span class="ot">&lt;-</span> heart_stroke</span>
-<span id="cb297-3"><a href="day-2-1.html#cb297-3" tabindex="-1"></a>variable_call <span class="ot">&lt;-</span> <span class="st">&quot;avg_glucose_level ~ bmi&quot;</span></span>
-<span id="cb297-4"><a href="day-2-1.html#cb297-4" tabindex="-1"></a>custom_col <span class="ot">&lt;-</span> <span class="st">&quot;blue&quot;</span></span>
-<span id="cb297-5"><a href="day-2-1.html#cb297-5" tabindex="-1"></a></span>
-<span id="cb297-6"><a href="day-2-1.html#cb297-6" tabindex="-1"></a></span>
-<span id="cb297-7"><a href="day-2-1.html#cb297-7" tabindex="-1"></a></span>
-<span id="cb297-8"><a href="day-2-1.html#cb297-8" tabindex="-1"></a><span class="co"># The actual task</span></span>
-<span id="cb297-9"><a href="day-2-1.html#cb297-9" tabindex="-1"></a></span>
-<span id="cb297-10"><a href="day-2-1.html#cb297-10" tabindex="-1"></a>lm_gluc_bmi <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">which_data =</span> heart_stroke, <span class="at">variable_call =</span> <span class="st">&quot;avg_glucose_level ~ bmi&quot;</span>, <span class="at">custom_col =</span> <span class="st">&quot;blue&quot;</span>) {</span>
-<span id="cb297-11"><a href="day-2-1.html#cb297-11" tabindex="-1"></a></span>
-<span id="cb297-12"><a href="day-2-1.html#cb297-12" tabindex="-1"></a>  <span class="co"># Run liner model</span></span>
-<span id="cb297-13"><a href="day-2-1.html#cb297-13" tabindex="-1"></a></span>
-<span id="cb297-14"><a href="day-2-1.html#cb297-14" tabindex="-1"></a>  <span class="co"># Make plot</span></span>
-<span id="cb297-15"><a href="day-2-1.html#cb297-15" tabindex="-1"></a></span>
-<span id="cb297-16"><a href="day-2-1.html#cb297-16" tabindex="-1"></a>fit_stroke <span class="ot">&lt;-</span> <span class="fu">lm</span>(variable_call, <span class="at">data =</span> which_data)</span>
-<span id="cb297-17"><a href="day-2-1.html#cb297-17" tabindex="-1"></a></span>
-<span id="cb297-18"><a href="day-2-1.html#cb297-18" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>, <span class="at">col =</span> stroke))<span class="sc">+</span></span>
-<span id="cb297-19"><a href="day-2-1.html#cb297-19" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># ADD PLUS SIGN</span></span>
-<span id="cb297-20"><a href="day-2-1.html#cb297-20" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> custom_col)</span>
-<span id="cb297-21"><a href="day-2-1.html#cb297-21" tabindex="-1"></a></span>
-<span id="cb297-22"><a href="day-2-1.html#cb297-22" tabindex="-1"></a>}</span>
-<span id="cb297-23"><a href="day-2-1.html#cb297-23" tabindex="-1"></a></span>
-<span id="cb297-24"><a href="day-2-1.html#cb297-24" tabindex="-1"></a><span class="fu">lm_gluc_bmi</span>(<span class="at">custom_col =</span> <span class="st">&quot;green3&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-113-1.png" width="672" /></p>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="day-2-1.html#cb301-1" tabindex="-1"></a><span class="co"># The variables</span></span>
+<span id="cb301-2"><a href="day-2-1.html#cb301-2" tabindex="-1"></a>which_data <span class="ot">&lt;-</span> heart_stroke</span>
+<span id="cb301-3"><a href="day-2-1.html#cb301-3" tabindex="-1"></a>variable_call <span class="ot">&lt;-</span> <span class="st">&quot;avg_glucose_level ~ bmi&quot;</span></span>
+<span id="cb301-4"><a href="day-2-1.html#cb301-4" tabindex="-1"></a>custom_col <span class="ot">&lt;-</span> <span class="st">&quot;blue&quot;</span></span>
+<span id="cb301-5"><a href="day-2-1.html#cb301-5" tabindex="-1"></a></span>
+<span id="cb301-6"><a href="day-2-1.html#cb301-6" tabindex="-1"></a></span>
+<span id="cb301-7"><a href="day-2-1.html#cb301-7" tabindex="-1"></a></span>
+<span id="cb301-8"><a href="day-2-1.html#cb301-8" tabindex="-1"></a><span class="co"># The actual task</span></span>
+<span id="cb301-9"><a href="day-2-1.html#cb301-9" tabindex="-1"></a></span>
+<span id="cb301-10"><a href="day-2-1.html#cb301-10" tabindex="-1"></a>lm_gluc_bmi <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">which_data =</span> heart_stroke, <span class="at">variable_call =</span> <span class="st">&quot;avg_glucose_level ~ bmi&quot;</span>, <span class="at">custom_col =</span> <span class="st">&quot;blue&quot;</span>) {</span>
+<span id="cb301-11"><a href="day-2-1.html#cb301-11" tabindex="-1"></a></span>
+<span id="cb301-12"><a href="day-2-1.html#cb301-12" tabindex="-1"></a>  <span class="co"># Run liner model</span></span>
+<span id="cb301-13"><a href="day-2-1.html#cb301-13" tabindex="-1"></a></span>
+<span id="cb301-14"><a href="day-2-1.html#cb301-14" tabindex="-1"></a>  <span class="co"># Make plot</span></span>
+<span id="cb301-15"><a href="day-2-1.html#cb301-15" tabindex="-1"></a></span>
+<span id="cb301-16"><a href="day-2-1.html#cb301-16" tabindex="-1"></a>fit_stroke <span class="ot">&lt;-</span> <span class="fu">lm</span>(variable_call, <span class="at">data =</span> which_data)</span>
+<span id="cb301-17"><a href="day-2-1.html#cb301-17" tabindex="-1"></a></span>
+<span id="cb301-18"><a href="day-2-1.html#cb301-18" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi, <span class="at">y=</span>avg_glucose_level, <span class="at">alpha=</span><span class="fl">0.3</span>, <span class="at">col =</span> stroke))<span class="sc">+</span></span>
+<span id="cb301-19"><a href="day-2-1.html#cb301-19" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># ADD PLUS SIGN</span></span>
+<span id="cb301-20"><a href="day-2-1.html#cb301-20" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> custom_col)</span>
+<span id="cb301-21"><a href="day-2-1.html#cb301-21" tabindex="-1"></a></span>
+<span id="cb301-22"><a href="day-2-1.html#cb301-22" tabindex="-1"></a>}</span>
+<span id="cb301-23"><a href="day-2-1.html#cb301-23" tabindex="-1"></a></span>
+<span id="cb301-24"><a href="day-2-1.html#cb301-24" tabindex="-1"></a><span class="fu">lm_gluc_bmi</span>(<span class="at">custom_col =</span> <span class="st">&quot;green3&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 </div>
 <div id="notes-on-data-types" class="section level3 hasAnchor" number="7.4.11">
 <h3><span class="header-section-number">7.4.11</span> Notes on data types<a href="day-2-1.html#notes-on-data-types" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1244,9 +1244,9 @@ table width of top of diamond relative to widest point (43–95)</p>
 <ol style="list-style-type: decimal">
 <li>Read in the “diamonds.csv” data into an object called data. Use the <code>strongAsFactors</code> parameter to automatically import the character values as a factor. Check the object you created by printing out the first 10 rows and applying the summary function.</li>
 </ol>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="day-2-1.html#cb298-1" tabindex="-1"></a>diamonds <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;datasets/diamonds.csv&quot;</span>, <span class="at">header =</span> T, <span class="at">stringsAsFactors =</span> T)</span>
-<span id="cb298-2"><a href="day-2-1.html#cb298-2" tabindex="-1"></a></span>
-<span id="cb298-3"><a href="day-2-1.html#cb298-3" tabindex="-1"></a><span class="fu">head</span>(diamonds)</span></code></pre></div>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="day-2-1.html#cb302-1" tabindex="-1"></a>diamonds <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;datasets/diamonds.csv&quot;</span>, <span class="at">header =</span> T, <span class="at">stringsAsFactors =</span> T)</span>
+<span id="cb302-2"><a href="day-2-1.html#cb302-2" tabindex="-1"></a></span>
+<span id="cb302-3"><a href="day-2-1.html#cb302-3" tabindex="-1"></a><span class="fu">head</span>(diamonds)</span></code></pre></div>
 <pre><code>##   X carat       cut color clarity depth table price    x    y    z
 ## 1 1  0.23     Ideal     E     SI2  61.5    55   326 3.95 3.98 2.43
 ## 2 2  0.21   Premium     E     SI1  59.8    61   326 3.89 3.84 2.31
@@ -1254,7 +1254,7 @@ table width of top of diamond relative to widest point (43–95)</p>
 ## 4 4  0.29   Premium     I     VS2  62.4    58   334 4.20 4.23 2.63
 ## 5 5  0.31      Good     J     SI2  63.3    58   335 4.34 4.35 2.75
 ## 6 6  0.24 Very Good     J    VVS2  62.8    57   336 3.94 3.96 2.48</code></pre>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="day-2-1.html#cb300-1" tabindex="-1"></a><span class="fu">summary</span>(diamonds)</span></code></pre></div>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="day-2-1.html#cb304-1" tabindex="-1"></a><span class="fu">summary</span>(diamonds)</span></code></pre></div>
 <pre><code>##        X             carat               cut        color        clarity     
 ##  Min.   :    1   Min.   :0.2000   Fair     : 1610   D: 6775   SI1    :13065  
 ##  1st Qu.:13486   1st Qu.:0.4000   Good     : 4906   E: 9797   VS2    :12258  
@@ -1282,14 +1282,14 @@ table width of top of diamond relative to widest point (43–95)</p>
 <ol start="2" style="list-style-type: decimal">
 <li>We’ll start investigating the relationship between different variables with price. Create a boxplot using ggplot with the cut on the x axis and the price on the y axis.</li>
 </ol>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="day-2-1.html#cb302-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb302-2"><a href="day-2-1.html#cb302-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="day-2-1.html#cb306-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb306-2"><a href="day-2-1.html#cb306-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Using the code in the previous step as foundation, create an object called <code>diamonds_categorical</code> that contains the name of all the categorical columns. Then, write a loop to print out a separate plot with each of the different categorical variables on the x axis and price on the y-axis.</li>
 </ol>
 <p>Hint: remember how aes can be specified in both the <code>ggplot()</code> or <code>geom_xx()</code> layer? You will need to use this because we are string the name of a column as a variable in our loop and in order for R to know that it is looking for a column name rather than an object, you will need to use the <code>aes_string()</code> parameter for just the <code>geom_boxplot()</code> layer to specify the changing x axis. The y axis can remain with <code>aes()</code> in the parent <code>ggplot()</code> layer.</p>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="day-2-1.html#cb303-1" tabindex="-1"></a><span class="fu">str</span>(diamonds)</span></code></pre></div>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="day-2-1.html#cb307-1" tabindex="-1"></a><span class="fu">str</span>(diamonds)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    53940 obs. of  11 variables:
 ##  $ X      : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ carat  : num  0.23 0.21 0.23 0.29 0.31 0.24 0.24 0.26 0.22 0.23 ...
@@ -1302,54 +1302,52 @@ table width of top of diamond relative to widest point (43–95)</p>
 ##  $ x      : num  3.95 3.89 4.05 4.2 4.34 3.94 3.95 4.07 3.87 4 ...
 ##  $ y      : num  3.98 3.84 4.07 4.23 4.35 3.96 3.98 4.11 3.78 4.05 ...
 ##  $ z      : num  2.43 2.31 2.31 2.63 2.75 2.48 2.47 2.53 2.49 2.39 ...</code></pre>
-<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="day-2-1.html#cb305-1" tabindex="-1"></a>diamonds_categorical <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;cut&quot;</span>, <span class="st">&quot;color&quot;</span>, <span class="st">&quot;clarity&quot;</span>)</span>
-<span id="cb305-2"><a href="day-2-1.html#cb305-2" tabindex="-1"></a></span>
-<span id="cb305-3"><a href="day-2-1.html#cb305-3" tabindex="-1"></a><span class="cf">for</span>(cat <span class="cf">in</span> diamonds_categorical) {</span>
-<span id="cb305-4"><a href="day-2-1.html#cb305-4" tabindex="-1"></a>  diaplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb305-5"><a href="day-2-1.html#cb305-5" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>(<span class="fu">aes_string</span>(<span class="at">x =</span> cat))</span>
-<span id="cb305-6"><a href="day-2-1.html#cb305-6" tabindex="-1"></a></span>
-<span id="cb305-7"><a href="day-2-1.html#cb305-7" tabindex="-1"></a>  <span class="fu">print</span>(diaplot)</span>
-<span id="cb305-8"><a href="day-2-1.html#cb305-8" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="day-2-1.html#cb309-1" tabindex="-1"></a>diamonds_categorical <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;cut&quot;</span>, <span class="st">&quot;color&quot;</span>, <span class="st">&quot;clarity&quot;</span>)</span>
+<span id="cb309-2"><a href="day-2-1.html#cb309-2" tabindex="-1"></a></span>
+<span id="cb309-3"><a href="day-2-1.html#cb309-3" tabindex="-1"></a><span class="cf">for</span>(cat <span class="cf">in</span> diamonds_categorical) {</span>
+<span id="cb309-4"><a href="day-2-1.html#cb309-4" tabindex="-1"></a>  diaplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb309-5"><a href="day-2-1.html#cb309-5" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>(<span class="fu">aes_string</span>(<span class="at">x =</span> cat))</span>
+<span id="cb309-6"><a href="day-2-1.html#cb309-6" tabindex="-1"></a></span>
+<span id="cb309-7"><a href="day-2-1.html#cb309-7" tabindex="-1"></a>  <span class="fu">print</span>(diaplot)</span>
+<span id="cb309-8"><a href="day-2-1.html#cb309-8" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## Warning: `aes_string()` was deprecated in ggplot2 3.0.0.
 ## ℹ Please use tidy evaluation idioms with `aes()`.
 ## ℹ See also `vignette(&quot;ggplot2-in-packages&quot;)` for more information.
 ## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning
-## was generated.</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-116-1.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-116-2.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-116-3.png" width="672" /></p>
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-118-1.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-118-2.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-118-3.png" width="672" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Write a function called <code>diamond_continous</code> that allows you to make a scatterplot that accepts one variable to plot on the x-axis as well as another variable to color the plot by as the inputs. Price will remain on the y-axis.</li>
 </ol>
 <p>Hint: Start out by making one plot, make it generalized, and then convert this into a function.</p>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="day-2-1.html#cb307-1" tabindex="-1"></a>diamond_continous <span class="ot">&lt;-</span> <span class="cf">function</span>(contV, colV) {</span>
-<span id="cb307-2"><a href="day-2-1.html#cb307-2" tabindex="-1"></a></span>
-<span id="cb307-3"><a href="day-2-1.html#cb307-3" tabindex="-1"></a>  diaPlot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb307-4"><a href="day-2-1.html#cb307-4" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes_string</span>(<span class="at">x =</span> contV, <span class="at">color =</span> colV), <span class="at">alpha =</span> <span class="fl">0.4</span>)</span>
-<span id="cb307-5"><a href="day-2-1.html#cb307-5" tabindex="-1"></a></span>
-<span id="cb307-6"><a href="day-2-1.html#cb307-6" tabindex="-1"></a>  <span class="fu">print</span>(diaPlot)</span>
-<span id="cb307-7"><a href="day-2-1.html#cb307-7" tabindex="-1"></a></span>
-<span id="cb307-8"><a href="day-2-1.html#cb307-8" tabindex="-1"></a>}</span>
-<span id="cb307-9"><a href="day-2-1.html#cb307-9" tabindex="-1"></a></span>
-<span id="cb307-10"><a href="day-2-1.html#cb307-10" tabindex="-1"></a><span class="fu">diamond_continous</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;clarity&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
+<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="day-2-1.html#cb311-1" tabindex="-1"></a>diamond_continous <span class="ot">&lt;-</span> <span class="cf">function</span>(contV, colV) {</span>
+<span id="cb311-2"><a href="day-2-1.html#cb311-2" tabindex="-1"></a></span>
+<span id="cb311-3"><a href="day-2-1.html#cb311-3" tabindex="-1"></a>  diaPlot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb311-4"><a href="day-2-1.html#cb311-4" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes_string</span>(<span class="at">x =</span> contV, <span class="at">color =</span> colV), <span class="at">alpha =</span> <span class="fl">0.4</span>)</span>
+<span id="cb311-5"><a href="day-2-1.html#cb311-5" tabindex="-1"></a></span>
+<span id="cb311-6"><a href="day-2-1.html#cb311-6" tabindex="-1"></a>  <span class="fu">print</span>(diaPlot)</span>
+<span id="cb311-7"><a href="day-2-1.html#cb311-7" tabindex="-1"></a></span>
+<span id="cb311-8"><a href="day-2-1.html#cb311-8" tabindex="-1"></a>}</span>
+<span id="cb311-9"><a href="day-2-1.html#cb311-9" tabindex="-1"></a></span>
+<span id="cb311-10"><a href="day-2-1.html#cb311-10" tabindex="-1"></a><span class="fu">diamond_continous</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;clarity&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Based on your plots from the previous step, pick a continuous variable to compare with price and create a linear model. Make sure the price is the dependent variable. Add a layer to your plot generated by the function to include the equation of the line.</li>
 </ol>
 <p>Is the relationship significant?</p>
-<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="day-2-1.html#cb308-1" tabindex="-1"></a>fit_diamond <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> carat, <span class="at">data =</span> diamonds)</span>
-<span id="cb308-2"><a href="day-2-1.html#cb308-2" tabindex="-1"></a></span>
-<span id="cb308-3"><a href="day-2-1.html#cb308-3" tabindex="-1"></a>fit_diamond<span class="sc">$</span>coefficients</span></code></pre></div>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="day-2-1.html#cb312-1" tabindex="-1"></a>fit_diamond <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> carat, <span class="at">data =</span> diamonds)</span>
+<span id="cb312-2"><a href="day-2-1.html#cb312-2" tabindex="-1"></a></span>
+<span id="cb312-3"><a href="day-2-1.html#cb312-3" tabindex="-1"></a>fit_diamond<span class="sc">$</span>coefficients</span></code></pre></div>
 <pre><code>## (Intercept)       carat 
 ##   -2256.361    7756.426</code></pre>
-<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="day-2-1.html#cb310-1" tabindex="-1"></a><span class="fu">diamond_continous</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;clarity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb310-2"><a href="day-2-1.html#cb310-2" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_diamond<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_diamond<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-118-1.png" width="672" /></p>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="day-2-1.html#cb314-1" tabindex="-1"></a><span class="fu">diamond_continous</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;clarity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb314-2"><a href="day-2-1.html#cb314-2" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_diamond<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_diamond<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
 <pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
 ## ℹ Please use `linewidth` instead.
 ## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning
-## was generated.</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-118-2.png" width="672" /></p>
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-120-2.png" width="672" /></p>
 
 </div>
 </div>
