@@ -5,7 +5,7 @@ After having done your [pre-work](#prework), download the course materials!
 ### Day 1 {-}
 <!-- 4 #s just so that it doesn't appear in table of contents, can remove it if you want "Day 1" and "Day 2" to appear under "Course Materials" in TOC -->
 
-I have no idea why the to-do lists wrritten in markdown look so weird?
+I have no idea why the to-do lists written in markdown look so weird?
 
 - [ ] [Module 1 Lecture Recording](https://youtu.be/Re3Lricv7o4)
 
