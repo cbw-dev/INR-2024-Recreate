@@ -21,6 +21,7 @@ Welcome to CBW's Introduction to R 2024 Workshop!
 Before continuing, ensure to register, complete your pre-work (below) and ensure your zoom is functional.
 <!-- Hyperlinking to prework before it is defined may cause rendering issues (promts a warning but I believe it works?) -->
 
+
 ## Pre-Workshop Materials {#prework}
 
 Click [here](https://forms.gle/xba2wVbLXtC1E1Dx9) for the pre-work. This includes programs to install.
